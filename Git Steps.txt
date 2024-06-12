@@ -1,3 +1,9 @@
+Git : a tool for Version Control System
+
+Git Hub: A cloud based platform where you can store, share, and work together with others
+
+
+
 Git Steps
 
 Create a working directory under d:/, e: etc (DotnetTraining)

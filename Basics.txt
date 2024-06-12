@@ -1,0 +1,104 @@
+Operating System : A software that controls the computers hardware and software resources
+
+Role of an OS : a) Processor Management
+                b) Memory management 
+                c) Device Driver Management 
+                d) Security
+                e) Input/Output, Interrupts management
+                f) File management
+               
+CPU : Central Processing Unit
+          Single-Core Processor
+          Dual Core
+          Quad Core
+          Multi Core
+
+Various types of Languages :
+
+ 1. Assembly Lang : Low-level lang, intended to communicate with the hardware directly
+    Assembler : is a program that translates commands into machine code. Assembler gathers instructions from the assembly language and translates  each action into a series electrical signals
+
+Components of an assembly lang:
+    1. Syntax : forms the basic structure
+    2. label : is a word, number, symbol etc which is used as a reference point to locate the instruction
+    3. command : an order/instruction to perform
+    4. Operand : Components that help in data manipulation
+    5. Directive : Instructions to the assembler to change the settings or perform certain actions
+    6. Macro : Are statements that work as a short representation of a sequence of instructions
+    7. Mnemonics : Represents abbreviation of a description of the action being performed
+
+Example : 
+  MOV x, 5  ---  register 5 in x
+  MOV y, 6  -- register 6 in y
+  ADD x,y,z -- add x with y and store in z
+
+2. Machine Language :
+   ASCII  - Every character in the keyboard has a ascii number and it occupies 1 byte
+
+  1 byte = 8 bits ( 1 bit is either '1' or a '0')
+
+00000000  - stop the program
+00000001 - turn the bulb on
+00000010 - turn bulb off
+
+Major programming Languages :
+
+  a) procedural Lang: A sequence of statements or commands in an order to achieve desired output
+    C, C++
+    Java
+    Pascal
+    Basic
+
+ b) Functional Programming Lang : It focuses on the output of a mathematical calculations and evaluations
+     Scala
+     Erlnag
+     Elixir
+     Python
+     F#
+     Haskell
+
+ c) OOP programming Lang : Treats a program as a group of objects composed of data and program elements (attributes and methods)
+     C++
+     Java
+     C#
+     Python
+     Ruby
+
+d) Scripting Language: To automate repetitive tasks, manage dynamic content, and or support process in larger application
+   PHP
+   JavaScript
+   Perl
+   Bash
+   Python
+   Node.js
+
+
+e) Logic Programming Lang : Instead of telling a computer what to do, here we express a series of facts and rules to instruct the computer to make decisions
+   Prolog
+   Absys
+   Datalog
+   Alma-0
+
+f) Front End lang : is concerned about the user interface and experience of the software in terms of images, Text,colors, navigation etc
+    Html
+    CSS
+    JavaScript
+    React Js
+    Angular
+
+g) Back End lang: Deals with storage and manipulation of data(server side software). Do not interact directly with the user
+   JavaScript
+   PHP
+   Java
+   C#
+
+Application Development Models :
+
+  1. Desktop Applications/Windows
+  2. Client Server Applications ( 2 tier, 3 tier, n tier)
+  3. Web Model
+
+
+   
+
+

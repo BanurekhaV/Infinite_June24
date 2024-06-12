@@ -1,0 +1,39 @@
+Dot Net Framework : Microsoft .net pronounced as Dot net is a software component 
+ - provides tools and libraries that enable the developers to create application software much easier and faster
+ - provides language independence and platform independence
+
+Major Components of the .Net Architecture
+1. Common language Specification  (CLS):
+          Common Type Specification  : (int, integer, number)
+
+2. Framework Class Library (FCL):has more than 7000 classes and data types to enable .net applications to
+     - read/write
+     - access database  
+     - process xml files
+     - display graphics
+     - use web services etc...
+
+3. Common Language Runtime (CLR) : refer jpg file
+
+4. .Net Tools  : IDE (Integrated Development Environment) 
+
+In conclusion ..
+   Dotnet is Microsoft's web Service strategy to connect information, people, systems and devices through the framework software
+ - It provides a standard set of services
+   1. Data Access and connectivity ( ADO.Net)
+   2. User Interface (Winforms,WPF)
+   3. WebApplications (Asp.net, Silverlight)
+   4. NetworkCommunication (WCF) and Work Flow(WWF)
+
+
+
+On compilation of a C# program, we get an assembly file created (MSIL/IL/CIL) which is a managed code
+
+-Assemblies are of 2 type viz. 1. .exe, and 2. .dll (depends on the type of application we create)
+
+Every dotnet application contains 2 steps
+  1. Compilation - Source code to IL
+  2. Execution On JIT Compilation  - IL to platform specific native code
+
+The native code is not stored anywhere. Once the program execution is over, it is discarded. Created when we need to execute again
+
