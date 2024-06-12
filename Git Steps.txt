@@ -1,0 +1,23 @@
+Git Steps
+
+Create a working directory under d:/, e: etc (DotnetTraining)
+Move to the newly created directory
+
+1. Git Init - to be given in the working directory (initializes a new .git folder)
+2. Next login to the GitHub.com
+3. Give credentials if already signed in, else sign up
+4. Create a new Repository
+5. Copy the new link address of the repository
+6. In the Local Repo type  git remote add <alias name> <remote address>
+7. check if the sync is done by typing git remote -v
+8. Next we can add as many files as needed
+9. Then to push it to the remote repo,
+    type a) git add .   (. includes all directories/subdirectories and files)
+         b) git commit -m "<meaningful message>"
+         c) git push <alias name> <branch name>
+10. Refresh the remote repo and check if the file/files are added
+11. You can edit the files in the remote repo and commit it
+12. For any changes made to the remote repo, that must be included in the local repo type
+     git pull <alias name> <branch name>
+
+  
