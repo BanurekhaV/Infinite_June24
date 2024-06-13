@@ -27,3 +27,44 @@ Literals in C# :
   4. Real 
   5. Boolean 
   6. Null 
+
+
+short byte
+byte
+int  4 bytes
+long
+float 8 bytes
+double  16 bytes
+decimal
+
+char
+
+Type Conversions :
+1. Implicit - lower data to a higher data  (50 ml into 100 ml)
+2. Explicit - higher data to a lower data (100 ml into 50 ml -- data loss)
+   - type casting  
+   - conversion functions
+
+parse and tryparse():
+--------------------
+
+parse will convert a string to an integer or float depending on the usage
+eg : int x = int.parse("100");  will convert to an int
+     float f = float.parse("100"); will convert to a float
+
+if the passed string has non number values then parse will throw an exception
+- to avoid the parse exception we can use tryparse() that does not throw any exception.
+
+
+Boxing and Unboxing
+
+Boxing : converting a value type to a reference type
+Unboxing : Converting reference type to value type
+
+Concept of Nullable
+All reference types by default are null, as long as they are not made to refer to any valid location
+
+In the same manner we can make the value type also to have null by making the type nullable using '?'
+
+Null coalescing operator '??'
+
