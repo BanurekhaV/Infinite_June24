@@ -1,0 +1,29 @@
+C Sharp Basics : C# is a modern, general-purpose object oriented programming lang developed by Microsoft.
+- was developed by Anders Hejlsberg and his team during the development of dot net framework
+- is designed for common lang infrastructure(CLI), which consists of the executable code and runtime environment that can allow usage of various high-level languages on different computer platforms and architecture
+
+
+Namespace :
+ - are a logical way to organize our programs
+ - it is a collection of classes, interfaces, events, delegates, structures, Enums and also other namespaces
+
+Data Types : are basically either
+  1. Value Type: All primitive/fundamental/integral/systemic datatypes are value types (int, char, float....) 
+
+     - Value types are derived from System.ValueType
+     - Value Type variables store data directly
+     - Value types are stored in Stack memory 
+
+  2. Reference Type: All objects of classes, interfaces, delegates, Arrays 
+
+   - Contains address/reference of the memory where data is stored
+   - Reference types are stored in Heap memory
+   - String and Object are predefined reference types
+
+Literals in C# :
+  1. Integer 
+  2. String
+  3. Character
+  4. Real 
+  5. Boolean 
+  6. Null 

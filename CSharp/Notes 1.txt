@@ -37,3 +37,21 @@ Every dotnet application contains 2 steps
 
 The native code is not stored anywhere. Once the program execution is over, it is discarded. Created when we need to execute again
 
+Assemblies:
+
+- Any .net application on compilation gives assembly files(.dll / .exe)
+- Are fundamental unit of deployment, version control, reuse and security for a dotnet application
+- They contain PE(Portable executable) header, CLR header, Manifest and IL
+- Manifest files contain metadata (data about data)
+- Assemblies can be private or shared
+- Shared assemblies are placed in GAC (Global Assembly Cache)
+- Use gacutil.exe to share an assembly   (gacutil /i or /u)
+
+- We can use ILDASM to peek into the assembly file and export the same into a text file
+- Use ILASM to reconstruct an assembly from the text file 
+- The above are known as assembler tools
+
+Global Assembly Cache
+ - Machine wide central repository of assemblies
+ - They have a strong name
+ - Strong name consists of Simple text name, version number and culture information(if provided), a public key and a digital signature
