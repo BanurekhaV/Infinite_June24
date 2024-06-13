@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day1_Dotnet.TypeConversion</StartupObject>
+    <StartupObject>Day1_Dotnet.Static_functions_Eg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     <Compile Include="MyClass.cs" />
     <Compile Include="NullableEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static_Instance_functions.cs" />
     <Compile Include="TypeConversion.cs" />
   </ItemGroup>
   <ItemGroup>

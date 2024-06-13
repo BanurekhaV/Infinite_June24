@@ -53,7 +53,7 @@ eg : int x = int.parse("100");  will convert to an int
      float f = float.parse("100"); will convert to a float
 
 if the passed string has non number values then parse will throw an exception
-- to avoid the parse exception we can use tryparse() that does not throw any exception.
+- to avoid the parse exception we can use tryParse() that does not throw any exception.
 
 
 Boxing and Unboxing
@@ -68,3 +68,17 @@ In the same manner we can make the value type also to have null by making the ty
 
 Null coalescing operator '??'
 
+
+
+Functions/methods of a class
+
+static functions - are functions that have only one copy
+- they are maintained and managed by the CLR
+- accessible through out the class
+- does not need any object for invocation
+- can be called by its name ( if static function is in another class, then we can call it by prefixing the class name)
+
+
+non-static function also known as instance function
+- need an object of the class where it is defined
+- every object maintains a separate copy 
