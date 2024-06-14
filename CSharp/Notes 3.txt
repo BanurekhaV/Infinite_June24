@@ -35,7 +35,7 @@ C# Supports 2 more types viz.
                    minimise usage of dynamic objects
 
 
-Arrays :
+Arrays : are declared inside System.Array namespace
 
 is a collection of values of same datatype specified with size
 
@@ -43,8 +43,13 @@ There are 3 types of arrays in c#
 
  Single Dimension
  Two/Multi dimension
- Jagged 
+ Jagged : are often referred to as array of arrays (smart arrays)
+          an element of a jagged array itself is an array
 
+Arrays support many functions and also have various properties
+ viz:
+  sort(), copy(), reverse()
+  length, rank (will return the dimension of the array)
 Array Instantiation :
  Datatype[] <arrayname> = new datatype[size]
 

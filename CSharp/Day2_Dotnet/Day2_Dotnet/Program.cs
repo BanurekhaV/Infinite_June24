@@ -29,11 +29,14 @@ namespace Day2_Dotnet
             // dm.CheckGrade();
             // dm.CheckGradeWithSwitch();
             Loops loops = new Loops();
-           // loops.WhileLoop();
-           // loops.DoWhileLoop();
-          //  Console.WriteLine("-------for loop with jump st. -------");
-           // loops.ForLoop();
-            loops.ImplicitTypeExample();
+            // loops.WhileLoop();
+            // loops.DoWhileLoop();
+            //  Console.WriteLine("-------for loop with jump st. -------");
+            // loops.ForLoop();
+            // loops.ImplicitTypeExample();
+            // ArraysEg.SingleDimension();
+            // ArraysEg.TwoDimension();
+            ArraysEg.JaggedArray();
             Console.Read();
         }
 
