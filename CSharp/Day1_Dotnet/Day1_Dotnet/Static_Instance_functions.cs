@@ -41,7 +41,7 @@ namespace Day1_Dotnet
         //instance function
         public int Add(int x, int y)
         {
-            return x + y;
+           return x + y;
         }
 
         //static function also known as class function

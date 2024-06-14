@@ -1,0 +1,11 @@
+Methods n Parameters
+
+1. call by value  : when a function is called by passing a copy of the variable. 
+                    Any changes made by the original variable does not affect the receiving variable and vice versa ( x and j as per the demo)
+2. call by reference : when a function is called by passing the reference of a variable.
+                       Any changes made by the original or receiving variable are seen at both places (x, j as per the demo)
+                      uses a keyword 'ref' both at the function declaration and at the function calling
+
+3. out parameters : when the application expects more than one value from a function call, we can use out parameters
+
+4. ParamArray (parameter array)
