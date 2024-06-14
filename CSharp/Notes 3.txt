@@ -8,4 +8,58 @@ Methods n Parameters
 
 3. out parameters : when the application expects more than one value from a function call, we can use out parameters
 
-4. ParamArray (parameter array)
+4. ParamArray (parameter array) : 
+
+Statements : Conditional Statements ( if, else, switch)
+             Iteration statements ( do while, while do, for, foreach)
+                 initial counter value, condition and change of counter value  - 3 aspects of any loop
+             Jump Statements (return, break, continue, (goto - label, throw)
+
+Types of Operators :
+ - Arithmetic 
+ - Assignment
+ - Logical   - not, and, or
+ - Relational
+ - Null Coalescing
+ - Misc : sizeof(), typeof()
+
+C# Supports 2 more types viz. 
+   Implicitly typed : variables that can be assigned values of a specific data type
+                      we have to initialize the var types with values during declaration
+                      once initialized, cannot be changed
+                      very useful in receiving return values/iterations etc
+
+   dynamic type  : is reference type that remains dynamic irrespective to the values assigned
+                   no need to initialize at the time of declaration
+                   undergoes boxing and unboxing during runtime (an overhead on the runtime that might cause performance issues)
+                   minimise usage of dynamic objects
+
+
+Arrays :
+
+is a collection of values of same datatype specified with size
+
+There are 3 types of arrays in c#
+
+ Single Dimension
+ Two/Multi dimension
+ Jagged 
+
+Array Instantiation :
+ Datatype[] <arrayname> = new datatype[size]
+
+Data type : specifies what type of data is stored
+arrayname indicates the name of the array
+new is a runtime operator to allocate memory
+size indicates number of elements
+
+int[] arr=new int[5];
+string[] words = new string[3];
+
+int[]arr=new int[5]{1,2,3,4,5}; declaring and initializing the array
+int[]arr= new int[]={1,2,3,4,5};
+
+ 
+ 
+
+

@@ -10,21 +10,30 @@ namespace Day2_Dotnet
     {
         static void Main()
         {
-            int x = 10;
-            Console.WriteLine("X  before calling a function is {0}", x);
-            CallByValue(x);  //calling a function
-            Console.WriteLine("X after calling the function is {0}", x);
-            Console.WriteLine("++++++++++++++++++");
-            Program program = new Program();
-            Console.WriteLine("X  before calling a function is {0}", x);
-            program.CallByRef(ref x);
+            //int x = 10;
+            //Console.WriteLine("X  before calling a function is {0}", x);
+            //CallByValue(x);  //calling a function
+            //Console.WriteLine("X after calling the function is {0}", x);
+            //Console.WriteLine("++++++++++++++++++");
+            //Program program = new Program();
+            //Console.WriteLine("X  before calling a function is {0}", x);
+            //program.CallByRef(ref x);
 
-            Console.WriteLine("X after calling the function is {0}", x);
+            //Console.WriteLine("X after calling the function is {0}", x);
 
-            Console.WriteLine("-------out parameter-------");
-            int total, prod, diff, div = 0;
-            div = CalculatorFunc(15, 10, out total, out prod, out diff);
-            Console.WriteLine($"Sum is {total}, Product is {prod}, Difference is {diff}, and Division is {div}");
+            //Console.WriteLine("-------out parameter-------");
+            //int total, prod, diff, div = 0;
+            //div = CalculatorFunc(15, 10, out total, out prod, out diff);
+            //Console.WriteLine($"Sum is {total}, Product is {prod}, Difference is {diff}, and Division is {div}");
+            // Decisionmaking dm = new Decisionmaking();
+            // dm.CheckGrade();
+            // dm.CheckGradeWithSwitch();
+            Loops loops = new Loops();
+           // loops.WhileLoop();
+           // loops.DoWhileLoop();
+          //  Console.WriteLine("-------for loop with jump st. -------");
+           // loops.ForLoop();
+            loops.ImplicitTypeExample();
             Console.Read();
         }
 
@@ -47,7 +56,7 @@ namespace Day2_Dotnet
             sum = a + b;
             product = a * b;
             difference = a - b;
-            return a / b;
+            return a / b;            
         }
     }
 }
