@@ -20,3 +20,62 @@ Strings : are a collection of characters
                 enum is the keyword used to declare enumeration type
                 the default type of enumeration list elements is int
                 is used when we want to store a list of values that generally correspond to a particular type
+
+OO Programming : is an architectural design of creating applications
+
+WYSIWYG 
+  - Encapsulation : Unit of Info.
+  - Abstraction: Give Required data alone, hide not required data 
+  - Polymorphism : Object exhibiting many forms
+                    overloading
+                    overriding
+  - Inheritance  : Single
+                   Multilevel
+
+Classes : are type definitions which can contain field, methods, properties, indexers etc.
+
+ Objects : are instances of the class
+           they have state and behaviour
+           
+
+  fields contain data
+  methods operate on the data
+
+Constructors : are special functions of the class
+               have the same name as that of the class
+               may be overloaded (parameterized constructors)
+               do not have any return type
+               are either public or internal
+               are meant for initializing the fields   
+               they are called at the time of object creation
+               framework provides a default constructor, if the class does not have any
+
+Destructors : is also a special function of a class
+              meant to release the memory
+              has the same name as that of the class prefixed with a '~'
+              has no return type
+              cannot be overloaded (only one per class)
+              cannot explicitly call a destructor.
+
+Constants vs readonly vs static
+
+Read only - variables are declared using 'readonly' keyword
+            values of readonly variables cannot be modified after it is initialized
+            values of readonly variables can be initialized either at the time of declaration or at the time of construction 
+            the behaviour of the readonly variables is similar to that of non-static variable, meaning it maintains a separate copy for each object, but the difference is non-static variables can be modified, but readonly cannot
+            both readonly and non-static need object to access them
+      
+
+
+Constants : a variable whose value is fixed.
+            is like a static variable, meaning they are not available for each object but instead
+                 available for the entire class
+            both constant and static do need any object to access
+            static variables can be modified, but constants cannot
+            has to be initialized at the time of declaration itself
+
+
+Access Specifiers / modifiers are the capabilities that we can build into the class (what is possible, and what is not)
+
+
+               
