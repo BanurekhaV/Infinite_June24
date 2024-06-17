@@ -8,7 +8,14 @@ Methods n Parameters
 
 3. out parameters : when the application expects more than one value from a function call, we can use out parameters
 
-4. ParamArray (parameter array) : 
+4. ParamArray (parameter array) :  'params' is the keyword that helps in giving a variable number of arguments/parameters, an arraylist separated by comma, or no arguments
+ - params keyword should be the last in the method declaration
+ - can have only one params for a function
+public static void get_Skilldata(int age, string name, params string[] skills){  }
+
+   get_skilldata(25,"ABC")
+   get_skilldata(23,"XYZ","C#")
+   get_skilldata(24,"PQR","C#","SQl","Html","Angular")
 
 Statements : Conditional Statements ( if, else, switch)
              Iteration statements ( do while, while do, for, foreach)
@@ -64,7 +71,31 @@ string[] words = new string[3];
 int[]arr=new int[5]{1,2,3,4,5}; declaring and initializing the array
 int[]arr= new int[]={1,2,3,4,5};
 
- 
+ switching multiple variables 
+
+int intval; string strval; bool boolval;
+
+switch(intval,strval,boolval)
+{
+  case(1,"Sahana",true)
+   c.w("cleared");
+   break;
+  case(2,"Tanmayee",false)
+   c.w("need to attempt"); break;
+  
+ }
+
+
+"expression syntax" of case
+
+string result = (intval,strval,boolval) switch
+{
+  (1,"Sahana",true)=>"cleared",
+  
+  (2,"Tanmayee",false)=>"To attempt",
+  _=>"Default"
+  
+ }
  
 
 

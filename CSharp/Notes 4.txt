@@ -1,0 +1,22 @@
+Strings : are a collection of characters
+          Memory is allocated in the heap
+         String is a predefined reference type
+         Strings have fixed size 
+         Strings are immutable
+         Strings memory cannot be changed dynamically
+
+   string s= "abc"
+   
+
+ StringBuilder - are similar to strings except for that they are mutable
+
+ Structures : are value types, where as classes are reference types
+             it is a user defined value type
+             is used when we want to store different data types as a single unit
+
+
+ Enumerations : Enumerations are a set/collection of named constants
+                it is a user defined value type
+                enum is the keyword used to declare enumeration type
+                the default type of enumeration list elements is int
+                is used when we want to store a list of values that generally correspond to a particular type

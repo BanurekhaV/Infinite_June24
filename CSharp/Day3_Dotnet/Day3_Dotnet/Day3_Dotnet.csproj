@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D8BD8618-9F5E-4AA4-BE48-CC867D811EFB}</ProjectGuid>
+    <ProjectGuid>{D3467D58-DDB1-4DD9-8F5A-67FBAFE24B06}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day2_Dotnet</RootNamespace>
-    <AssemblyName>Day2_Dotnet</AssemblyName>
+    <RootNamespace>Day3_Dotnet</RootNamespace>
+    <AssemblyName>Day3_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day2_Dotnet.ParamsEg</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArraysEg.cs" />
-    <Compile Include="Decisionmaking.cs" />
-    <Compile Include="ParamsEg.cs" />
+    <Compile Include="EnumerationsEg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
