@@ -4,9 +4,59 @@ Polymorphism : Many Forms
  Overloading can be either 
    - function/method overloading ( are functions with same name but different number of arguments or different datatypes of arguments. Return types alone do not specify overload)
    function signature should be different in terms of the parameters/arguments
-   - operator overloading
-
-
+   - overloading is always within the same class
 int add(int x, int y)  { return x+y;}
 
 float add(int a, float b) { return a+b;}
+
+-call resolution in function overloading are done by the compiler 
+-call resolution is binding the function implementation/body/definition to the place of call to a function
+-since call resolution happens at the compile time, this is also known as static polymorphism/early binding/compile time binding
+
+
+   - operator overloading : are general operators that are overloaded to work with objects
+
+eg : int a=5, b=6, c;
+    c = a + b;
+c.w(c) ; 11  
+a++ = a= a + 1
+
+object a, b, c
+
+ c= a + b;  //will throw errors
+
+
+write a csharp prg to overload a ++ unary operator;
+
+Goto labels : are used to transfer control within the function
+they are used with any valid identifiers followed by a :
+They are unstructured control of flow of statements
+
+Inheritance : A fundamental concept of OO programming that allows to define a new class based on the existing class ( extension)
+ - it is a relationship between 2 class
+ - can be implemented either using 'is a relationship' or ' has a' relationship (aggregation/composition)
+
+car is a vehicle   - inheritance
+
+car has an engine  - containtment
+
+class vehicle{ 
+
+protected int no,of wheels;}
+
+class car : vehicle
+{
+   Engine e;
+  string cartype ;
+}
+
+
+class Engine{
+double horsepower;}
+
+Base class being the first to get created, there will be a need to initialize the base class members thru the child class constructor, when
+  - the base class does not have an empty constructor and has only parameterized constructor
+
+The above is not required if the base class does not have any constructors or has an empty constructor
+
+ 

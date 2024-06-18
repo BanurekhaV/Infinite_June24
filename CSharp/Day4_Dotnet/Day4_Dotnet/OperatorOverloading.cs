@@ -26,6 +26,13 @@ namespace Day4_Dotnet
             return temp;
         }
 
+        public static Distance operator ++(Distance d)
+        {
+            Distance dtemp = new Distance();
+            dtemp.dist1 = d.dist1 + 1;
+            return dtemp;
+        }
+
     }
     class OperatorOverloading
     {
@@ -36,9 +43,11 @@ namespace Day4_Dotnet
             d1.dist1 = 50;
             d2.dist1 = 80;
             Distance totaldistance = d1 + d2;  // the operator overloaded function is called
-            
-            Console.WriteLine("The overall Distance is {0} ans Myvar is {1}", totaldistance.dist1, totaldistance.myvariable);
-            totaldistance = d1++;
+
+            Console.WriteLine("The overall Distance is {0} and Myvar is {1} ", totaldistance.dist1, totaldistance.myvariable);
+            d1++;
+            totaldistance.dist1 = d1.dist1;
+            Console.WriteLine(d1.dist1 + " "+ totaldistance.dist1);
             Console.Read();
 
         }

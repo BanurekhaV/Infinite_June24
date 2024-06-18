@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day4_Dotnet.OperatorOverloading</StartupObject>
+    <StartupObject>Day4_Dotnet.BaseClassInitialization</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseClassInitialization.cs" />
+    <Compile Include="Multilevel_Inheritance.cs" />
     <Compile Include="OperatorOverloading.cs" />
     <Compile Include="Polymorphism.cs" />
     <Compile Include="Program.cs" />
