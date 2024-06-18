@@ -1,0 +1,11 @@
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\bin\Debug\Day4_Dotnet_2.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\bin\Debug\Day4_Dotnet_2.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\bin\Debug\Day4_Dotnet_2.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\bin\Debug\Day4_Dotnet.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\bin\Debug\Day4_Dotnet.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\bin\Debug\Day4_Dotnet.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\obj\Debug\Day4_Dotnet_2.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\obj\Debug\Day4_Dotnet_2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\obj\Debug\Day4_Dotnet_2.csproj.CopyComplete
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\obj\Debug\Day4_Dotnet_2.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day4_Dotnet\Day4_Dotnet_2\obj\Debug\Day4_Dotnet_2.pdb

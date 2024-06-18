@@ -76,6 +76,34 @@ Constants : a variable whose value is fixed.
 
 
 Access Specifiers / modifiers are the capabilities that we can build into the class (what is possible, and what is not)
+-Defines the scope and visibility of a class member.
+Encapsulation is defined as the process of enclosing one or more items within a physical or logical structure
+
+Note :All classes are internal by default
+----
+     All members of the class are private by default
+     
+C# supports the below access specifiers
+  1. Private : -are members that are accessible only in the class where they are declared
+               -nowhere else
+              - All class members are private by default
+  2. Public :  - are accessible within the current assembly or outside the assembly.
+               - are accessible with or without derivation (child class)
+               - We need an object of the class whose public members we would like to access
+
+  To access the public members outside of an assembly, we need to do the following
+
+       1. Add a reference of the assembly that needs to be used
+       2. Include the assembly in the using clause
+       3. Create objects and start using the members
+  3. Protected : members of a class are accessible to all its derived classes
+                 - derived classes can be in the same assembly or in other assemblies
+  4. Internal : exactly like a public access specifier, providing access to derived or non-derived classes but of the same assembly
+
+  5. Internal protected or Protected Internal : internal to all the derived and non derived class of the same assembly and
+       -protected to all the derived classes irrespective of the assembly
+
+  
 
 
                

@@ -1,0 +1,12 @@
+Polymorphism : Many Forms
+  is achieved using  a) overloading and b) overriding
+
+ Overloading can be either 
+   - function/method overloading ( are functions with same name but different number of arguments or different datatypes of arguments. Return types alone do not specify overload)
+   function signature should be different in terms of the parameters/arguments
+   - operator overloading
+
+
+int add(int x, int y)  { return x+y;}
+
+float add(int a, float b) { return a+b;}
