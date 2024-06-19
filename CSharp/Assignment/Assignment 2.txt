@@ -1,0 +1,33 @@
+1. Write a C# program to compute the sum of two given integers. If two values are the same, return the triple of their sum.
+
+2 . Write a C# Sharp program to read any day number as an integer and display the name of the day as a word.
+
+Test Data / input: 2
+
+Expected Output :
+Tuesday
+
+----------------------------------------------------------------------------------------
+Arrays 
+
+1.    Write a  Program to assign integer values to an array  and then print the following
+	a.	Average value of Array elements
+	b.	Minimum and Maximum value in an array 
+    
+2.	Write a program in C# to accept ten marks and display the following
+	a.	Total
+	b.	Average
+	c.	Minimum marks
+	d.	Maximum marks
+	e.	Display marks in ascending order
+	f.	Display marks in descending order
+
+3.  Write a C# Sharp program to copy the elements of one array into another array.(do not use any inbuilt functions)
+
+Strings Assignment :
+
+1.	Write a program in C# to accept a word from the user and display the length of it.
+2.	Write a program in C# to accept a word from the user and display the reverse of it. 
+3.	Write a program in C# to accept two words from user and find out if they are same. 
+
+Hint: Use functions of the string class

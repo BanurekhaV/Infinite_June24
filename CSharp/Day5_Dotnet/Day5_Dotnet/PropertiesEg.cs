@@ -14,7 +14,7 @@ namespace Day5_Dotnet
         private float marks = 60;
 
         //declare properties for all the private members
-        public string Code
+        public string RollNo
         {
             get { return code; }
             set { code = value;}
@@ -23,7 +23,10 @@ namespace Day5_Dotnet
         public int _Age
         {
             get { return age; }
-            set { age = value; }
+            set { if (value >= 15)
+                    age = 10;
+                else age = value;
+            }
         }
 
         public float Marks
@@ -42,13 +45,41 @@ namespace Day5_Dotnet
         {
             Student stud = new Student();
 
-            stud.Code = "S001";
+            stud.RollNo = "S001";  // set accessor is invoked
             stud._Age = 13;
+            
             //stud.Marks = 56;  cannot assign value to marks as the property has only get and not set
-            Console.WriteLine("student Info : {0}", stud.ToString());
-            Console.WriteLine($"student info from outside Code = {stud.Code}, Age = {stud._Age} and " +
-                $"Marks = {stud.Marks}");
+            //Console.WriteLine("student Info : {0}", stud.ToString());
+            //Console.WriteLine($"student info from outside Code = {stud.RollNo}, Age = {stud._Age} and " +
+            //    $"Marks = {stud.Marks}"); // get accessor is invoked
+            //Console.WriteLine("+++++++++++++++++");
+            ////let us increment the age
+            //stud._Age += 2;
+            //Console.WriteLine($"student info from outside Code = {stud.RollNo}, Age = {stud._Age} and " +
+            //    $"Marks = {stud.Marks}");
+            Console.WriteLine("========= Auto Property Implementation =======");
+            AutoStudent autos = new AutoStudent();
+            autos.DisplayAutoStudent();
             Console.Read();
+        }
+    }
+
+    class AutoStudent
+    {
+        //let us declare and define automatic implementation of properties
+        public string RollNo { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public float Marks { get; } = 75;
+
+        public void DisplayAutoStudent()
+        {
+            AutoStudent ast = new AutoStudent();
+            ast.RollNo = "R100";
+            ast.Name = "Infinite Ltd.";
+            ast.Age = 25;
+            
+            Console.WriteLine($"Student info {ast.RollNo}, {ast.Name}, {ast.Age} and {ast.Marks}");
         }
     }
 }

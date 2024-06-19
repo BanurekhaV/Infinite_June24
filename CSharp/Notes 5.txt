@@ -96,3 +96,5 @@ Properties : are named members of a class, structure, interfaces
              they have to be declared with public modifier
              they have the same datatype as that of the field for which we are writing the property
 
+Automatic property implementation :
+
