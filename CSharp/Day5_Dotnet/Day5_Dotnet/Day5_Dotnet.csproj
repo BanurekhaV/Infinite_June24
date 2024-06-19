@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90951A4D-A351-47C4-B24A-210E6C923BE4}</ProjectGuid>
+    <ProjectGuid>{CD88C170-0FAB-4298-A181-CC7A00E38149}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day4_Dotnet</RootNamespace>
-    <AssemblyName>Day4_Dotnet</AssemblyName>
+    <RootNamespace>Day5_Dotnet</RootNamespace>
+    <AssemblyName>Day5_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day4_Dotnet.MethodOverriding</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,13 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseClassInitialization.cs" />
-    <Compile Include="MethodOverriding.cs" />
-    <Compile Include="Multilevel_Inheritance.cs" />
-    <Compile Include="Name_method_Hiding.cs" />
-    <Compile Include="OperatorOverloading.cs" />
-    <Compile Include="Polymorphism.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ConstructorTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -59,4 +59,13 @@ Base class being the first to get created, there will be a need to initialize th
 
 The above is not required if the base class does not have any constructors or has an empty constructor
 
- 
+ - Method Hiding/Name Hiding : Is a concept that aids in redefining functionalities of the base class or re declare the members of the base class without overriding using the 'new' keyword
+
+- overriding : when a derived class wants to redefine the functionalities of the base class, we can use the concept of overriding
+  -The base class has to mark the functionality as 'virtual'
+  - The derived class can implement the functionality using 'override' keyword
+  - The derived class cannot change the function signature (neither access specifier/modifier, return type, nor arguments and its type) 
+  - Overriding is always seen between two related classes
+  - It is also known as dynamic polymorphism, late binding, dynamic binding
+
+
