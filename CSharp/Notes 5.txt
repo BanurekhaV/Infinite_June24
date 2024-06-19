@@ -68,4 +68,31 @@ The above is not required if the base class does not have any constructors or ha
   - Overriding is always seen between two related classes
   - It is also known as dynamic polymorphism, late binding, dynamic binding
 
+Constructor Types :
+ 
+  0. this keyword : used for constructor chaining of the same class
+  1. Private : cannot create objects of the class outside the class. Also cannot inherit from the class
+  2. Protected : Only derived classes will be able to create objects of the base class. 
+  3. Static : static constructors are for the entire class and it executes before any instance of the class is created
+         - static constructors initialize static members
+         - are executed only once 
+         - they cannot take any modifiers (like public protected etc)
+         - they cannot be provided with parameters/arguments unlike the instance constructors
+         - they are called automatically
+         - user has no control on when the static constructor is executed 
+
+
+
+Class Info :
+   fields  : are member variables that can store data
+   constructors 
+   functions
+
+Properties : are named members of a class, structure, interfaces
+             are extensions of the fields 
+             they are accessed using accessors (get- to read the contents, set - write the content)
+             through the properties, we can access private fields
+             they do not have storage locations
+             they have to be declared with public modifier
+             they have the same datatype as that of the field for which we are writing the property
 

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Day5_Dotnet.PropertiesEg</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstructorTypes.cs" />
+    <Compile Include="PropertiesEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticConstructorEg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
