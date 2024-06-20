@@ -1,0 +1,10 @@
+Indexers : An indexer allows an object to be indexed such as an array. When we define an indexer for a class, this behaves similar to the virtual array.
+           We can access the instance of the class using the array access operator '[]'
+
+Declaration and behaviour of an indexer is to some extent similar to that of a property.
+ Property                  vs                  Indexer
+accessed using get and set accessors		Are also accessed using get and set accessors
+Gets or Sets a specific data member		Gets or sets a particular value from the object instance
+                                                  ( it breaks the instance data into smaller parts and indexes each part. and gets
+                                                    or sets each part)
+Are defined with a name				Are defined with a 'this' keyword
