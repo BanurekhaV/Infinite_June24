@@ -54,11 +54,19 @@ namespace Day6_Dotnet
             return 0;
         }
 
-        public int this[string day]
+        public int this[string day]  // will return the index of the given day
         {
             get
             {
                 return (GetDay(day));
+            }
+        }
+
+        public string this[int x]
+        {
+            get
+            {
+                return days[x];  //will return the day at a particular position/index
             }
         }
     }
@@ -76,8 +84,10 @@ namespace Day6_Dotnet
             Console.WriteLine("-------------------");
             IndexersEg2 ind2 = new IndexersEg2();
 
-            Console.WriteLine(ind2["Thur"]);
+            Console.WriteLine(ind2["Thur"]); // calling the matching indexer
             Console.WriteLine(ind2.GetDay("Fri"));
+            Console.WriteLine(ind2["someday"]);
+            Console.WriteLine(ind2[3]);
             Console.Read();
         }
     }
