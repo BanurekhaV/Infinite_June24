@@ -17,7 +17,7 @@ namespace Day7_Dotnet
         void DoPurchase(int qty);
     }
 
-    interface IOrders
+    interface IOrders : IProducts
     {
         void PrintOrders();
     }
@@ -42,6 +42,11 @@ namespace Day7_Dotnet
         public void PrintOrders()
         {
             Console.WriteLine("Order is ready for despatch..");
+        }
+
+        public string ProductDetails()
+        {
+            return "All product details are here..";
         }
     }
     class Program

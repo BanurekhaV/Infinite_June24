@@ -1,0 +1,29 @@
+Interfaces : are like classes which contain properties, methods, delegates, events, but only declarations and no implementation
+- are declared using 'interface' keyword
+- interface members are public by default
+- they do not allow explicit access modifiers
+- the class that inherits from the interface will have to provide implementation to all the members
+- a class can inherit from multiple interface (class a : iint1, iint2, iint3)
+- interfaces can inherit from other interfaces (interface IMyinterface : IYourInterface, IourInterface)
+- we cannot create interface instance , but a reference object can be made to point to the derived classes 
+
+Advantages :
+ - it is used to achieve loose coupling
+ - it is used to achieve total abstraction
+ - it is used to achieve component-based programming
+ - multiple inheritance and abstraction
+ - they add a plug and play like architecture into applications
+
+Inheritance Chain : Implementing all the methods of all the interfaces in the hierarchy is known as interface chaining
+
+Explicit Interface Implementation : When a class implements 2 or more interfaces, and if those interfaces have the same method(including the signature), we can go for explicit implementation
+
+Points for explicit interface implementation
+1. the explicit method has to be preceded with the name of the interface (as per the demo IProducts.productDetails())
+2. We have to remove the modifier as it is not allowed ( remove the public keyword)
+3. Write the implementation code
+
+In order to execute the explicitly implemented methods, we have 2 options
+ 1. Create Interface reference variable and make it point to the Implementing class 
+ 
+ 2. Create implementing class object and typecast it to the interface
