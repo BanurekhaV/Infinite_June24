@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day7_Dotnet.Business</StartupObject>
+    <StartupObject>Day7_Dotnet.EqualsMethodEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EqualsMethodEg.cs" />
     <Compile Include="Explicit_Interface_Implementation.cs" />
+    <Compile Include="Interface_WithProperties.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

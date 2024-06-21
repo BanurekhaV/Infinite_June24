@@ -27,3 +27,35 @@ In order to execute the explicitly implemented methods, we have 2 options
  1. Create Interface reference variable and make it point to the Implementing class 
  
  2. Create implementing class object and typecast it to the interface
+
+
+Interfaces                       vs                                  Abstract classes
+- A class can implement many interfaces				-A class can inherit only one abstract class
+- An interface cannot provide any code until it is default      -An abstract class can provide complete code ,virtual ,abstract, and default code
+- Does not allow modifiers					-Allows
+- Needs time to find actual method in the implementing class	-Fast
+- Cannot declare fields						-Can declare field, constants etc. No readonly
+
+--------------------------------------------------------------------------------------------------
+
+== operator and Equals()method compares the data of 2 value types
+
+== operator and Equals()method compares the reference of 2 reference types
+
+overriding the Equals() of the Object class
+
+
+
+'is' - checking for same type (obj is Customer) and 
+'as' - used for converting one type to another( int as float)
+
+
+
+
+
+
+
+
+
+
+
