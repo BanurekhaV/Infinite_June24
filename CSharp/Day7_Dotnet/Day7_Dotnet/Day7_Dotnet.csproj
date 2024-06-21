@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{678499C7-32C8-4D8E-B58F-F568B7D9603B}</ProjectGuid>
+    <ProjectGuid>{D0CF5287-4002-48C6-8803-0B27A739E619}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day6_Dotnet</RootNamespace>
-    <AssemblyName>Day6_Dotnet</AssemblyName>
+    <RootNamespace>Day7_Dotnet</RootNamespace>
+    <AssemblyName>Day7_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day6_Dotnet.AbstractEg</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractEg.cs" />
-    <Compile Include="IndexersDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SomeMoreIndexers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

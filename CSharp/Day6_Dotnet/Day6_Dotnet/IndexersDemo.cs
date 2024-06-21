@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day6_Dotnet
 {
-    public class Employee
+    public partial class Employee
     {
         //declare properties
         public int ID { get; set; }
@@ -66,22 +66,22 @@ namespace Day6_Dotnet
 
         //2nd indexer to access the properties with their names
         //thereby we are overloading the indexer
-        public object this[string prop]
-        {
-            get
-            {
-                if (prop == "ID")
-                    return ID;
-                else if (prop == "Name")
-                    return Name;
-            }
-            set
-            {              
-               if (prop=="ID")
-               ID = Convert.ToInt32(value);
+        //public object this[string prop]
+        //{
+        //    //get
+            //{
+            //    if (prop.ToUpper() == "ID")
+            //        return ID;
+            //    else if (prop == "Name")
+            //        return Name;
+            //}
+            //set
+            //{              
+            //   if (prop=="ID")
+            //   ID = Convert.ToInt32(value);
 
-            }
-        }
+            //}
+        
     }
     class IndexersDemo
     {
@@ -101,12 +101,13 @@ namespace Day6_Dotnet
             emp[3] = 50000;
             emp[5] = "Quality";
             Console.WriteLine("===============================");
-            Console.WriteLine("EID = " + emp[0]);  // emp["ID"]
+            Console.WriteLine("EID = " + emp[0]);  // emp["id"]
             Console.WriteLine("Name = " + emp[1]);
             Console.WriteLine("Salary = " + emp[3]);
             Console.WriteLine("Department = " + emp[5]);
-
+          
             Console.Read();
         }
     }
+
 }
