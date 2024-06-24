@@ -1,0 +1,22 @@
+1. Create a Class Program which would be used to accepts two  Strings - FirstName and LastName and call the static method Display() that displays the first name in one line and the LastName in the second line after converting the same to upper case.
+
+2. Create a Program to count the no. of occurrences of a letter in a given string (for example in a string called “OOPS PROGRAMMING”, O appears 3 times)
+Hint : Accept a string and also the letter to be counted
+
+Exception Handling    Assignment  
+3.
+•	You have a class which has methods for transaction for a banking system. (created earlier)
+•	Define your own methods for deposit money, withdraw money and balance in the account.
+•	Write your own new application Exception class called InsuffientBalanceException. 
+•	This new Exception will be thrown in case of withdrawal of money from the account where customer doesn’t have sufficient balance.
+•	Identify and categorize all possible checked and unchecked exception.
+
+4. Create a class called Scholarship which has a function Public void Merit() that takes marks and fees as an input. 
+If the given mark is >= 70 and <=80, then calculate scholarship amount as 20% of the fees
+If the given mark is > 80 and <=90, then calculate scholarship amount as 30% of the fees
+If the given mark is >90, then calculate scholarship amount as 50% of the fees.
+In all the cases return the Scholarship amount
+
+Properties
+
+ 5. Create a Class called Doctor with RegnNo, Name, Feescharged as Private members. Create properties to give values and also to display the same.

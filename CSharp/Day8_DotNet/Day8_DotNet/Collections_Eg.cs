@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
 
 
@@ -20,9 +19,9 @@ namespace Day8_DotNet
             arrlst1.Add(345);
             arrlst1.Add("AAA");
 
-            Console.WriteLine(arrlst1.Count + " "+ arrlst1.Capacity);
+            Console.WriteLine(arrlst1.Count + " " + arrlst1.Capacity);
 
-            foreach(var item in arrlst1)
+            foreach (var item in arrlst1)
             {
                 Console.WriteLine(item);
             }
@@ -81,13 +80,81 @@ namespace Day8_DotNet
                 Console.WriteLine(item);
             }
 
+            Console.WriteLine("-----------------");
+            //in order to get both the keys and values
 
+            foreach (DictionaryEntry de in ht)
+            {
+                Console.Write(de.Key + " ");
+                Console.Write(de.Value);
+                Console.WriteLine();
+            }
+            Console.WriteLine("Searching.............a record");
+            Console.WriteLine("Enter a Key to search :");
+            string ekey = Console.ReadLine();
+            if (ht.ContainsKey(ekey))
+            {
+                Console.WriteLine(ekey + " = " + ht[ekey]);
+            }
+            else
+                Console.WriteLine(ekey + " does not exists");
+        }
+
+        public static void Others()
+        {
+            SortedList sl = new SortedList();
+            sl.Add("ora", "Oracle");
+            sl.Add("vb", "Visual basic");
+            sl.Add("cs", "CSharp");
+            sl.Add("asp", "ASP Net");
+
+            foreach(DictionaryEntry de in sl)
+            {
+                Console.WriteLine(de.Key + " " + de.Value);
+            }
+
+            Console.WriteLine("--------------------");
+
+            Stack st = new Stack();
+            st.Push(100);
+            st.Push("AAAA");
+            st.Push(400);
+
+            foreach(var item in st)
+            {
+                Console.WriteLine(item);
+            }
+
+             st.Pop();
+            foreach (var item in st)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(st.Peek());
+            Console.WriteLine("=================");
+            Queue q = new Queue();
+            q.Enqueue("CSharp.Net");
+            q.Enqueue("VB.Net");
+            q.Enqueue("ASP.Net");
+            q.Enqueue("ADO.Net");
+
+            foreach(Object o in q)
+            {
+                Console.WriteLine(o);
+            }
+
+            q.Dequeue();
+            foreach (Object o in q)
+            {
+                Console.WriteLine(o);
+            }
         }
 
         public static void Main()
         {
             //  ArrayListEg();
-            HashTableEg();
+            //HashTableEg();
+            Others();
             Console.Read();
         }
     }
