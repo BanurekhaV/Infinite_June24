@@ -17,15 +17,20 @@ namespace Day8_DotNet
             a = int.Parse(Console.ReadLine());
             b = Convert.ToInt32(Console.ReadLine());
             c = a / b;
-                int[] arr = { 1, 2, 3, 4 };
-                Console.WriteLine(arr[6]);
-            Console.WriteLine(c);
+             Console.WriteLine(c);
+             int[] arr = { 1, 2, 3, 4 };
+            Console.WriteLine(arr[6]);
+           
                 Console.Read();
             }
             
             catch (FormatException fe)
             {
-                Console.WriteLine(fe.Message);
+                Console.WriteLine(fe.Message + " "+ fe.StackTrace + " "+ fe.Source);
+            }
+            catch(IndexOutOfRangeException e)
+            {
+                Console.WriteLine("Trying to read beyond the array size");
             }
             catch (DivideByZeroException de)
             {
