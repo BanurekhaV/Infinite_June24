@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D0CF5287-4002-48C6-8803-0B27A739E619}</ProjectGuid>
+    <ProjectGuid>{5725A4DD-CBF4-40A7-A300-B082BAFB4BE6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day7_Dotnet</RootNamespace>
-    <AssemblyName>Day7_Dotnet</AssemblyName>
+    <RootNamespace>Day8_DotNet</RootNamespace>
+    <AssemblyName>Day8_DotNet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day7_Dotnet.CompareToEg</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,10 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompareToEg.cs" />
-    <Compile Include="EqualsMethodEg.cs" />
-    <Compile Include="Explicit_Interface_Implementation.cs" />
-    <Compile Include="Interface_WithProperties.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

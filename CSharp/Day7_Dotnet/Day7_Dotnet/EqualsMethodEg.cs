@@ -1,5 +1,6 @@
 ﻿using System;
 using static System.Console;
+using System.Text;
 
 namespace Day7_Dotnet
 {
@@ -21,10 +22,29 @@ namespace Day7_Dotnet
             //WriteLine(d1 == d2);
             //WriteLine(d1.Equals(d2));
             WriteLine("*************************");
-            Equality_With_ReferenceTypes();
+            // Equality_With_ReferenceTypes();
+            ReferenceEquals();
             Console.Read();
         }
 
+        public static void ReferenceEquals()
+        {
+            StringBuilder sb1 = new StringBuilder();
+            StringBuilder sb2 = new StringBuilder();
+            Console.WriteLine(Object.ReferenceEquals(sb1,sb2));
+
+            sb1 = sb2;
+            Console.WriteLine(Object.ReferenceEquals(sb1, sb2));
+
+            //let us test the string literals
+            Console.WriteLine("----------------------");
+            string lit1 = "a";
+            string lit2 = "a";
+            Console.WriteLine(Object.ReferenceEquals(lit1,lit2));
+            lit1 = lit2;
+            Console.WriteLine(Object.ReferenceEquals(lit1, lit2));
+
+        }
         public static void Equality_With_ReferenceTypes()
         {
             Customers c1 = new Customers();
@@ -71,9 +91,9 @@ namespace Day7_Dotnet
                 (this.LastName == ((Customers)obj).LastName);
         }
 
-        public override int GetHashCode()
-        {
-            return FirstName.GetHashCode() ^ LastName.GetHashCode();
-        }
+        //public override int GetHashCode()
+        //{
+        //    return FirstName.GetHashCode() ^ LastName.GetHashCode();
+        //}
     }
 }

@@ -1,0 +1,28 @@
+Reference Equals : method of the Object class that compares the references of 2 given objects
+
+CompareTo : Compares two integer values and returns
+ -1 (when first number is small)
+  1 (when first number is bigger)
+  0 (when both numbers are equal)
+
+IComparable Interface has one method CompareTo(object Obj), that can be implemented in a class which wants to compare object values
+
+IComparer - interface has Compare() 
+
+
+Exceptions : are unwanted/unexpected events during the program execution.
+
+Handling Exceptions: We need to handle exceptions since we want to exit from the program by indicating in simple terms the issue to the user. Also we would not want to expose the code to the outsiders.
+
+try{} - block:  is a block that identifies where a particular exception is activated. Which ever part of the code, we anticipate can generate exceptions, need to be put inside try block.
+   try block is always followed by 1 or more catch block()
+catch Block : This place is where we handle the exception
+-between try and catch blocks, no other executable code is allowed
+
+finally block : is used to execute statements irrespective of exceptions or not. Normally all clean up and closure statements can be executed here.
+
+throw : keyword is used to raise exceptions
+
+All C# exceptions are represented by classes that are directly or indirectly inherited from System.Exception class
+
+
