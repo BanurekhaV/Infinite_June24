@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day9_Dotnet.Enumerable_enumerator</StartupObject>
+    <StartupObject>Day9_Dotnet.DictionaryCollection</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllGenerics.cs" />
+    <Compile Include="DictionaryCollection.cs" />
     <Compile Include="Enumerable_enumerator.cs" />
     <Compile Include="GenericIndexers.cs" />
     <Compile Include="Generics_Eg1.cs" />

@@ -1,0 +1,4 @@
+Delegates : are like function pointers of C,C++.
+            A delegate is a reference type object that holds the reference to a method/function
+            the delegate reference can be changed at runtime (dynamic)
+
