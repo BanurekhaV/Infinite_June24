@@ -1,0 +1,13 @@
+Generics : a way of creating classes, methods, indexers, properties, constructors, fields etc decoupled with the data type
+           lets us define type-safe classes, without compromising
+               - type-safety
+               - performance
+               - productivity
+
+
+Non - Generic                            Generic
+ArrayList				List
+HashTable				Dictionary
+SortedList				SortedList<>
+Stacks					Stack<>
+Queue					Queue<>
