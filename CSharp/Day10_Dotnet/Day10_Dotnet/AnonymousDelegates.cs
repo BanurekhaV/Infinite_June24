@@ -37,6 +37,42 @@ namespace Day10_Dotnet
             }
 
             p(500);
+
+            Console.WriteLine("======= Predicate  Delegate ====");
+            Predicate<string> chkupper = delegate (string s)
+            {
+                return s.Equals(s.ToUpper());
+            };
+
+            //calling predicate delegate
+            bool res = chkupper("HELLO World");
+            Console.WriteLine(res);
+
+            Console.WriteLine("========= Action Delegate ======");
+
+            Action<int> Simpleaction = delegate (int x)
+            {
+                Console.WriteLine("The Value of x {0} ", x);
+            };
+
+            Simpleaction(200);
+
+            Console.WriteLine("======== Function Delegate =======");
+            Func<int> getRnumber = delegate ()
+            {
+                Random r = new Random();
+                return r.Next(1, 100);
+            };
+
+            //the above func delegate can be used with lambda expressions
+            Func<int> grn = () => new Random().Next(1, 100);
+
+            Func<int, int, int> Sum = (x, y) => x + y;
+
+            int result = getRnumber();
+            Console.WriteLine(result);
+            Console.WriteLine(grn());
+            Console.WriteLine(Sum(5,10));
             Console.Read();
         }
     }

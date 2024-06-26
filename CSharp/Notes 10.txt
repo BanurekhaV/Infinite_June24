@@ -16,3 +16,14 @@ we can also pass the Delegate object as an argument/parameter to a function
 We can have Generic delegates thru which we achieve polymorphism
 
 Anonymous Delegates : are delegates that point to functions without name
+
+Types of Delegates: 
+
+1. Predicate Delegates : is a delegate type that takes one input and returns a Boolean type. Can be used with anonymous methods as well lambda expressions
+
+2. Action Delegates : are delegate type that may not take any input, nor return any
+
+3. Functions Delegates : is a built in delegate type.
+                         has to return a value
+                         can take 0 to 16 inputs
+                         does not allow 'ref' and 'out' parameters
