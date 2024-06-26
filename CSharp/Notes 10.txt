@@ -8,4 +8,11 @@ Steps for Delegate usage :
   3. Assign any function that matches the signature of the delegate
   4. Call the delegate with arguments if any
 
-Multicast Delegates:
+Multicast Delegates: an object of the delegate is made to point to many methods that match the signature
+                    - If we do multicasting to many methods with return values, then the delegate object would return only the value of the last method
+
+we can also pass the Delegate object as an argument/parameter to a function 
+
+We can have Generic delegates thru which we achieve polymorphism
+
+Anonymous Delegates : are delegates that point to functions without name

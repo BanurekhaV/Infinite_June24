@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day10_Dotnet.MulticastDelegates</StartupObject>
+    <StartupObject>Day10_Dotnet.AnonymousDelegates</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnonymousDelegates.cs" />
+    <Compile Include="Delegates_As_Parameter.cs" />
+    <Compile Include="GenericDelegates.cs" />
     <Compile Include="MulticastDelegates.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
