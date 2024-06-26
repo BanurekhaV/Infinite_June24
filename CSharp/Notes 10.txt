@@ -2,3 +2,10 @@ Delegates : are like function pointers of C,C++.
             A delegate is a reference type object that holds the reference to a method/function
             the delegate reference can be changed at runtime (dynamic)
 
+Steps for Delegate usage :
+  1. declare a delegate with signature
+  2. Create objects of the delegate
+  3. Assign any function that matches the signature of the delegate
+  4. Call the delegate with arguments if any
+
+Multicast Delegates:

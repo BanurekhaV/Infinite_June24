@@ -1,0 +1,7 @@
+C:\Banu\Infinite\Batch_June24\CSharp\Day10_Dotnet\Day10_Dotnet\bin\Debug\Day10_Dotnet.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\Day10_Dotnet\Day10_Dotnet\bin\Debug\Day10_Dotnet.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day10_Dotnet\Day10_Dotnet\bin\Debug\Day10_Dotnet.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day10_Dotnet\Day10_Dotnet\obj\Debug\Day10_Dotnet.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day10_Dotnet\Day10_Dotnet\obj\Debug\Day10_Dotnet.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day10_Dotnet\Day10_Dotnet\obj\Debug\Day10_Dotnet.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day10_Dotnet\Day10_Dotnet\obj\Debug\Day10_Dotnet.pdb
