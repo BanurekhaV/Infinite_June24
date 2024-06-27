@@ -27,3 +27,36 @@ Types of Delegates:
                          has to return a value
                          can take 0 to 16 inputs
                          does not allow 'ref' and 'out' parameters
+
+
+Co Variance : allowing an object of more derived type to be assigned to a lesser derived type
+
+Base Class : some common information
+
+derived classes : will be more derived ( base class info + derived class info)
+
+eg : Shape as a Base Class and Rectangle as a derived class
+
+Shape shape = new Rectangle(); 
+
+Contravariance : it is applied more to the parameters of a function  than object or variables 
+
+Events : are hardware related interactions with the application, that responds to them.
+-----------
+User->Events->Delegates->Methods
+
+-They work on Publisher-Subscriber Models
+-Events enable a class or object to notify other classes when something occurs/happens
+
+- the class that raises the event is publisher
+- the class that handles the event is subscriber
+-  publisher determines when an event is raised
+-  events can have multiple subscribers
+-  subscribers can handle events from multiple publishers
+
+Points to Note :
+1. The events are declared, raised in a class and associated with the event handlers using delegates that can be either in the same class or in other cl
+
+
+
+

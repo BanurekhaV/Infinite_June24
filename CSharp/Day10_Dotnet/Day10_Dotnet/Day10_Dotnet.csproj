@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day10_Dotnet.AnonymousDelegates</StartupObject>
+    <StartupObject>Day10_Dotnet.TestEvent</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnonymousDelegates.cs" />
+    <Compile Include="CovarianceEg.cs" />
     <Compile Include="Delegates_As_Parameter.cs" />
+    <Compile Include="Events_1.cs" />
+    <Compile Include="Events_2.cs" />
     <Compile Include="GenericDelegates.cs" />
     <Compile Include="MulticastDelegates.cs" />
     <Compile Include="Program.cs" />

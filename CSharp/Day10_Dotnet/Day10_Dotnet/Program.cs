@@ -25,6 +25,7 @@ namespace Day10_Dotnet
         {
             Console.WriteLine("Hello All Employees"); 
         }
+               
     }
 
     class Numbers
@@ -63,7 +64,7 @@ namespace Day10_Dotnet
 
             //creating objects of the delegate
             Empdelegate ed1 = new Empdelegate(Employee.accept); //assigning the name of the static function/method to the delegate object
-
+           
             Empdelegate ed2 = new Empdelegate(emp.display); //assigning the name of the non-static function/method to the delegate object
             //now let us invoke the delegate
             ed1.Invoke("Amanullah");
