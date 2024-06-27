@@ -19,6 +19,7 @@ namespace Day10_Dotnet
         {
             this.ourEvent += new EventDelegate(this.WelcometheUser);
             this.secondevent += new EventDelegate(this.Someotherfunction);
+            this.secondevent += new EventDelegate(EventSubscriber.Handlerfunction); //event handler in other class than the publisher
         }
 
         public string WelcometheUser(string uname)
@@ -52,6 +53,14 @@ namespace Day10_Dotnet
             string secondresult = eventobj.secondevent("Infinite Assocaiates"); //raising secondevent
             Console.WriteLine(secondresult);
             Console.Read();
+        }
+    }
+
+    class EventSubscriber
+    {
+        public static string Handlerfunction(string str)
+        {
+            return "This is the data in the argument " + str;
         }
     }
 }

@@ -55,7 +55,11 @@ User->Events->Delegates->Methods
 -  subscribers can handle events from multiple publishers
 
 Points to Note :
-1. The events are declared, raised in a class and associated with the event handlers using delegates that can be either in the same class or in other cl
+1. The events are declared, raised in a class and associated with the event handlers using delegates that can be either in the same class or in other classes
+
+2. The class containing the events is used to publish the event.
+3. Publisher is an object that contains the definition of the event and the delegate. The event-delegate association is also defined in this object
+4. Publisher class object invokes the event and notifies to other objects
 
 
 

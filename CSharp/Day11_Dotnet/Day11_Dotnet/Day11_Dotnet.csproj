@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F2181D3-004D-4FC0-B40A-278E6DF85259}</ProjectGuid>
+    <ProjectGuid>{58A9B996-1B5C-401C-9B1E-E1E6F643BEB4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day10_Dotnet</RootNamespace>
-    <AssemblyName>Day10_Dotnet</AssemblyName>
+    <RootNamespace>Day11_Dotnet</RootNamespace>
+    <AssemblyName>Day11_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day10_Dotnet.Events_1</StartupObject>
+    <StartupObject>Day11_Dotnet.UsingBlock</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,15 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnonymousDelegates.cs" />
-    <Compile Include="CovarianceEg.cs" />
-    <Compile Include="Delegates_As_Parameter.cs" />
-    <Compile Include="Events_1.cs" />
-    <Compile Include="Events_2.cs" />
-    <Compile Include="GenericDelegates.cs" />
-    <Compile Include="MulticastDelegates.cs" />
+    <Compile Include="Deep_ShallowCopy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsingBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,0 +1,7 @@
+C:\Banu\Infinite\Batch_June24\CSharp\Day11_Dotnet\Day11_Dotnet\bin\Debug\Day11_Dotnet.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\Day11_Dotnet\Day11_Dotnet\bin\Debug\Day11_Dotnet.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day11_Dotnet\Day11_Dotnet\bin\Debug\Day11_Dotnet.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day11_Dotnet\Day11_Dotnet\obj\Debug\Day11_Dotnet.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day11_Dotnet\Day11_Dotnet\obj\Debug\Day11_Dotnet.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day11_Dotnet\Day11_Dotnet\obj\Debug\Day11_Dotnet.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day11_Dotnet\Day11_Dotnet\obj\Debug\Day11_Dotnet.pdb

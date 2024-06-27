@@ -1,0 +1,45 @@
+Garbage Collection:
+It works on the managed heap memory.
+It has an engine known as Optimization Engine
+Garbage collection occurs if at least one the below conditions are satisfied
+   1. If the system has low physical memory
+   2. If the memory allocated to various objects in the heap exceeds the pre-set threshold 
+   3. If the GC.Collect() is called
+
+Has 3 phases :
+   1. Marking Phase : list of live objects are created in this phase
+   2. Relocating Phase : all the objects that are not in the marking phase, are moved to this phase
+   3. Compacting Phase : All not required dead objects (without references) are released
+
+Generations : heap memory is organised into 3 generations
+Generation 0 : all short lived objects
+Generation 1 : objects moving from gen 0 is collected here
+Generation 2 : objects moving from gen 1 is collected here
+
+Important methods of the garbage collection : GetGeneration(), GetTotalMemory(), Collect()
+
+Dispose() and Finalize() methods also aid in garbage collection
+
+Dispose()                                                        
+- is called by the application either with the object or using the using block
+
+   Finalize()
+- is called by the GC, before the object that is eligible for collection
+
+
+Shallow Copy  :  stores the references of objects to the original memory address
+                 reflects changes made to the new object in the original object
+                 are faster but lazy
+
+DeepCopy : stores copies of the objects value
+           does not reflect changes made to the new object in the original object
+           are little slower than shallow copy
+
+
+the keyword 'using' in C# has 3 representations
+
+ -to include the namespace
+ - to include static classes
+ - in the program block ( automatically calls the Dispose Function and deallocates the objects memory created in the using block)
+
+
