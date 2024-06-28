@@ -38,8 +38,15 @@ DeepCopy : stores copies of the objects value
 
 the keyword 'using' in C# has 3 representations
 
- -to include the namespace
+ - to include the namespace
  - to include static classes
  - in the program block ( automatically calls the Dispose Function and deallocates the objects memory created in the using block)
+
+
+Files : Allows the application to persist the data for later use.
+
+I order to persist data, we have to write onto a source and read from that source. This is enabled in C# by making use of the various in-built classes for persistence. 
+- We have to use the System.IO namespace 
+
 
 
