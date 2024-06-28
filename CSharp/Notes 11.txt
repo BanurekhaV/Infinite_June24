@@ -1,3 +1,5 @@
+file size : 2200 appx
+
 Garbage Collection:
 It works on the managed heap memory.
 It has an engine known as Optimization Engine
@@ -47,6 +49,13 @@ Files : Allows the application to persist the data for later use.
 
 I order to persist data, we have to write onto a source and read from that source. This is enabled in C# by making use of the various in-built classes for persistence. 
 - We have to use the System.IO namespace 
+
+FileInfo and Directory Info classes that helps to create or read from the directory all files and other directories
+
+Serialization : is a process of converting object data into byte stream, so that it can be saved in the memory, files or database
+
+DeSerialization : is the reverse of Serialization , meaning converting byte stream to objects
+
 
 
 

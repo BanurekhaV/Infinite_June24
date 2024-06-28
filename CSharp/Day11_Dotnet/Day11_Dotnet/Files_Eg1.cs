@@ -11,6 +11,7 @@ namespace Day11_Dotnet
             // WriteBinary();
             // ReadBinary();
             FilesEg2 file2 = new FilesEg2();
+            file2.WriteData();
             file2.ReadData();
             Console.Read();
         }
@@ -40,7 +41,7 @@ namespace Day11_Dotnet
     {
         public void ReadData()
         {
-            FileStream fs = new FileStream(@"C:\Banu\Infinite\Batch_June24\Git Steps.txt", FileMode.Open, FileAccess.Read);
+            FileStream fs = new FileStream(@"C:\Banu\Infinite\Batch_June24\Myfile.txt", FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(fs);
 
             /*we can position the file pointer at any location by seeking no,
@@ -57,6 +58,23 @@ namespace Day11_Dotnet
 
             sr.Close();
             fs.Close();
+        }
+
+        public void WriteData()
+        {
+            FileStream fs = new FileStream(@"C:\Banu\Infinite\Batch_June24\Myfile.txt", FileMode.Append, FileAccess.Write);
+
+            StreamWriter sw = new StreamWriter(fs);
+
+            //prompt the user for data to write
+            Console.WriteLine("Enter a string");
+            string str = Console.ReadLine();
+
+            sw.Write(str);
+
+            sw.Flush(); //clears the buffer of the current writer
+            sw.Close(); //closes the current streamwriter object
+            fs.Close(); //closes the stream itself
         }
     }
 }
