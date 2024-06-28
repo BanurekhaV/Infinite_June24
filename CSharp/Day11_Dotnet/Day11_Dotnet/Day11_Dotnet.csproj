@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day11_Dotnet.Serializing_DeSerializing</StartupObject>
+    <StartupObject>Day11_Dotnet.XMLSerialization</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializing_DeSerializing.cs" />
     <Compile Include="UsingBlock.cs" />
+    <Compile Include="XMLSerialization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

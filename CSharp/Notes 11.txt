@@ -56,6 +56,14 @@ Serialization : is a process of converting object data into byte stream, so that
 
 DeSerialization : is the reverse of Serialization , meaning converting byte stream to objects
 
+Annotations or Attributes/metatdata are classes that provide additional input to the data about it
 
 
+We can serialize in many formats :
+ 1. Binary
+ 2. Xml  <>
+ 3. SOAP ( simple object access protocol)
+ 4. JSON (JavaScript Object Notation)
 
+
+{"authorname":"Amish T", "bookname":"Seetha-warrior","yr_published":2010}
