@@ -1,0 +1,28 @@
+Threads : A thread is defined as the execution path of a program
+          Are a light weight processes
+          The Thread that will be executed first in the entire process is called as Main Thread
+          The Main Thread is created automatically when the execution of C# program begins
+          The threads that are created using the Thread class are child threads of the main Thread
+          Each thread defines a unique flow of control, and performs a particular job
+
+Important Properties of a Thread:
+    - CurrentThread
+    - IsAlive
+    - Name
+    - ThreadState
+
+Life Cycle of thread has the below state :
+  
+   - Unstarted
+   - Runnable
+   - Running
+   - Not Runnable
+   - Dead
+
+Functionality of a thread:
+  -Sleep
+  -Join
+  -Abort
+  - Suspend
+  - Resume
+  - Start

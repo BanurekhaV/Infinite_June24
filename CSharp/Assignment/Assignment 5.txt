@@ -1,0 +1,14 @@
+1. Create a class called Books with BookName and AuthorName as members. Instantiate the class through constructor and also write a method Display() to display the details. 
+
+Create an Indexer of Books Object to store 5 books in a class called BookShelf. Using the indexer method assign values to the books and display the same.
+
+Hint(use Aggregation/composition)
+
+
+2. Write a class Box that has Length and breadth as its members. Write a function that adds 2 box objects and stores in the 3rd. Create a Test class to execute the above.
+
+3. Create an Employee class with Empid int, Empname string, Salary float. Pass values to the members through Constructor.
+
+Create a derived class called ParttimeEmployee with Wages as a data member. Instantiate the base class through the derived class constructor 
+
+4. Create an Interface IStudent with StudentId and Name as Properties, void ShowDetails() as its method. Create 2 classes Dayscholar and Resident that implements the interface Properties and Methods.
