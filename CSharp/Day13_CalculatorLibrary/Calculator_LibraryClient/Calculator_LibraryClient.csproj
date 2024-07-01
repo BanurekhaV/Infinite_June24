@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33A42660-027E-45D8-9156-6FAEF5AF5095}</ProjectGuid>
+    <ProjectGuid>{ACCEF5A5-5C17-41F5-840B-3809D7606E3F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day12_Dotnet</RootNamespace>
-    <AssemblyName>Day12_Dotnet</AssemblyName>
+    <RootNamespace>Calculator_LibraryClient</RootNamespace>
+    <AssemblyName>Calculator_LibraryClient</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day12_Dotnet.ThreadStateEg</StartupObject>
+    <StartupObject>Calculator_LibraryClient.LambdaExp</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,15 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MultiThread.cs" />
+    <Compile Include="LambdaExp.cs" />
+    <Compile Include="Named_n_OptionalParameters.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThreadPoolEg.cs" />
-    <Compile Include="ThreadStateEg.cs" />
-    <Compile Include="ThreadSync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Day13_CalculatorLibrary\Day13_CalculatorLibrary.csproj">
+      <Project>{496ef589-b94c-437e-852f-63fcb6287f2c}</Project>
+      <Name>Day13_CalculatorLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day13_CalculatorLibrary_Extension1\Day13_CalculatorLibrary_Extension1.csproj">
+      <Project>{bb66cc1f-13d2-4672-821a-ade17e525436}</Project>
+      <Name>Day13_CalculatorLibrary_Extension1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

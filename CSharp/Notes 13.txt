@@ -1,0 +1,53 @@
+Class Library : Is an application/Project type that creates .dll assemblies. They cannot be executed on their own, they need a host application to test and run
+
+Bank Scenario :
+with one single credential, we are able to operate on various types of account functions and do transactions
+
+
+Extension Methods : are additional functionalities /functions that are provided as a part of the original object
+
+Steps for extension :as per the demo
+1. Create a class library application called Day13_CalculatorLibrary
+2. Rename the class from class1 to CalculatorClass
+3. Add functionality viz Addnos(), SubtractNos()
+4. Build the project
+5. Add another Console Application project to the same solution called LibraryClient
+6. Add a reference to the Calculator_library and also use the namespace in the relevant .cs file
+7. Create and instantiate an object of the Calculator class
+8. Invoke the Addnos and SubtractNos()
+
+Now to extend the functionalities of the above class thru extensions,
+
+1. Create another class library project names Calculator_LibraryExtension
+2. Rename the class1 to Addoncalculator
+3. Add the reference of the first Dll here in the second
+4. Also use the first dll assembly namespace
+5. Make the Addoncalculator class static
+6. Create additional functions also as static viz, Multiplynos(), DivideNos(), as per the need
+7. To both the new functions, pass the object of the class to which we want to add extensions with the this keyword as below
+      MultiplyNos(this CalculatorClass cobj, int x, int y) 
+8. Build the second dll
+
+
+- Now in the LibraryClient application, add reference of the second dll
+- Also include it in the using namespace
+- Build once
+- with the help of the first dll class object, we would be able to invoke the extension methods also.
+
+
+Note : Extension methods are always declared as static, but when they are bound with any class or structure, they will convert into non-static
+- When an extension method is defined with the same name and signature of the existing method, then the compiler will resolve only the existing method and not the extension method (hence extension methods do not support overriding)
+- We can also add extension methods to sealed classes
+
+Named and Optional Parameters :
+
+LINQ : Language Integrated Query : is a uniform query language that can be used to query any source viz. objects, database, nosql db, xml file, excel file etc..
+
+  - Query Syntax ( simpler representation, and will be simple english)
+  - Method Syntax ( makes use of extension functions)
+
+Lambda Expressions :
+ eg 
+int c = a+b;
+
+int sum(int a, int b){return a+b;}  =>a+b

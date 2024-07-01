@@ -1,0 +1,12 @@
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\bin\Debug\Calculator_LibraryClient.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\bin\Debug\Calculator_LibraryClient.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\bin\Debug\Calculator_LibraryClient.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\bin\Debug\Day13_CalculatorLibrary.dll
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\bin\Debug\Day13_CalculatorLibrary.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\obj\Debug\Calculator_LibraryClient.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\obj\Debug\Calculator_LibraryClient.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\obj\Debug\Calculator_LibraryClient.csproj.CopyComplete
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\obj\Debug\Calculator_LibraryClient.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\obj\Debug\Calculator_LibraryClient.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\bin\Debug\Day13_CalculatorLibrary_Extension1.dll
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_CalculatorLibrary\Calculator_LibraryClient\bin\Debug\Day13_CalculatorLibrary_Extension1.pdb

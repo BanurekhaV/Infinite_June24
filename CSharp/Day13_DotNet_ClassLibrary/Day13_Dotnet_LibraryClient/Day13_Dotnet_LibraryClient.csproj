@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33A42660-027E-45D8-9156-6FAEF5AF5095}</ProjectGuid>
+    <ProjectGuid>{6F5F5A90-3EB5-479F-8C7C-E9FA4C8E3276}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day12_Dotnet</RootNamespace>
-    <AssemblyName>Day12_Dotnet</AssemblyName>
+    <RootNamespace>Day13_Dotnet_LibraryClient</RootNamespace>
+    <AssemblyName>Day13_Dotnet_LibraryClient</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day12_Dotnet.ThreadStateEg</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,15 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MultiThread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThreadPoolEg.cs" />
-    <Compile Include="ThreadStateEg.cs" />
-    <Compile Include="ThreadSync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Day13_DotNet_ClassLibrary\Day13_DotNet_ClassLibrary.csproj">
+      <Project>{c04fe51d-52d4-4d2c-90f7-127293e33a70}</Project>
+      <Name>Day13_DotNet_ClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

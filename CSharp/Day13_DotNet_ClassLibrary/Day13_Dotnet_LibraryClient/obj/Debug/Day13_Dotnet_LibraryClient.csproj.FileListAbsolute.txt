@@ -1,0 +1,10 @@
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\bin\Debug\Day13_Dotnet_LibraryClient.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\bin\Debug\Day13_Dotnet_LibraryClient.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\bin\Debug\Day13_Dotnet_LibraryClient.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\bin\Debug\Day13_DotNet_ClassLibrary.dll
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\bin\Debug\Day13_DotNet_ClassLibrary.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\obj\Debug\Day13_Dotnet_LibraryClient.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\obj\Debug\Day13_Dotnet_LibraryClient.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\obj\Debug\Day13_Dotnet_LibraryClient.csproj.CopyComplete
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\obj\Debug\Day13_Dotnet_LibraryClient.exe
+C:\Banu\Infinite\Batch_June24\CSharp\Day13_DotNet_ClassLibrary\Day13_Dotnet_LibraryClient\obj\Debug\Day13_Dotnet_LibraryClient.pdb
