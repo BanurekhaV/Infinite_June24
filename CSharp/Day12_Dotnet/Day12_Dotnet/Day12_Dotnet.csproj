@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day12_Dotnet.MultiThread</StartupObject>
+    <StartupObject>Day12_Dotnet.ThreadPoolEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,8 @@
     <Compile Include="MultiThread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThreadPoolEg.cs" />
+    <Compile Include="ThreadSync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

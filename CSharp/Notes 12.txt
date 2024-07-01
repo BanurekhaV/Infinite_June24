@@ -10,6 +10,9 @@ Important Properties of a Thread:
     - IsAlive
     - Name
     - ThreadState
+    -IstHreadPoolThread
+    -IsBackground
+    -ManagedThreadID
 
 Life Cycle of thread has the below state :
   
@@ -26,3 +29,12 @@ Functionality of a thread:
   - Suspend
   - Resume
   - Start
+
+Thread Synchronization : A mechanism that protects overlap of critical/sensitive data, by using the below techniques
+   - Blocking
+   - locks
+   - join
+   - signalling
+
+Thread Pool : is a collection of threads that can be reused for some job/activity. We can get a thread from the pool, using one of the methods of the Thread class known as 'QueueUserWorkItem()'. This method tries to allocate a thread if available in the pool, else it will callback when available. Till such time application method will be queued.
+   
