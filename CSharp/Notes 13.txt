@@ -43,11 +43,11 @@ Named and Optional Parameters :
 
 LINQ : Language Integrated Query : is a uniform query language that can be used to query any source viz. objects, database, nosql db, xml file, excel file etc..
 
-  - Query Syntax ( simpler representation, and will be simple english)
+  - Query Syntax ( simpler representation, and will be simple English)
   - Method Syntax ( makes use of extension functions)
 
-Lambda Expressions :
- eg 
-int c = a+b;
+Lambda Expressions : are a way to minimal code with lot of inbuilt abstract functionalities
+  '=>'. has 2 parts. The one before the lambda is the input, the one after lambda is the expression. One taking the input and evaluating the expression, the lambda returns value/s
+ 
 
-int sum(int a, int b){return a+b;}  =>a+b
+Query Expressions : are expressions to query any source. It always starts with from and ends either in select or group by clause

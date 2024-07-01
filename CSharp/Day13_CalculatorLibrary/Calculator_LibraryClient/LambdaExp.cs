@@ -38,8 +38,38 @@ namespace Calculator_LibraryClient
             {
                 Console.WriteLine(x);
             }
+            Console.WriteLine(" Lambda with UDT------");
+            List<Employee> emplist = new List<Employee>()
+            {
+                new Employee{ID =101, Name="SaiVardhan", Salary=47000},
+                new Employee{ID =102, Name="Ramesh", Salary=45000},
+                new Employee{ID =103, Name="Suresh", Salary=42000},
+            };
 
+            //find the employee with id 102
+            Employee emp = emplist.Find(e => e.ID == 103);
+            if (emp != null)
+            {
+                Console.WriteLine("ID = {0}, Name = {1}, and Salary = {2}", emp.ID, emp.Name, emp.Salary);
+            }
+            else
+                Console.WriteLine("employee Id not found");
+
+            //sorting the emplist on the basis of name
+            IEnumerable<Employee> sortedemployees = emplist.OrderByDescending(x => x.Name);
+
+            foreach(Employee item in sortedemployees)
+            {
+                Console.WriteLine(item.ID + " " + item.Name + " "+ item.Salary);
+            }
             Console.Read();
         }
+    }
+
+    class Employee
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public float Salary { get; set; }
     }
 }
