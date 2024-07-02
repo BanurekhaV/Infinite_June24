@@ -1,0 +1,23 @@
+Auto properties
+
+C# 6.0 
+
+public class Employee{
+public string name {get;}
+public float salary{get;}
+}
+
+public Employee()
+{
+  name= "Tim";
+  salary = 50000;
+}
+
+Literal Movements : enhanced reading options of data
+Dictionary Initializers 
+Local Functions : If we want to execute some piece of code many times within a method, then we can make use of local functions
+- Local functions can be called anytime within the Parent/enclosing function only
+- They cannot be overloaded
+- The cannot have access modifiers
+- Compiler will raise a warning if the local functions are not called by the parent function
+- All variables of the enclosing scope(parent function) can be accessed by the local function
