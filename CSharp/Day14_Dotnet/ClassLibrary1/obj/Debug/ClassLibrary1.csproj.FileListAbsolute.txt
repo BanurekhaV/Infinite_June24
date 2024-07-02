@@ -1,0 +1,5 @@
+C:\Banu\Infinite\Batch_June24\CSharp\Day14_Dotnet\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Banu\Infinite\Batch_June24\CSharp\Day14_Dotnet\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\Day14_Dotnet\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\Day14_Dotnet\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Banu\Infinite\Batch_June24\CSharp\Day14_Dotnet\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

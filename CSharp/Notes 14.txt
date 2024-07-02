@@ -26,3 +26,20 @@ public Employee()
 *Expression bodied members : is a feature that simplifies syntactic expression in programming. Similar like lambda expressions
 *Nullable type : Nullable<T> : generic structure that allows primitive/value types to have nulls
   null conditional Operator : (?.) is a simpler way of checking null objects. It is a cleaner and concise code where it removes extra null usage
+
+*Exception Filters : Allow us to specify a conditional clause for eavh catch block. Instead of a catch block handling all exceptions, we can write a catch on certain condition being true
+*Nameof operator : is used to produce the name of a variable,method,type or any member as a string constant
+      Names of different code artifacts are returned by the nameof operator
+
+*externAlias : is helpful
+
+
+*tuples : if we want a method to return many values , we can use tuples
+
+ different ways to return more than one value from a method
+   1. By using custom datatype    : eg : public Employee getEmployee()
+					{
+       						Employee e = new Employee(){Id=1,Name="AAA",Sal=5666};
+						return e;}
+  2. by using 'out' keyword:
+  3. using dynamic datatype
