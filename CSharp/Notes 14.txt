@@ -31,7 +31,7 @@ public Employee()
 *Nameof operator : is used to produce the name of a variable,method,type or any member as a string constant
       Names of different code artifacts are returned by the nameof operator
 
-*externAlias : is helpful
+*externAlias : is helpful to eliminate conflicts in class names/method/members names of 2 or more assemblies.
 
 
 *tuples : if we want a method to return many values , we can use tuples
@@ -43,3 +43,7 @@ public Employee()
 						return e;}
   2. by using 'out' keyword:
   3. using dynamic datatype
+
+Note: Tuples are reference types that can hold maximum 8 elements of different datatypes.
+      Elements in tuple don't have names, and are accessible only using item1... item 8
+      If we want a method to return more than 8 values, then the last item of the tuple must be created with another tuple. This makes the syntax more difficult to write and understand.
