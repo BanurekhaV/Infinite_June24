@@ -13,11 +13,16 @@ public Employee()
   salary = 50000;
 }
 
-Literal Movements : enhanced reading options of data
-Dictionary Initializers 
-Local Functions : If we want to execute some piece of code many times within a method, then we can make use of local functions
+* Literal Movements : enhanced reading options of data
+* Dictionary Initializers 
+* Local Functions : If we want to execute some piece of code many times within a method, then we can make use of local functions
 - Local functions can be called anytime within the Parent/enclosing function only
 - They cannot be overloaded
 - The cannot have access modifiers
 - Compiler will raise a warning if the local functions are not called by the parent function
 - All variables of the enclosing scope(parent function) can be accessed by the local function
+
+* Throws Expression : ease of use
+*Expression bodied members : is a feature that simplifies syntactic expression in programming. Similar like lambda expressions
+*Nullable type : Nullable<T> : generic structure that allows primitive/value types to have nulls
+  null conditional Operator : (?.) is a simpler way of checking null objects. It is a cleaner and concise code where it removes extra null usage
