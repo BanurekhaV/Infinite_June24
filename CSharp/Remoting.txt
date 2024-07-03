@@ -1,0 +1,15 @@
+Remoting : Is a mechanism for communication between objects of various applications, that may not be in the same process(domain), nor in the same system,
+- Which may be using different transport protocols, serialization formats etc
+
+- Is a Microsoft framework that provides services like
+    * object activation
+    * life time support of objects
+    * communication channels
+    * Transport messages(xml,json,binary,text)
+
+Domain : When an application is loaded onto the memory, a process is created within that application. This is known as Application Domain
+
+Contexts : A context is a set of common constraints, usage, access, functionalities within the object
+
+proxy/proxies : 
+Is an instance of the remote object directly available to the client. It does all marshalling across various context, and then forwards the request to the actual remote object

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AysncnAwait_inCatch.cs" />
+    <Compile Include="Deconstruction.cs" />
     <Compile Include="IteratorsEg.cs" />
     <Compile Include="PatternmatchingEg.cs" />
     <Compile Include="Program.cs" />
