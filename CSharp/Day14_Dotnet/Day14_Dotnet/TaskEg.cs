@@ -8,7 +8,7 @@ namespace Day14_Dotnet
 {
     class Accounts
     {
-        int balance;
+        public int balance;
 
         public Accounts(int a)
         {
@@ -18,12 +18,12 @@ namespace Day14_Dotnet
         public void Credit(int amt)
         {
             balance += amt;
-            Console.WriteLine(balance);
+           Console.WriteLine("Credit Balance" + " " + balance);
         }
         public void Debit(int amt)
         {
             balance -= amt;
-            Console.WriteLine(balance);
+            Console.WriteLine("Debit Balance" + " "+ balance);
         }
     }
     class TaskEg
@@ -39,6 +39,9 @@ namespace Day14_Dotnet
                 task[i] = Task.Run(() => RandomlyUpdate(account));
             }
             Task.WaitAll(task);
+            Console.WriteLine("------------------------");
+            Console.WriteLine("All tasks Done..");
+            Console.WriteLine(account.balance);
             Console.Read();
         }
 

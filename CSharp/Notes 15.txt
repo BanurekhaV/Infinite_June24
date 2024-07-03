@@ -1,0 +1,43 @@
+* Tasks : Tasks are used to implement task based asynchronous programming. The task parallel library TPL was introduced in .net 4.0
+- tasks executes asynchronously on a thread pool rather than synchronously on the main thread
+- A task scheduler is responsible for starting, managing it
+- TPL is a set of public types and API's in system,threading.tasks namespace
+- TPL handles partitioning of work, scheduling of threads,state management and other low level details
+- TPL helps in maximizing the code performance 
+
+Tasks Vs Threads
+
+asynchronous operations				manipulating flow of work using thread class 
+can return a result				does not have a mechanism to return directly
+tasks have multiple process happening   	threads have only one task running at a time
+    simultaneously	
+aync and await based programs is possible        ----------
+
+Task is a higher level concept to Threads
+
+*Async and await - Task parallel programs
+   - in catch and finally
+
+*Iterators: Iterators are methods which are used to retrieve elements from a collection.
+-It uses yield return to return the element 
+-yield break is used to stop iteration
+- return types of iterators are IEnumerable, IEnumerator, IEnumerable<>, IEnumerator<>
+- iterators cannot be used in an event, instance/static constructor
+-yield is not a reserved word, but when used with return or break statements, they have a special meaning
+- cannot use multiple yields
+
+*Pattern Matching : is a feature that allows testing an expression for the occurrence of a given pattern
+- allows operations like
+    -type checking (type pattern)
+    -null checking(constant pattern)
+    -comparisons (relational pattern)
+    -object deconstruction (positional pattern)
+
+can be used with 3 constructs
+  1. is : 
+  2. switch statements
+  3. switch expression
+
+*Deconstruction : the process of splitting a variable value into multiple parts and storing each part into a new variable.
+
+
