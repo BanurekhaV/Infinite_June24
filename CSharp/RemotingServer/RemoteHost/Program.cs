@@ -11,7 +11,7 @@ using RemotingServer;
 
 namespace RemoteHost
 {
-    class Program
+    class Program 
     {
         static void Main(string[] args)
         {

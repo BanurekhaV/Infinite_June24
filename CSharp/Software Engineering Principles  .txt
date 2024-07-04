@@ -1,0 +1,55 @@
+Software Engineering Principles : 
+
+ 1. Separation of Concern 
+ 2. Modularization
+ 3. Abstractions -(what rather than how)
+ 4. Anticipation of Changes : 
+            - Generality (de-coupled codes)
+            - Incremental Development
+            - Consistency of Look and Feel
+5. DRY  : Do not Repeat Yourselves
+6. KISS : Keep It Simple Stupid
+7. YAGNI : You Aren't Gonna Need It ( Avoid features and functions that are not required)
+8 SOLID : Are Design Principles
+
+ S : Single Responsibility Principle (SRP)  : a class or a structure in the code should always have one job to do
+ O : Open Close Principle (OCP) : A s/w module/class is open to extension, but closed for modifications
+ L : Liskov Substitution Principle (LSP) : is an extension of the OCP, where derived classes extend from the base        	class without changing the behaviour of the base class (Usage of Interface Methods)
+ I : Interface Segregation Principle (ISP) : Not to force the implementing class to implement all the methods of the Interface. Instead of one fat Interface, create many small/thin interfaces, with minimum methods
+ D : Dependency Inversion Principle (DIP) : States that high level modules/classes (consumers) should not depend on the low level classes/modules(implementing class). Both should depend on Abstraction (layered architecture)
+
+ DIP as a design principle suggest a solution to the dependency problem, but does not specify any technique
+
+ Inversion of Control (Ioc): is the actual mechanism to allow DIP
+
+ Dependency Injection (DI) : is the design pattern to inject concrete implementation of the low level components into high level components
+
+Ioc is a Principle and DI is Implementation
+
+DI can be used in the below places :
+1. Constructor Injection : Instance of the dependency type (Server class) can be passed as an argument to the constructor of the dependant class (client)
+
+2. Method Injection : Instance of the dependency type can be passed as an argument to the method of the dependant class
+
+3. Property Injection : Instance of the dependency type can be injected to a specific property of the dependant class
+
+Based on the Solid Principles we have Software Design patterns.
+
+Design Patterns : 4 authors of the Book "Elements of reusable object oriented software" were the ones who had brought the concept of design in software. These design patterns solve the problems of object creation and integration (object initialization, structural changes of classes/interface, relationship between objects, communication between objects). Based on the these requirements, we have 3 broad patterns :
+
+  1. Creational Design Pattern :( Object creation and initialization)
+        Eg : Factory, Abstract Factory, Singleton
+  2. Structural Design Pattern :(changes to classes/interface and relationships)
+        Eg: Adapter, Bridge, Decorator, Proxy
+  3. Behavioral Design Pattern :(communication between objects)
+        Eg : Iterator,Observer
+
+
+
+
+
+
+
+  
+          
+ 
