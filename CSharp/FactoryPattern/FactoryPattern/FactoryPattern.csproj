@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreditCard.cs" />
+    <Compile Include="CreditCardFactory.cs" />
+    <Compile Include="ICreditCard.cs" />
     <Compile Include="Implementingclasses\MoneyBack.cs" />
     <Compile Include="Implementingclasses\Platinum.cs" />
     <Compile Include="Implementingclasses\Titanium.cs" />
