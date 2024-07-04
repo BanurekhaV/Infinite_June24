@@ -1,0 +1,10 @@
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\bin\Debug\RemoteHost.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\bin\Debug\RemoteHost.exe
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\bin\Debug\RemoteHost.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\bin\Debug\RemotingServer.dll
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\bin\Debug\RemotingServer.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\obj\Debug\RemoteHost.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\obj\Debug\RemoteHost.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\obj\Debug\RemoteHost.csproj.CopyComplete
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\obj\Debug\RemoteHost.exe
+C:\Banu\Infinite\Batch_June24\CSharp\RemotingServer\RemoteHost\obj\Debug\RemoteHost.pdb

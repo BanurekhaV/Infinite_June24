@@ -11,5 +11,37 @@ Domain : When an application is loaded onto the memory, a process is created wit
 
 Contexts : A context is a set of common constraints, usage, access, functionalities within the object
 
-proxy/proxies : 
+Proxy/Proxies : 
 Is an instance of the remote object directly available to the client. It does all marshalling across various context, and then forwards the request to the actual remote object
+
+Marshalling : Specifies how a remote object is exposed to the client. The process of passing parameters from one context to another context is marshalling. There are 2 ways to marshal
+
+      1. Marshal By Value : the server creates a copy of the object and passes the copy to the client
+      2. Marshal By Ref : the client creates proxy for the remote object and uses this proxy for further processing
+
+Channels : allows data /message transfers through a stream of bytes
+   - HTTP Channel, TCP Channel
+
+Types of Remote Objects :
+     1. Single Call : Objects that serve one request
+     2. Singleton :  Objects that serve multiple clients. One Object that serves all the request of the client. 
+                     The server/remote,  maintains the state of each client
+     3. Client Activated Objects : Upon client request for the remote object, the instance of the required object is activated, and the reference of the object is sent back to the client. A proxy object gets created at the client side. All calls will be executed on the proxy.
+
+various techniques for Distributed Application:
+
+-Remote Procedure Calls (RPC)
+-DCOM ( Distributed Component Object Model)
+-Remoting - replacement of DCOM
+-Web Services
+-WCF (Windows Communication Framework)
+-API (Application Programming Interface)
+
+
+Steps for Remoting :
+
+1. Create a class Library, where all remote objects are created
+2. Create a Console Application - Host/server that hosts the class library
+3. Create Client Application
+
+
