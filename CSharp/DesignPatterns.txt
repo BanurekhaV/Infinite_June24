@@ -42,4 +42,9 @@ Physical Layering  : When we create the above layers in different machines
 Logical Layering : If we place them separately in the same application 
  
 
+DI Patterns involves 3 types of classes
+1. Client Class : This is class is the dependent class that depends on the services 
+2. Service Class : This is dependency class that provides the services
+3. Injector Class : This class is the class which injects the services into the client
+
                         

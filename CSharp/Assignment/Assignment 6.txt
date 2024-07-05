@@ -1,0 +1,29 @@
+1.) 
+Write a query that returns list of numbers and their squares only if square is greater than 20 
+
+Example input [7, 2, 30]  
+Expected output
+→ 7 - 49, 30 - 900
+
+
+2.)
+
+Write a query that returns words starting with letter 'a' and ending with letter 'm'.
+
+
+Expected input and output
+"mum", "amsterdam", "bloom" → "amsterdam"
+
+
+3.	Create a list of employees with following property EmpId, EmpName, EmpCity, EmpSalary. Populate some data
+Write a program for following requirement
+a.	To display all employees data
+b.	To display all employees data whose salary is greater than 45000
+c.	To display all employees data who belong to Bangalore Region
+d.	To display all employees data by their names is Ascending order
+
+4.    Create a class library with a function CalculateConcession()  that takes age as an input and calculates concession for travel as below:
+If age <= 5 then “Little Champs - Free Ticket” should be displayed
+If age > 60 then calculate 30% concession on the totalfare(Which is a constant Eg:500/-) and Display “ Senior Citizen” + Calculated Fare
+Else “Print Ticket Booked” + Fare. 
+Create a Console application with a Class called Program which has TotalFare as Constant, Name, Age.  Accept Name, Age from the user and call the CalculateConcession() function to test the Classlibrary functionality
