@@ -1,0 +1,7 @@
+C:\Banu\Infinite\Batch_June24\CSharp\SingleTonPattern\SingleTonPattern\bin\Debug\SingleTonPattern.exe.config
+C:\Banu\Infinite\Batch_June24\CSharp\SingleTonPattern\SingleTonPattern\bin\Debug\SingleTonPattern.exe
+C:\Banu\Infinite\Batch_June24\CSharp\SingleTonPattern\SingleTonPattern\bin\Debug\SingleTonPattern.pdb
+C:\Banu\Infinite\Batch_June24\CSharp\SingleTonPattern\SingleTonPattern\obj\Debug\SingleTonPattern.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\CSharp\SingleTonPattern\SingleTonPattern\obj\Debug\SingleTonPattern.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\CSharp\SingleTonPattern\SingleTonPattern\obj\Debug\SingleTonPattern.exe
+C:\Banu\Infinite\Batch_June24\CSharp\SingleTonPattern\SingleTonPattern\obj\Debug\SingleTonPattern.pdb
