@@ -15,4 +15,31 @@ Singleton Implementation :
     3. private static variable that can hold the instance of the singleton(as per our demo - stobj)
     4. public static method or property that can return the instance of the singleton class  (as per our demo - GetInstance())
 
+
+DI frameworks in the market : Castle Windsor, Spring.Net, StructureMap, unity, Ninject etc...
+
+DI using unity framework(Ioc framework)
+
+Unity is an Inversion of Control Container, which is a general purpose extensible opensource. Licensed under Apache 2.0
+
+- Specifies the type of objects to be created and injected
+- Registering the types
+- Resolving concrete types with the registered types 
+
+(registered types - Interface types/Abstract types)
+(Concrete types - Interface implementing class)
+
+Resolving is basically mapping the registered type with the concrete type
+
+Layered Architecture : where components of specific functionalities can be grouped under one 
+
+User Interface : UI
+Business Layer : Business Access Layer (BAL), where all business rules are implemented
+Data Layer : Data Access Layer (DAL), where all data related activities viz. database connection, issuing commands, retrieval of data 
+
+
+Physical Layering  : When we create the above layers in different machines
+Logical Layering : If we place them separately in the same application 
+ 
+
                         
