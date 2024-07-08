@@ -13,7 +13,7 @@ namespace Project_MsTester
     [TestClass]
     public class Class1
     {
-
+        Program p = new Program();
         [TestMethod]
         public void Cancellation_ByAdmin_ReturnsTrue()
         {
@@ -53,5 +53,7 @@ namespace Project_MsTester
         {
             Debug.WriteLine("Test class CleanUp.");
         }
+
+        
     }
 }

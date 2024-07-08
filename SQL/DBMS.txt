@@ -1,0 +1,49 @@
+DBMS : Database Management System
+
+Database : Defined as the storage of inter related data that has been organized in such a fashion that the process of retrieval of data is efficient and effective
+
+Management System : Set of programs to access the data
+
+DBMS : is an environment that is both convenient and efficient
+
+Purpose of DBMS : Earlier data was stored directly on top of the file system
+Drawbacks of file system :
+  - Data redundancy and inconsistency
+  - Difficulty in accessing the data
+  - Data isolation - multiple files and formats
+  - Integrity problems
+  - Atomicity of Updates
+  - Concurrent access to multiple users
+  - Security Problems
+
+DBMS architecture : 3 layered
+1. Physical : actual data stored in the Hard disk
+2. Logical/Conceptual : Customer (custid , Name , Address, country, phone,
+3. Application :application programs can hide sensitive data from the user and provide only the rest
+
+Data Modelling : A collection of tools for describing
+  - Data
+  - Data Relationships
+  - Data Semantics
+  - Data Constraints
+
+Types of DBMS :
+  1. HDBMs - Hierarchical Database management system 
+  2. NDBMS - Network Dbms
+  3. RDBMS - Relation dbms (Relational Algebra/set theory) 
+  4. Object RDBMS 
+      - multimedia
+      - hypertext based databases
+
+
+RDBMs : Data is perceived to be in rows and columnar structures knows as Relations/Tables
+        Columns are the attributes that describe the data 
+        Rows contain the actual data
+
+E.F Codd - he coined the 12 golden rules on which any RDBMS has to be built
+
+E-R Modelling (Entity Relation Ship model)  Dr.Chen
+ - Entity : is anything that exists and is distinguishable 
+ - Entity Set : a group of similar entites
+ - Attribute - Properties that describe an entity
+ - Relationship - an association between entities
