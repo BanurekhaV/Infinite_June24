@@ -28,6 +28,38 @@ namespace Testing
             else
                 return "Incorrect User Id or Password";
         }
+
+        public List<Employee> EmpData()
+        {
+            List<Employee> emplist = new List<Employee>()
+            {
+                new Employee{Id=100,Name="Nithin",Salary=45000,Gender="Male"},
+                new Employee{Id=101,Name="Saivardhan",Salary=45000,Gender="Male"},
+                new Employee{Id=102,Name="Bindu",Salary=45000,Gender="Female"},
+                new Employee{Id=103,Name="Sripriya",Salary=45000,Gender="Female"}
+            };
+            return emplist;
+        }
+
+        public List<Employee>GetEmployee(int id)
+        {
+            List<Employee> emp = new List<Employee>();
+            Program prog = new Program();
+            var elist = prog.EmpData();
+            foreach(var v in elist)
+            {
+                if (v.Id == id)
+                {
+                    emp.Add(v);
+                }
+            }
+            return emp;
+        }
+
+        public int Add2Nos(int x, int y)
+        { 
+            return x + y;
+        }
         static void Main(string[] args)
         {
         }

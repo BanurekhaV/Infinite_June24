@@ -29,5 +29,27 @@ namespace ProjectTester
             ClassicAssert.AreEqual("Incorrect User Id or Password", s1);
             ClassicAssert.AreEqual("Welcome Admin", s3);
         }
+
+        [Test]
+        public void CheckEmployeeDetails()
+        {
+            List<Employee> employeelist = p.EmpData();
+            foreach(var x in employeelist)
+            {
+                ClassicAssert.IsNotNull(x.Id);
+                ClassicAssert.IsNotNull(x.Name);
+            }
+        }
+
+        [Test]
+        [TestCase(15,35,50)]
+        [TestCase(10,45,55)]
+        [TestCase(20,50,60)]
+
+        public void TestAdd2Nos_withTestCases(int n1, int n2, int expected)
+        {
+            int result = p.Add2Nos(n1, n2);
+            ClassicAssert.AreEqual(expected, result);
+        }
     }
 }
