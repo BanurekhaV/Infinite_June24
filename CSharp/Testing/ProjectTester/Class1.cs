@@ -13,7 +13,14 @@ namespace ProjectTester
     public class Class1
     {
         //arrange
-        Program p = new Program();
+        Program p ;
+        Accounts act = new Accounts("12345");
+
+        [SetUp]
+        public void TestSetup()
+        {
+            p = new Program(); ;
+        }
 
         [Test]
         //1. test case
@@ -44,12 +51,31 @@ namespace ProjectTester
         [Test]
         [TestCase(15,35,50)]
         [TestCase(10,45,55)]
-        [TestCase(20,50,60)]
+        [TestCase(20,50,70)]
 
         public void TestAdd2Nos_withTestCases(int n1, int n2, int expected)
         {
             int result = p.Add2Nos(n1, n2);
             ClassicAssert.AreEqual(expected, result);
+        }
+
+        [Test]
+        [Ignore("Waitforsometime")]
+        public void TestDepositMethod()
+        {
+            act.Deposit(500);
+            ClassicAssert.AreEqual(1500, act.CheckBalance());
+        }
+
+        public void TestWithdrawalMethod()
+        {
+            act.Withdraw(2500);
+        }
+
+        [Test]
+        public void TestWithdrawalException()
+        {
+            ClassicAssert.Throws<Exception>(TestWithdrawalMethod);
         }
     }
 }

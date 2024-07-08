@@ -60,8 +60,40 @@ namespace Testing
         { 
             return x + y;
         }
+
+        
         static void Main(string[] args)
         {
         }
+    }
+
+    public class Accounts
+    {
+        string Accno;
+        float balance = 1000;
+
+        public Accounts(string accno)
+        {
+            Accno = accno;
+        }
+        public float CheckBalance()
+        {
+            return balance;
+        }
+
+       
+        public void Deposit(float amt)
+        {
+            balance += amt;
+        }
+
+        public void Withdraw(float amt)
+        {
+            if (balance >= amt)
+                balance -= amt;
+            else
+                throw new Exception("Not Enough balance to withdraw");
+        }
+
     }
 }

@@ -56,10 +56,48 @@ var c= expectedsum=10;
 Test Cases are always public (no other modifier is allowed)
 They do not have return types (only void)
 The names of the Testcases should be meaningful revealing the purpose of test, even if it has to span multiple words
-[TextFixture]
-[Test]
-[SetUp]
-[Ignore]
+[TestFixture] : attribute to mark the class as testable
+[Test] : to mark a method as testable by the test runner
+[SetUp] : Gets executed every time before running the test
+[Ignore] : is ignored by the testrunner
+
+
+MsTest: is Microsoft's Testing Framework. Include MStest package and MsTestAdapter package from nuget manager into the testing project (.dll)
+
+-use the namespace 'using Microsoft.VisualStudio.TestTools.UnitTesting;' in the class file that will be used for writing test cases
+
+[TestClass] - marking the class for testing
+[TestMethod] - marking a method for testing by the test runner
+[TestInitialize] - Gets executed before executing all test
+[TestCleanUp] - Gets executed after all test are done
+[ClassInitialize] - Executes once for each testclass. Has to be a static method with testcontext passed as a parameter
+[ClassCleanUp] - Exceutes once for each class. Has to be static 
+
+[AssemblyInitialize] - Executes once for the entire namespace(.dll). Has to be a static method with testcontext passed as a parameter
+
+[AssemblyCleanUp] - Executes once for the entire namespace(.dll). Has to be a static method 
+
+
+TDD - Test Driven Development is a strategic approach to sw development. Here we first write a testcase before the actual code
+
+-- writing a failing test
+-- code and retest
+-- passing test
+
+Example :
+[TestMethod]
+public void TestAdd2Nos()
+{
+  Assert.Equals(3, addTwoNos(1,2));
+}
+
+//the above test will fail since we have not coded addTwoNos() function.
+- then write a minimal code and test it
+-if it passes or we need improvement, we can refcator the code and test again
+
+
+
+AssemblyInitialize->ClassInitialize->TestInitialize->TestMethod->TestCleanup->ClassCleanUp->AssemblyCleanp
 
 }
     
