@@ -1,0 +1,67 @@
+Software Development Life Cycle : SDLC is a process for developing software. It consists of detailed plan, maintain, replace or enhancements etc. This defines methodologies for improving the quality of both the software being developed as well as the process of development
+
+- Water Fall Model 
+- Prototype
+- Iteration
+- V-Shaped
+- Spiral
+ 
+
+The various Phases involved:
+
+1. Initiation : Begins when a sponsor identifies a need or an opportunity. Concept proposal is created
+2. System Concept Development : Defines the scope or boundary of the concepts. Includes system  ,document, cost benefit Analysis, Risk analysis, Plan, feasibility study etc
+3. Planning : Developing Project Management Plan (acquiring resources, documents, timelines)
+4. Requirement Analysis : User needs are analysed. Functional Requirements Document
+5. Design : Transformation of requirements into complete system design document
+6. Development : Designs undergo transformations into information system(Test Driven Development)
+7. Integration and Testing : All software integrated and tested for confirmation to requirements (quality assurance)
+8. Implementation : Preparing of the system onto the production server.
+9. Operations and Maintenance : Post implementation and In-process Reviews
+10. Disposition : End of system activities 
+
+
+- Agile : Project Manager
+          User Story
+	  Sprint
+          Scrum
+          Stand Up
+          Burn down/up charts
+
+Testing : Is a process of validating and verifying a software program or application or a product
+
+Unit testing : Unit is a small piece of code
+   - NUnit: an open source testing framework under MIT licence which user friendly with many attributes
+
+         A single Unit test will include a well known structure of the Triple 'A's'
+          - Arrange : Arrange all required Objects, variables etc
+          - Act     : Invoke the methods/functions
+          - Assert  : Checking for corrective ness of the code
+
+Example :
+
+ public void test1()
+{
+  //arrange
+  var a=5;
+var b=5;
+var c= expectedsum=10;
+
+//act
+  var res= sum(a,b);
+
+//assert
+ Assert.AreEqual(res, expectedsum)
+
+Test Cases are always public (no other modifier is allowed)
+They do not have return types (only void)
+The names of the Testcases should be meaningful revealing the purpose of test, even if it has to span multiple words
+[TextFixture]
+[Test]
+[SetUp]
+[Ignore]
+
+}
+    
+   - mb Unit
+   - MSTest : as a part of the Visual Studio IDE
