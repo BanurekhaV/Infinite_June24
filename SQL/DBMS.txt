@@ -44,6 +44,86 @@ E.F Codd - he coined the 12 golden rules on which any RDBMS has to be built
 
 E-R Modelling (Entity Relation Ship model)  Dr.Chen
  - Entity : is anything that exists and is distinguishable 
- - Entity Set : a group of similar entites
+ - Entity Set : a group of similar entities
  - Attribute - Properties that describe an entity
  - Relationship - an association between entities
+         - one to one
+         - one to many
+         - many to many
+
+Important terms:
+ - Relation - a table
+ - Tuple - a row in a table
+ - Attribute - a column in a table
+ - Degree - number of columns
+ - Cardinality - number of tuples
+
+Keys : Super key
+Candidate Key :
+Alternate Key : 
+
+Primary Key : a column that can identify a tuple/row unique. Cannot be duplicates or nulls
+
+Composite/Compound Primary Key : a combination of one or more columns put together to identify a unique row
+
+Foreign Key : a column in one relation that always looks up to the primary key column in another relation. Can be duplicated and can have null values
+
+Unique Key : is similar to the primary key, but can support one null value.
+
+Integrity Constraints :
+Constraints are the rules enforced on the data columns of a table. They are used to limit the type of the data, range of the data
+    1. Domain Integrity : states that every element from a relation should respect the type and the restrictions on the length, range, null, default data etc
+            (check, default, unique, null/not null)
+    2. Entity Integrity : states that no pk should be null or duplicate  (primary key)
+    3. Referential Integrity : is specified between 2 relations and is used to maintain consistency among the tuples in 2 relations (foreign key)
+
+MS SQL Server :
+
+  Structured Query Language : Basic Components 
+  1. DDL - Data Definition Lang (create, drop, alter, truncate)
+  2. DML - Data Manipulation lang (insert, delete, update)
+  3. DQL - Data Query lang (select)
+  4. TCL - Transaction Control lang (Commit, Rollback)
+  5. DCL - Data Control lang (Grant, Revoke)
+
+Datatypes :
+   char(n)
+   varchar(n)
+   int / integer
+   number (p,d)
+   float
+   real
+   double
+   money
+   ntext
+   date
+
+Create <object> <object name>
+   create database <database name> - under master database
+  - move to the created database either using the down arrow of the drop down or type use <databasename>
+
+create table <tablename>
+(
+  col1 <datatype><datasize> <constraints>,
+ col2 <datatype><datasize> <constraints>,
+col n
+)
+ 
+-insert into <tablename> values(positional columns as per the table)
+-insert into(col list) values(as col list) - to insert into few columns, provided the rest can either take a null value or has a default value
+
+--to add a new column to the created table
+  alter table <tablename>
+  add <column name> datatype size  <constraint are allowed if the table is without any data)
+
+-- to add a constraint to a column after table creation
+  alter table <tablename>
+  add constraint <constraint name> < constraint type> <tablename>(<column name>)
+
+Selection -- 
+Projection  --
+where
+Join
+Union
+Difference
+Divide

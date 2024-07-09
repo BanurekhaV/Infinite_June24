@@ -189,3 +189,27 @@ select count(empid) from tblemployees
 select count(deptno) from tblemployees  -- count includes duplicates
 
 select count(distinct(deptno)) from tblemployees  -- distinct removes duplicates
+
+
+--deletion
+delete from tblemployees where empid = 200
+
+--order by clause to sort the data being displayed
+--ascending which is default or descending
+--we can sort multiple columns
+--we can sort on alias names
+--we can sort on a column that is not in the select list
+
+select Empid,Salary from tblemployees
+order by empname
+
+select Empid,Salary,Empname as Employeename from tblemployees
+order by Employeename
+
+--to test multiple sorts with asc and desc
+update tblemployees set salary=6400 where empid=100
+
+insert into tblemployees values(300,'Banurekha','Female',6350,3,666666)
+
+select Empid,Salary, empname from tblemployees
+order by salary desc, empname
