@@ -169,4 +169,31 @@ group by deptno
 having min(salary) >
                   (select min(salary) from tblemployees where deptno = 4)
 
---Co-Related Subquery
+--Exists operator  (in) 
+ -- test for existence of rows in the result of the subquery
+ -- if found the search does not continue the inner query and returns true
+ -- if not found, then it returns false and continues the search
+
+ --select empid,job,name, deptid from emp outer
+ --where exists(select 'x' from emp where mgrid = outer.mgrid)
+
+ --select empid,job,name, deptid from emp outer
+ --where empid in(select mgrid from emp where mgrid is not null)
+
+ -- ex 1. find all departments that have any employees
+
+ select deptno,deptname from tblDepartment d
+ where exists(select 'x' from tblemployees where deptno = d.DeptNo)
+
+ -- the above query can also be used with in as below
+ select deptno,deptname from tblDepartment d
+ where deptno in(select deptno from tblemployees where deptno = d.DeptNo)
+
+ --ex.2. find all departments that do not have any employees
+
+ select deptno,deptname from tblDepartment d
+ where not exists(select 'x' from tblemployees where deptno = d.DeptNo)
+
+ select deptno,deptname from tblDepartment d
+ where deptno not in(select deptno from tblemployees where deptno = d.DeptNo)
+
