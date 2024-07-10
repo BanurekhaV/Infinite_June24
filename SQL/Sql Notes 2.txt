@@ -1,0 +1,24 @@
+Selection - *
+Projection - col list
+Predicate - where condition
+
+--Functions to the RHS of a where clause will not work
+Example:
+
+select * from tblemployees where Salary > avg(Salary)
+
+Group By :  
+- All columns in the select list apart from the aggregates have to be included in the group by 
+
+
+
+where clause : works on each row to check if the condition is met
+having clause : works on each group to check if the condition is met     
+
+The DQL works in the following order
+  - from clause
+  - where clause
+  - group by clause
+  - having clause  
+  - order by clause   
+  - select     

@@ -1,0 +1,76 @@
+use InfiniteDB
+
+select * from tblemployees where Salary > avg(Salary)
+
+--group by clause is used to divide the rows of the table into smaller sets of data
+--we can apply group by clause only on the columns in the select list
+--we have to group by on all the columns in the list
+-- we can group on multiple columns, provided we select the columns in the select list
+--we cannot group on an alias name
+
+--1. dept wise avg salary
+
+select deptno as 'Department', avg(Salary) 'Average Salary' from tblemployees
+group by DeptNo
+
+--2. count the no.of male and female employees
+select gender, count(*)'No of Employees' from tblemployees
+group by gender
+
+insert into tblemployees values(113, 'Kajal', 'Female',6500,4, 56272211),
+(110,'Shreyash', 'Male',6520,5,768989), (115,'Naman','Male',6455,5,0967879),
+(114,'Vijendra','Male',6520,4,09892765),(120,'vaishnavi','Female',6450,5,0988765)
+
+
+--3. dept wise no. of male and female employees
+select deptno,gender,count(*)'No of Employees' from tblemployees
+group by deptno,gender
+order by deptno,gender
+
+update tblemployees set gender ='Female' where empid=107
+
+select * from tblemployees where gender is null
+
+--4. dept wise, no. of male and female employees where the count is > 1
+select deptno,gender, count(*)'No of Employees' from tblemployees
+group by deptno,gender
+having count(*)>1
+order by deptno
+
+--5. dept wise average salary having average salary > 6300
+select deptno,avg(salary) as 'Average Salary' from tblemployees
+where deptno is not null
+group by deptno
+having avg(salary)>6300
+order by deptno desc
+
+select * from tblDepartment
+select * from tblemployees
+
+--department name wise total salary where total salary > 13000
+-- the above query involves 2 tables
+-- we will need to join the tables
+
+--joining 2 tables to get the expected output
+select DeptName, sum(salary) as 'Total Salary for Dept' from tblDepartment, tblemployees
+where tblDepartment.DeptNo = tblemployees.DeptNo
+group by DeptName
+having sum(salary)>13000
+
+--joining 2 tables and qualifying with thier original names
+select tbldepartment.DeptName, sum(salary) as 'Total Salary for Dept' from tblDepartment, tblemployees
+where tblDepartment.DeptNo = tblemployees.DeptNo
+group by tblDepartment.DeptName
+having sum(salary)>13000
+
+--joining 2 tables and qualifying with their alias names
+select t1.DeptName, sum(salary) as 'Total Salary for Dept' from tblDepartment t1, tblemployees t2
+where t1.DeptNo = t2.DeptNo
+group by t1.DeptName
+having sum(salary)>13000
+
+--Joins
+-- Cross Joins (cartesian product)
+-- Inner Join  (Natural/Equi)
+-- Outer Join  ( left,right,full)
+-- Self Join  (join a table with itself)
