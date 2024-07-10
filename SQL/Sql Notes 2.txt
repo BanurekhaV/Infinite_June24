@@ -21,4 +21,17 @@ The DQL works in the following order
   - group by clause
   - having clause  
   - order by clause   
-  - select     
+  - select   
+
+Sub query : query within query  
+- the subquery/inner query will execute once and before the outer/main query, and the result of the subquery is used by the main query
+
+Guidelines for subquery
+ 1. Enclose subqueries in parentheses
+ 2. Place the subquery on the right side of the comparison operator
+ 3. Use Single-row operators with single row subqueries
+      and multi row operators with multirow subqueries
+
+Single row operators : =, >, <, >=, <=, !=, <>
+
+Multi row operators : in, any, all  ( they can be used in conjunction with the single row operator)

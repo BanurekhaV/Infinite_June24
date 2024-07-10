@@ -74,3 +74,99 @@ having sum(salary)>13000
 -- Inner Join  (Natural/Equi)
 -- Outer Join  ( left,right,full)
 -- Self Join  (join a table with itself)
+
+
+--1. cross join
+select * from tblemployees, tblDepartment
+--or
+select * from tblemployees cross join tblDepartment
+
+--2. Equi/Natural/Inner Join
+select td.deptname,td.loc,te.empname,te.salary from tblDepartment td, tblemployees te
+where td.DeptNo= te.DeptNo
+
+--or 
+select td.deptname,td.loc,te.empname,te.salary from tblDepartment td join tblemployees te
+on td.DeptNo=te.DeptNo
+
+--or
+select td.deptname,td.loc,te.empname,te.salary from tblDepartment td inner join tblemployees te
+on td.DeptNo=te.DeptNo
+
+--3. outer join (matching + non matching records/rows )
+
+insert into tblDepartment values(7,'Sales',450000,'Kolkatta')
+
+select * from tbldepartment
+select * from tblemployees
+--left outer join -all matching records/rows from both the tables and non matching rows from 
+ --the left hand side table
+
+select td.deptname,td.loc,te.empname,te.salary from tblDepartment td left outer join 
+tblemployees te on td.DeptNo=te.DeptNo
+
+--right out join -- all matching records/rows from both the tables and non matching rows from 
+ --the right hand side table
+
+select td.deptname,td.loc,te.empname,te.salary from tblDepartment td right outer join 
+tblemployees te on td.DeptNo=te.DeptNo
+
+--full outer join - all matching records/rows from both the tables and non matching rows from 
+ --the left hand side table and also non-matching rows of the right hand side table
+
+select td.deptname,td.loc,te.empname,te.salary from tblDepartment td full outer join 
+tblemployees te on td.DeptNo = te.DeptNo
+
+--display all the supervisor names and their subordinate names
+--4. self join (a table joining with itself. giving alias names become a must)
+select t1.empname as 'Supervisor Name', t2.Empname as 'Subordinates name'  from tblemployees t1 join tblemployees t2
+on t1.empid=t2.mgrid
+
+/*multiple joins
+  select t1.col1, t2.col5,t3.col2,t4.col4 from t1 join t2 on t1.c = t2.col join t3 on 
+  t2.c = t3.c join t4 on t3.c = t4.c */
+
+ --sub queries
+ -- display all employees who have salaries greater than Ayesha
+ select salary from tblemployees where empname like 'ayesha'  -- 6300
+
+ select empname, salary from tblemployees where Salary > 6300
+
+  select empname, salary from tblemployees where Salary > 
+                                                 (select salary from tblemployees where empname like 'ayesha')
+
+--
+select empname, salary from tblemployees where Salary > any
+                                                 (select salary from tblemployees where empname like 'A%')
+												 -- 6400,6000,6200,6100,6300,6300
+
+select empname, salary from tblemployees where Salary > all
+                                                 (select salary from tblemployees where empname like 'A%')
+												 -- 6400,6000,6200,6100,6300,6300
+
+select empname, salary from tblemployees where Salary in
+                                                 (select salary from tblemployees where empname like 'A%')
+												 -- 6400,6000,6200,6100,6300,6300
+
+--list of employees who works in the deptno as that of 103 and earns salary > than 106
+
+select empname,salary from tblemployees
+where deptno = 
+              (select deptno from tblemployees  where Empid = 103)  -- 2
+and salary >
+            (select salary from tblemployees where empid = 108)    -- 5000
+
+--using group functions in subquery
+
+select empname,gender, salary
+from tblemployees where salary >
+                           (select avg(salary) from tblemployees)
+
+--having clause with subqueries
+
+select deptno, min(salary) from tblemployees
+group by deptno
+having min(salary) >
+                  (select min(salary) from tblemployees where deptno = 4)
+
+--Co-Related Subquery
