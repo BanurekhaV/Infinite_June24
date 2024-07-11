@@ -1,6 +1,40 @@
 Corelated Subquery : Is a way of reading every row in a table and comparing values in each row against related data
 - it is used whenever a subquery must return different result set for each candidate row by the main query
+- can use all and any operators
+- can be used for deletion and updation
+- inner queries are driven by the outer query value
+- are dependent on the outer query for its values
+- they are executed repeatedly till end of result set/record set 
 
 
-copying data from one table to another
+-Bulk insertion using 'insert into select'
 
+--identity columns : are columns that ensure automatic data insertion. There is no need to provide data for the column
+- are always integers
+- they can take a seed value and an increment value
+- The default seed and increment are (1,1)
+
+-difference between delete, truncate, drop
+
+Drop : is a ddl command
+       drops an object from the database schema permanently along with the data
+
+Truncate : is a ddl command
+           deletes data and retains the structure
+           cannot restrict deletion
+           cannot roll back
+           faster than delete
+  
+delete : is a dml command
+         deletes all data and retains the structure
+         restricts delete with a where clause
+         can be rolled back 
+
+Hard delete : permanent deletion, cannot retrieve
+Soft Delete : record is updated with status/remarks etc but is available 
+
+Case : works as alternates for any condition
+ Simple Case : case keyword is immediately followed by case expression and before when statement
+ Searched Case : case keyword is followed by when statement. There is no expression between case and when statements
+ Nested Case : case within case
+                   case within if-else

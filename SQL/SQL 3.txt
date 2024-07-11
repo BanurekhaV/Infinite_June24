@@ -52,3 +52,70 @@ insert into dummy2(id, dummyname) select did,dname from dummy1
 --destination having more columns than source, then we need to specify 
 --the column list for insertion
 insert into dummy2(id, dummyname) select did,dname from dummy1 
+
+
+--identity column
+drop table sample1
+create table Sample1
+(S_id int identity(2,2),
+sname varchar(5))
+
+sp_help sample1
+
+sp_help tblemployees
+
+insert into sample1 values('BCOM')
+
+select * from sample1
+delete from sample1 where s_id=2
+
+--drop vs truncate vs delete
+
+create table test(tid int, tname char(5))
+insert into test values(1,'g'),(2,'p'),(3,'o')
+select * from test
+
+drop table test
+truncate table test
+
+delete from test
+where tid>1
+
+begin tran
+  delete from test
+where tid>1
+rollback
+
+--hard delete vs soft delete
+delete tbldepartment where deptno=1
+
+update tblDepartment set deptno=0 where deptno=1  -- soft delete
+
+alter table tblemployees
+add remarks varchar(max)
+select * from tblemployees
+update tblemployees set remarks ='inactive' where empid=300
+
+--case
+create table casetable(cid int, cname varchar(20))
+
+insert into casetable values(5, 'White'),(3,'Blue'),(2,'Green'),(4,'Red')
+
+--Simple Case without else
+select cid,cname,
+ case cname
+   when 'Red' then 'Danger'
+   when 'Blue' then 'Primary'
+   when 'Green' then 'Success'
+ end as Remarks
+  from casetable
+
+ --case with else
+ select cid,cname,
+ case cname
+   when 'Red' then 'Danger'
+   when 'Blue' then 'Primary'
+   when 'Green' then 'Success'
+   else 'No Comments'
+ end as 'Color Remarks'
+  from casetable
