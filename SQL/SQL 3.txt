@@ -119,3 +119,112 @@ select cid,cname,
    else 'No Comments'
  end as 'Color Remarks'
   from casetable
+
+
+ --searched case with else
+  select cid,cname,
+  case 
+    when cname ='Red' then 'Danger'
+	when cname='Blue' then 'Primary'
+    when cname='Green' then 'Success'
+	else 'Incorrect Color'
+  end as ColorStatus
+  from casetable
+ 
+--t-sql (transact sql)helps us to use programming constructs viz.
+--1. variables
+--2. if else
+--3. case
+--4. while
+--5. break and continue
+
+--nested case
+declare @totsales int
+set @totsales=530
+select case
+  when @totsales >=500 then 'Bumper Sales'
+  when @totsales <500 then  
+      case 
+	    when @totsales between 100 and 200 then 'Poor Sales'
+		when @totsales between 201 and 300 then 'Ok Sales'
+		when @totsales between 301 and 400 then 'Good Sales'
+		else 'No Sales'
+      end
+  end as SalesData
+
+  --nested case inside if else
+declare @sales int
+set @sales=245
+select @sales as 'Total Sales'
+
+print 'The Total Sales made is ' + ' ' + cast(@sales as varchar(5))
+if @sales >300
+   select 'Bumper Sales'
+else
+ begin 
+   select case
+    when @sales between 100 and 200 then 'Poor Sales'
+	 when @sales between 201 and 300 then 'OK Sales'
+	  when @sales between 301 and 400 then 'Good Sales'
+    else 'No Sales'
+	end 'Sales Status'
+  end
+
+--tsql 1. 
+begin
+declare @v int=50, @v2 int=100, @sum int
+set @sum = @v
+print 'The sum of 2 nos is ' + cast(@sum as varchar(5))
+if(@v > @v2)
+ print 'v is greater'
+else
+ print 'v2 is greater'
+end
+
+--ex 1.
+--using tsql increase the salary by 100/- for all employees 
+--who earn less than 103 empid
+begin
+ declare @sal float
+ declare @ename varchar(30)
+ select @ename=empname, @sal=salary from tblemployees where empid=102
+print 'Name of the employee : ' + @ename
+print 'Salary is :' + cast(@sal as varchar(10))
+if(@sal<=6100)
+ begin
+  set @sal=@sal +100
+   print 'Revised Salary : '+ cast(@sal as varchar(10))
+  end
+  else
+  begin
+   print 'Salary seems ok'
+  end
+end
+
+--while
+declare @ctr int = 1
+while @ctr <= 5
+ begin
+   print @ctr
+   set @ctr = @ctr + 1;
+  end
+
+  --while with break
+  declare @ctr1 int = 0
+while @ctr1 <= 5
+ begin
+ set @ctr1 = @ctr1 + 1;
+ if @ctr1 = 4
+ break
+   print @ctr1   
+  end
+ 
+ --while with continue
+   declare @ctr2 int = 0
+while @ctr2 <= 5
+ begin
+ set @ctr2 = @ctr2 + 1;
+ if @ctr2 = 4
+ continue
+   print @ctr2   
+  end
