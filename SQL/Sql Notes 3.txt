@@ -1,0 +1,6 @@
+Corelated Subquery : Is a way of reading every row in a table and comparing values in each row against related data
+- it is used whenever a subquery must return different result set for each candidate row by the main query
+
+
+copying data from one table to another
+

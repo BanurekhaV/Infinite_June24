@@ -1,0 +1,54 @@
+--second highest problems are solved using corelated sub query
+
+select empname,salary from tblemployees order by salary desc
+update tblemployees set salary = 7000 where empname = 'vijendra'
+
+select e.Empname, e.salary from tblemployees e
+where 2 =(select count(salary)from tblemployees e2 where e2.Salary >=e.salary)
+
+-- in many cases corelated sub query can be replaced with inner join for better performance
+
+--eg 1. Find all employees whose salary is greater than the average salary of that department
+
+--with corelated sub query
+select e1.Empid, e1.empname from tblemployees e1
+where salary > (select avg(salary) from tblemployees e2 where e2.deptno = e1.deptno)
+
+--with inner join
+select e1.Empid, e1.empname from tblemployees e1 join 
+                       (select deptno, avg(salary) as 'Dept Average' from tblemployees
+					   group by deptno) as T on e1.DeptNo = T.DeptNo
+					   where e1.Salary > t.[Dept Average]
+
+--corelated sub query for updation
+--eg 2. update salary for all employees, whose salary is minimum in that departement
+
+update tblemployees set salary = 6000 where empid =108
+
+update tblemployees set salary = Salary + 20 
+from tblemployees t1 where Salary <=
+                       (select min(t2.salary) from tblemployees t2 where t2.deptno = t1.DeptNo)
+
+select empname, salary from tblemployees
+
+--bulk insertion
+
+create table dummy1(did int, dname varchar(10))
+
+alter table dummy1 add daddress varchar(10)
+
+update dummy1 set daddress = 'Infinite'
+
+drop table dummy2
+create table dummy2(id int, dummyname varchar(10),dphone varchar(5),dcity varchar(6),dsal float)
+
+insert into dummy1 values(1,'A'),(2,'B'),(3,'C'),(4,'D')
+select * from dummy1
+select * from dummy2
+
+-- source having more columns than destination
+insert into dummy2(id, dummyname) select did,dname from dummy1 
+
+--destination having more columns than source, then we need to specify 
+--the column list for insertion
+insert into dummy2(id, dummyname) select did,dname from dummy1 
