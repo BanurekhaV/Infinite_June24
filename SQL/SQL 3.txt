@@ -228,3 +228,53 @@ while @ctr2 <= 5
  continue
    print @ctr2   
   end
+
+
+--set commands
+--union and union all
+create table utable1(tid int identity,tname varchar(30),
+tgrade char(1), tpercentage int)
+
+insert into utable1 values('Nithin','A',85),('Pratheeba','A',80),('Raghav','B',65),
+('Raghu','B',60)
+
+create table utable2(tid int identity,tname varchar(30),
+tgrade char(1), tpercentage int)
+
+delete from utable2
+insert into utable2 values('Ritesh','A',85),('Saivardhan','A',80),('Jahnavi','B',65),
+('Kajal','B',63)
+
+select * from utable1
+select * from utable2
+
+select tgrade,tpercentage from utable1
+where tname like 'R%'
+union all
+select tgrade,tpercentage from utable2
+
+--intersect
+create table empdetails
+(Id int identity,
+EName varchar(30), Age int, City varchar(20))
+
+insert into empdetails values('Suresh',24,'Delhi'),('Ramesh',23,'Pune'),('Vijesh',30,'Kolkatta')
+
+create table Bonusdata(BonusId int, Eid int, bonusAmt int)
+
+insert into Bonusdata values(20,5,10000),(15,3,30000)
+
+select ID, Ename,bonusAmt from empdetails
+left join Bonusdata on empdetails.Id = Bonusdata.Eid
+intersect
+select ID, Ename,bonusAmt from empdetails
+right join Bonusdata on empdetails.Id = Bonusdata.Eid
+
+--except
+
+select ID, Ename,bonusAmt from empdetails
+left join Bonusdata on empdetails.Id = Bonusdata.Eid
+except
+select ID, Ename,bonusAmt from empdetails
+right join Bonusdata on empdetails.Id = Bonusdata.Eid
+

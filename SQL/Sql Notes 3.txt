@@ -38,3 +38,26 @@ Case : works as alternates for any condition
  Searched Case : case keyword is followed by when statement. There is no expression between case and when statements
  Nested Case : case within case
                    case within if-else
+
+T-Sql : programming with sql
+ - variables
+ if else
+ case
+ while
+ break, continue
+
+set commands : are operators that can work with multiple result sets(query output)
+
+Rules for using set operators :
+ 1. the result set of both the queries must have the same number of columns
+ 2. the datatypes of the columns of both the result set must be same
+ 3. the positional ordering of the column returned by the query must be same
+ 4. In case we need sorted output, we can order only the final result
+
+- Union : removes duplicates from the concatenation of 2 or more result sets
+- union all : includes duplicates
+
+intersect : is used to get records common to all result sets retrieved from multiple queries or tables
+
+Except : is used to retrieve records which are found in one query , but not in another. Returns records which are unique to one resultset
+
