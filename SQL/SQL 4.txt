@@ -36,7 +36,16 @@ as(select deptno,deptname,loc from tblDepartment)
 --
 update dmlcte2 set deptlocation='Navi Mumbai' where Department_Number=4
 
+--recursive cte
 
+with cte_week(n,wkday)
+as(select 0,DATENAME(dw,0)
+union all
+select n + 1, datename(dw,n+1) from cte_week where n < 6)
+
+select n,wkday from cte_week
+
+select datename(dw,getdate())
 
 --Hierarchial queries with cte(recursive)
 
@@ -50,3 +59,84 @@ where e.mgrid is not null)
 
 select * from ourcte 
 order by emplevel
+
+--Stored Procedure
+
+create procedure sp_welcome
+as
+begin
+ select 'Hello and Welcome to SQL procedures'
+end
+
+--to execute procedure
+--1.
+execute sp_welcome
+--2.
+exec sp_welcome
+--3.
+sp_welcome
+
+sp_helptext sp_welcome
+
+create proc sp_deptdetails
+as
+begin
+select * from dept
+where deptno=20
+end
+--to execute
+sp_deptdetails
+
+--to remove procedure from the database schema
+drop proc sp_deptdetails
+
+--delete some data
+create or alter proc sp_deleteemp
+as
+begin
+ select * from tblemployees where empid=300
+ delete from tblemployees where empid =300
+  select * from tblemployees where empid=300
+  select getdate()as 'Todays Date'
+ end
+
+ exec sp_deleteemp
+
+ --procedure with parameter
+ --1. procedure that takes a name from the user and welcomes that user
+ create proc sp_parameter1 @name varchar(20)
+ as
+ begin
+   select concat('Hello ', @name)
+end
+
+--to execute the above
+sp_parameter1 'Banurekha'
+
+--2. 
+create or alter proc GetDeptName(@eid int)
+as
+begin
+ select empname,deptname from tblemployees join tblDepartment
+ on tblemployees.DeptNo=tblDepartment.DeptNo and tblemployees.Empid=@eid
+end
+
+getdeptname 110
+
+
+--3.
+create or alter proc sp_updatesalary(@eid int, @sal float)
+as
+begin
+ declare @revisedsalary float
+ declare @ename varchar(30)
+ select @ename=empname from tblemployees where empid=@eid
+ if(@sal <=6300)
+  begin
+   set @revisedsalary = @sal+100
+   print 'Salary has been revised for ' + @ename + '  from :' + cast(@sal as varchar(10)) + 
+   ' to ' + cast(@revisedsalary as varchar(10))
+   end
+end
+
+sp_updatesalary 103,6100

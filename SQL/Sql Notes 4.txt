@@ -13,3 +13,9 @@ Advantages :Reusability (cte reference to other ctes, recursive ctes')
 Disadvantages : can be used only within the scope of its declaration in the main query.
                 not supported by many database platforms
 
+
+Stored Procedures : 
+Any query will be parsed and then a plan for execution is created and then executed as per plan, by the SQL Engine. In order to avoid the above repetitive task, we can store the query along with the execution plan as an object inside the database schema. This is stored procedure
+
+
+
