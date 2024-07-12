@@ -140,3 +140,43 @@ begin
 end
 
 sp_updatesalary 103,6100
+
+
+--procedures with output parameters
+create or alter proc sp_Taxcalculator @eid int, @annualsal float output
+as
+begin
+declare @temp float
+select @temp=(salary*12) from tblemployees where empid=@eid
+  if(@temp >75000)
+    begin
+	  set @annualsal= @temp
+	end
+ else
+   begin
+    print 'No Tax as salary is less than 78000'
+   end
+end
+
+--to execute the above proc
+
+declare @salary float
+declare @taxamt float
+exec sp_Taxcalculator 101,@salary output
+set @taxamt=@salary*10/100
+print 'Tax Amount to be paid is ' + cast(@taxamt as varchar(8))
+
+--2. 
+create or alter proc getsalary(@ename varchar(30), @esal float output)
+as
+begin
+ select @esal=sal from emp where ename=@ename
+ end
+
+ select * from tblemployees
+ --changed order of calling the proc with output parameter
+ declare @empsalary float
+ execute getsalary  @esal=@empsalary output, @ename='Smith'  -- named parameters
+ print 'Employee salary is : ' + cast(@empsalary as varchar(7))
+
+
