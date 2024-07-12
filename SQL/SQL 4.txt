@@ -180,3 +180,47 @@ begin
  print 'Employee salary is : ' + cast(@empsalary as varchar(7))
 
 
+ --ex 2. 
+--create a procedure that takes an employee no, and outputs the manager id and the salary of the employee
+
+--procedures with return type
+--1.
+create or alter proc sp_totalDept
+as
+begin
+return (select count(deptno) from tblDepartment)
+end
+
+declare @totdept int
+exec @totdept= sp_totaldept 
+select @totdept
+
+--2. proc that returns a non integer values
+--results in an error
+
+create proc sp_getLocation 
+as
+begin
+return (select loc from tblDepartment where DeptNo=4)
+end
+
+declare @loc varchar(20)
+exec @loc=sp_getLocation
+select @loc
+
+-- now let us modify the above proc
+create proc sp_Deptno (@loc varchar(20)) 
+as
+begin
+return (select deptno from tblDepartment where loc=@loc)
+end
+
+
+declare @dno int
+exec @dno = sp_Deptno 'navi mumbai'
+select @dno
+
+--ex 3.
+-- create a procedure that takes deptno as input and 
+-- ouputs the average salary of that department, and also
+-- returns the count of employees in that department
