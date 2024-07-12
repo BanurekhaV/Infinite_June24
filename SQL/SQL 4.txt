@@ -1,0 +1,52 @@
+--cte
+--1.
+
+with firstcte(Empname, AnnualSalary, Department)
+as
+(select Empname, (salary*12),tblDepartment.DeptName
+from tblemployees join tblDepartment
+on tblemployees.DeptNo = tblDepartment.DeptNo)
+
+--main query1
+--select * from firstcte where AnnualSalary>75000
+
+--query 2
+select department,avg(annualsalary)'Dept Average' from firstcte
+group by Department having avg(annualsalary) >78000
+
+--eg 2 multiple ctes
+with cte1 as(select * from tblemployees),
+cte2 as (select * from tblDepartment)
+
+--main query using ctes
+select cte1.empname,cte1.salary,cte2.deptname from
+cte1 join cte2 on cte1.DeptNo= cte2.DeptNo and cte1.Salary>6400
+
+--eg 3 dml operations with cte
+with dmlcte1(DepartmentNo,DeptName,NewLocation)as(select deptno,deptname,loc from tblDepartment)
+
+-- main query
+--select * from dmlcte1
+insert into dmlcte1 values(11,'second Dept','Cochin')
+
+--eg 4 
+with dmlcte2(Department_Number, DeptartmentName,DeptLocation)
+as(select deptno,deptname,loc from tblDepartment)
+
+--
+update dmlcte2 set deptlocation='Navi Mumbai' where Department_Number=4
+
+
+
+--Hierarchial queries with cte(recursive)
+
+with ourcte(EmpNo,EName,MGR,EmpLevel)
+as(select empno,ename,mgrid,1 EmpLevel   -- initial subquery
+  from emp where mgrid is null
+  union all
+select e.empno,e.ename,e.mgrid,oc.emplevel + 1   -- recursive subquery
+from emp e inner join ourcte oc on e.mgrid = oc.empno
+where e.mgrid is not null)
+
+select * from ourcte 
+order by emplevel

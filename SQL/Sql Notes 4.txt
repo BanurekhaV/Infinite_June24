@@ -1,0 +1,15 @@
+Common Table Expression (CTE) : Allows us to define a named temporary result set that is available within the execution scope
+- we can perform dml operations
+- we can have multiple ctes separated with a ','
+- one cte can refer to other cte's
+- we can recursive ctes'
+
+Advantages :Reusability (cte reference to other ctes, recursive ctes')
+            Complex queries can be broken down into different ctes
+            more readable
+            does not occupy memory
+
+
+Disadvantages : can be used only within the scope of its declaration in the main query.
+                not supported by many database platforms
+
