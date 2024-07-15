@@ -170,3 +170,9 @@ create index idxcity on dummy1(dummycity)where dummycity is not null
 
 select * from dummy1
 select dummycity from dummy1
+
+
+--2. 
+create index idx_salary on emp(sal) where sal > 1600
+
+select sal from emp where sal >1600

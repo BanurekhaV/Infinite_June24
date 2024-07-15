@@ -45,6 +45,15 @@ Difference between procedures and functions
 
 
 Indexes : are mechanism to sort the physical order of the data in the database
+
+Why Index?? : Without indexes, any query or modification causes the SQL engine to search the referenced table/s from the top down. A single well placed index can shorten the query/modification from dozens of minutes to under a second
+- Speeds up the data access
+- Enforces Uniqueness
+
+disadvantages :
+
+- consumes disk space
+
   There are 2 types of Indexes
 1. Clustered Index
             - sorts the physical table on every dml operation
