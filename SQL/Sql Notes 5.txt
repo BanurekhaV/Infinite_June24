@@ -1,0 +1,17 @@
+Error Handling within Procedure
+SQL allows simple error handlers with begin try and begin catch blocks
+- we can raise and throw specific user defined errors
+- All predefined errors Nos are below 50000, and user defined are above 50000. Error number is a unique identifier for each error that occurs
+
+Error Message:  Is a brief info. describing the error that occurred recently. It can be for a maximum of 2047 characters
+
+Severity Level : It tells us the importance of the error. This ranges between 0 and 24
+  0-9 : not severe , and is considered as status messages/information
+  11-16 : Indicates user generated errors
+  17-19 : Indicates Software errors and cannot be corrected by the user. Must be reported to the sysadmin
+  20-24 : Indicate fatal errors that can damage the database/system. Here the database connection immediately terminates to ensure database security
+
+State : It is an arbitrary value not very important to the user. This ranges between 0 and 127
+
+
+Functions : 

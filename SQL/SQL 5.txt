@@ -1,0 +1,58 @@
+use infinitedb
+
+select * from ourtable -- throws an error, read the various aspects of error
+--like error id, level, state and the message
+
+--error handling proc
+create or alter proc Errorproc
+as
+begin
+begin try
+  select salary + empname from tblemployees where empid=108
+end try
+begin catch
+ --select 'Some Error Occured.. try again'
+ --raiserror(13114,16,5)
+ --raiserror(60001,-1,8,'Invalid Operation in procedure')
+ throw 60001,'Unable to convert datatypes',1
+end catch
+end
+ 
+ errorproc
+ --all systemic + userdefined error messages are stored in sysmessages
+ select * from sysmessages
+ --to add an user defined error message
+ sp_helptext sp_addmessage
+ sp_addmessage 60001,8,'Unable to convert datatypes'
+
+ --Functions :
+ --create function <functionname>(parameter <name> <datatype><size>,
+ --parameter <name> <datatype><size>)
+ --as
+ --begin
+ --function body
+ --end
+
+ create function fnJoinData(@empname varchar(30),@gen varchar(10),@phone varchar(10))
+ returns nvarchar(100)
+ as
+  begin
+ return (select @empname + ' '+ @gen + ' ' + @phone)
+ end
+
+ --to call/execute the above function
+ --we need to specify either a 2 part or 3 part reference/qualification
+
+ select Empid as 'Employee Number', infinitedb.dbo.fnjoindata(empname,gender,Phoneno)
+ as 'Employee Details' from tblemployees
+
+ --ex 1. write a function that takes an employeed id and returns the salary of that employee
+ create function fngetSalary(@empid int)
+ returns float
+ as
+ begin
+  return (select salary from tblemployees where empid=@empid)
+  end
+
+  select empid as 'employee number',dbo.fngetSalary(empid) from tblemployees
+  order by Empid
