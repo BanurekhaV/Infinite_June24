@@ -56,3 +56,117 @@ end
 
   select empid as 'employee number',dbo.fngetSalary(empid) from tblemployees
   order by Empid
+
+ --ex 4. write a function to calculate the area of rectangle
+
+create or alter function fn_calculateArea(@length int, @breadth int)
+returns int
+as
+begin
+declare @area int
+set @area = @length * @breadth
+return @area
+end
+
+select dbo.fn_calculateArea(5,6) 'Area of Rectangle'
+print dbo.fn_calculateArea(6,6)
+
+--Table valued Function -- inline
+create function fn_tablevalued(@deptid int)
+returns table
+as
+return(select empid,empname,salary,deptno from tblemployees where deptno=@deptid)
+
+select * from fn_tablevalued(5)
+
+
+
+--multistatement tabled valued
+create or alter function fn_GetEmployeesbyGender(@gender varchar(8))
+returns
+@EmpBygender table(
+Empid int, EmployeeName varchar(40),
+Gender varchar(7))
+as
+begin
+--bulk insertion
+ insert into @EmpBygender
+ select Empid,Empname,gender from tblemployees 
+ where Gender= @gender
+ --handling exception situation
+ if @@ROWCOUNT = 0
+ begin
+  insert into @EmpBygender
+  values(0,'No Emp found with the given gender',null)
+  end
+ return
+end
+
+--to execute the above function
+select * from fn_GetEmployeesbyGender('male')
+
+create function CustomersByCountry
+(@country varchar(20))
+returns
+@CustBycountry table( Custid varchar(11),
+CustomerName varchar(30),
+Country varchar(30))
+as
+begin
+
+insert into @CustBycountry select CustomerId,ContactName,Country
+from customers where country=@country
+
+if @@ROWCOUNT = 0
+ begin
+  insert into @CustBycountry
+  values('','No Customers found',null)
+  end
+return
+end
+
+select * from CustomersByCountry('Germany')
+select deptname from tblDepartment join 
+dbo.fn_tablevalued(4) on tblDepartment.DeptNo=4
+
+
+
+--indexes
+drop table dummy2
+create table dummy1(dummyid int, dummyname varchar(20),dummycity varchar(20))
+
+sp_help dummy1
+truncate table dummy1
+insert into dummy1 values(6,'GG',null),(8,'II',null)
+,(4,'DD','Pune'),(2,'AA','Chennai')
+
+select * from dummy1
+
+--let us create a clustered index on a table that does not have a primary key
+create clustered index idxdummyid on dummy1(dummyid)
+
+create unique clustered index idxuniq on dummy1(dummyid) -- throws an error
+--saying only one clustered per table possible
+
+drop index dummy1.idxdummyid
+
+create unique clustered index idxuniqdummy on dummy1(dummyid)
+
+update dummy1 set dummyid=4 where dummyname ='duplicate'
+
+--non clustered index
+select * from emp
+create index idxname on emp(ename)  -- always creates a non unique, non clustered index ony
+
+select * from emp where ename like'A%'
+
+-- if we want a unique non clustered index then
+create unique nonclustered index idxsal on tblemployees(empname)
+
+sp_help emp
+
+--filtered index
+create index idxcity on dummy1(dummycity)where dummycity is not null
+
+select * from dummy1
+select dummycity from dummy1

@@ -14,4 +14,51 @@ Severity Level : It tells us the importance of the error. This ranges between 0 
 State : It is an arbitrary value not very important to the user. This ranges between 0 and 127
 
 
-Functions : 
+Functions : are reusable piece of code that is a part of the database schema
+-All functions must return a scalar datatype
+-cannot return text, ntext, image, timestamp, cursor
+-May or may not take inputs
+
+they are of 2 types
+  1. scalar
+  2. tabled valued
+       - inline table valued : are functions that return a table and are not enclosed within begin and end keywords
+                - used in where and join clause also apart from select
+                - gives better performance than multi statement table valued functions
+       - multi statement table valued 
+                - can define the table structure as per the need.
+                - contains begin and end clauses
+
+If any given task can be achieved thru inline, then prefer inline
+
+
+Difference between procedures and functions
+1. A function must return a value, where as procedure need not (only if we need an integer value to be returned, we may use it)
+2. Procedures can have both input, output parameters, where as functions can have only input parameters
+3. Procedures can have select, and other dml statements, but functions can have only select statements. Cannot be used for data modification
+4. Procedures provides options for transaction management, error handling etc. where as functions does not
+5. We call a procedure using execute/exec/procedure name whereas a function can be called using select
+6. Procedures can call other procedures and functions, where as functions can call only other functions
+7. UDF can be used in select, where, join/having SQL clause, but procedures cannot be used
+
+
+
+
+Indexes : are mechanism to sort the physical order of the data in the database
+  There are 2 types of Indexes
+1. Clustered Index
+            - sorts the physical table on every dml operation
+            - there can be only one clustered index per table
+            - it will be just unique and clustered without primary key (allows one null)
+
+2. Non Clustered Index
+            - we can have as many non clustered index as that of the columns in  the table
+                 (we need to use it appropriately- whenever we have large data, and we are going to regularly query on a particular column/s, then having an index on those col/s makes sense, and can help improve performance)
+            - creates a separate index table where is the data is sorted
+            - it occupies space
+            - any dml manipulations does not effect the table, instead the index table
+            - they can be either unique or non-unique
+
+3. Filtered Index 
+            - Is a non clustered index with a predicate. 
+            - Used in situations where we need only a portion of the index
