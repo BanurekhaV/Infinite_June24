@@ -31,3 +31,79 @@ select * from tblemployees where empname='banurekha'
 
  select * from tblDepartment
  select * from tblemployees
+
+
+ --procedure with exception handling,transactions,tsql and few dml operations
+ create table Products
+ (ProductId int primary key,
+ Productname varchar(30) not null,
+ Price int,
+ QuantityAvailable int)
+
+ --let us populate data into products
+
+ insert into Products values(101,'Laptops',55000,100),
+ (102,'Desktops',35000,50),(103,'Tablets',60000,45),(104,'SmartPhones',45000,25)
+
+ drop table productsales
+ --product sales table
+ create table ProductSales 
+ (SaleId int primary key,
+ ProductId int references Products(ProductId),
+ QuantitySold int)
+
+  select * from Products
+ select * from ProductSales
+ select max(saleid) from ProductSales
+
+ create or alter proc Sales
+ @pid int, @qty_to_sell int
+ as
+ begin
+  --first we need to check if there is enough stock available to sell
+  declare @stockavailable int
+  select @stockavailable = Quantityavailable from Products where ProductId = @pid
+  --we need to throw an error if the stock i sless than the qty to sell
+  if(@stockavailable < @qty_to_sell)
+    begin
+	  raiserror('Not Enough Stock on hand to sell',16,1)
+	end
+  else
+    begin -- we shall start a transaction
+	begin tran
+	-- we need to update the qty available in products table and also insert one rsale record
+	-- in productsales table
+	update Products
+	set QuantityAvailable = (QuantityAvailable - @qty_to_sell)
+	where ProductId = @pid
+
+	-- now let us insert one row into productsales
+	-- inorder not to have pk violetion, we should not hard code ant data for sale id
+	--we can write a logic that autogenerates the saleid, by finding the max saleid
+	declare @maxsaleid int
+	select @maxsaleid = case
+	   when max(SaleId) is null then 0
+	   else max(SaleId)
+	   end
+	   from ProductSales
+	   -- we will increment the @maxsaleid by 1, to avoid Pk violation
+	    set @maxsaleid = @maxsaleid + 1
+
+	   insert into ProductSales values(@maxsaleid, @pid, @qty_to_sell)
+	   --@@Error , a global variable will have 0 if no errors
+	   if(@@Error <> 0)
+	    begin
+		  rollback transaction
+		  Print 'something went wrong.. try later, rolling back'
+        end
+	   else
+	    begin
+		  commit transaction
+		  Print 'Transaction Successfull'
+		end
+  end
+end
+
+--let us execute the above proc
+Sales 101,10
+
