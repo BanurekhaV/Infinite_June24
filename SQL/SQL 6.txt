@@ -1,0 +1,33 @@
+use infinitedb
+
+select * from tblemployees
+
+--Transactions
+--1. 
+begin transaction
+select * from tblemployees where empname='banurekha'
+ update tblemployees set remarks='Active'
+ where empname='Banurekha'
+ select * from tblemployees where empname='banurekha'
+ 
+ commit
+
+ --2. 
+ begin tran
+ insert into tblemployees values(160,'Ritesh','Male',6500,2,563486,null)  -- this has to happen
+ save tran t1 
+ select * from tblemployees
+ delete from tblemployees where empid=200
+ select * from tblemployees where empid=200
+ save tran t2
+  update tbldepartment set budget=50000 where deptno=2
+ select * from tblDepartment
+ rollback tran t2
+ --rollback tran t1
+ --rollback
+ commit tran t2 -- or rollback
+ commit tran t1  -- only one commit is allowed
+
+
+ select * from tblDepartment
+ select * from tblemployees

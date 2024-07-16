@@ -1,0 +1,39 @@
+Transactions Management :
+A database transaction consists of 
+   -dml statements that constitutes changes
+   -ddl
+   -dcl
+Begins when the first dml statement is executed
+Ends with one of the following
+   - A commit or a rollback statement
+   - Auto commit
+   - User exits
+   - System crashes
+
+With commit and rollback statements, we can ensure
+    - Data Consistency
+    - Preview data changes before making changes permanent
+    - Group logically related operations
+
+Save Transactions 
+    - Are logical markers of a set of operations in atransaction
+    - It is not ANSI standard SQL
+
+Transactions can be grouped and saved under a logical name. This helps us to decide whether to go ahead or undo the changes
+  If we want to undo certain sql statements, we can rollback till a logical transaction
+  If we don't want any transactions, then simply type Rollback
+  If we want changes to be made permanent, then issue just a commit 
+
+A : Atomicity 
+
+C : Consistency
+
+I : Isolation
+
+D : Durability
+
+Locks in transaction help in having consistent and durable data
+They are of 2 types 
+   1. Shared Lock
+   2. Exclusive Lock
+

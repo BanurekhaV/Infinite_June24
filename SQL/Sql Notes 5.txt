@@ -71,3 +71,36 @@ disadvantages :
 3. Filtered Index 
             - Is a non clustered index with a predicate. 
             - Used in situations where we need only a portion of the index
+
+Guidelines for Indexing :  
+ - Columns to index :
+     Primary key and foreign key
+     Those frequently searched in ranges
+     Those frequently accessed in sorted order
+     Those frequently grouped together during aggregation
+
+-Columns not to Index on
+     Those that are seldom referred in queries
+     Those that contain few unique value
+     Those that are defined with text, ntext, image etc datatypes
+
+Guidelines for Non clustered Index
+   Columns that contain large number of distinct values
+   Frequently Searched
+   Where joins ang groups are used extensively
+
+
+Type of Internal indexes
+   Btree - OLTP applications
+   bitmap - datawarehouses
+   domain - user defined datatypes
+
+When to create indexes
+   - columns that contain number of null values
+   - when table is large and most queries are expected to retrieve less than 2 to 4% of rows
+
+When not to create :
+   when table is small
+   columns not referred often
+   more than 4% of rows are retrieved on queries
+   
