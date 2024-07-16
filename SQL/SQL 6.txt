@@ -107,3 +107,52 @@ end
 --let us execute the above proc
 Sales 101,10
 
+
+
+--Triggers
+--1.
+create trigger trgEmpIns
+on tblemployees
+for insert
+as
+ begin
+  select * from inserted
+  select * from tblemployees
+end
+
+insert into tblemployees values(300,'Tanmayee','Female',6700,1,998800,null)
+
+--2.
+create or alter trigger trgUpdEmp
+on tblemployees
+for update
+as
+begin
+select * from deleted
+select remarks from inserted
+declare @status varchar(20)
+select @status=remarks from inserted
+if(@status='active')
+ begin
+ print 'Employee is active'
+ end
+end
+
+update tblemployees set remarks ='active' where empid=150
+
+--3.
+create trigger trg_Nochanges
+on tbldepartment
+for insert,update,delete
+as
+begin
+ print ' cannot manipulate table'
+ rollback
+ end
+
+ select * from tblDepartment
+ insert into tblDepartment values(100,'aa',567,'l1')
+
+ update tblDepartment set loc='Cochin' where deptno=20
+
+ drop trigger trg_nochanges

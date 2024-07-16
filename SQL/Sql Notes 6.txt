@@ -37,3 +37,29 @@ They are of 2 types
    1. Shared Lock
    2. Exclusive Lock
 
+set implicit_transactions on/off - enables or disables the auto commit mode
+
+
+Triggers : is like a procedure/function that can be used to define business rules/constraints
+  - are reused, but unlike procedures/functions, they are not called explicitly, but fired automatically
+     on any event (DDL, DML)
+
+- They can before/after or instead of triggers (before the event, after the event or instead of the event)
+
+triggers -> fire on an object-->when an event occurs on the object 
+
+Magic Tables : are temporary tables that gets created when a trigger is fired on an event.
+               - The scope of the Magic Table is within the trigger body
+               - They are 2 in nos.
+                     Inserted
+                     Deleted 
+
+ update events are always delete followed by insert
+
+create trigger <triggername>
+on table/views
+instead of insert,update,delete
+as
+begin
+
+end
