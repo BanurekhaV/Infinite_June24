@@ -156,3 +156,96 @@ begin
  update tblDepartment set loc='Cochin' where deptno=20
 
  drop trigger trg_nochanges
+
+create table Employee_Audit(Msg varchar(max))
+
+ create or alter trigger trgAuditInsert
+ on tblemployees
+ for insert
+ as
+ begin
+ declare @id int
+ select @id=empid from inserted
+
+ insert into Employee_Audit
+ values('New Employee with Empid '+ ' '+ cast(@id as varchar(5)) + ' is added at '
+ + cast(getdate() as nvarchar(20)))
+ end
+
+ insert into tblemployees values(200,'Banurekha','Female',6500,4,007,null)
+
+ select * from employee_audit
+
+
+ --let us add a column to the Employee_audit table
+ alter table employee_audit
+ add AuditDate date
+ -- eg 5. to make an elaborate audit details using the columns from
+ --both inserted and deleted table
+
+ create or alter trigger trgUpdateEmp
+ on tblemployees
+ for update
+ as
+ begin
+   --declare few variables to hold old data
+   declare @id int
+   declare @oldename varchar(35), @newename varchar(35)
+   declare @oldsalary float, @newsalary float
+   declare @olddeptid int, @newdeptid int
+   select * from inserted
+   select * from deleted
+   --declare a variable to build the audit string
+   declare @auditdata varchar(max)
+   --store the newly updated data into a temp table ('#') or use the inserted table
+   select * into #temtableforupdation from inserted
+
+   --loop thru all the updated records incase we have updated many rows
+   while(exists(select empid from #temtableforupdation))
+     begin
+	  set @auditdata = ' '
+	  --let us select the first row of temporary table
+	  select top 1 @id=empid,@newename=empname,
+	  @newsalary=salary,@newdeptid=deptno from #temtableforupdation
+
+	  --let us select data from deleted table
+	  select @oldename=empname, @oldsalary=salary,
+	  @olddeptid=deptno from deleted where empid=@id
+
+	  set @auditdata = 'Employee with Id : '+ cast(@id as varchar(5)) + ' changed '
+	  --if old data is updated with newdata, we should track it
+	  if(@oldename <> @newename)
+	   begin
+	   set @auditdata = @auditdata + 'the Name from '+ @oldename + ' to '+ @newename
+	   end
+	   --salary changes verfification
+	   if(@oldsalary <> @newsalary)
+	    begin
+		set @auditdata = @auditdata + ' Salary from ' + cast(@oldsalary as varchar(10)) + 
+		' to ' + cast(@newsalary as varchar(10))
+		end
+		--dept changes verification
+		if(@olddeptid <> @newdeptid)
+		begin
+		set @auditdata = @auditdata + ' Department from  '+ cast(@olddeptid as varchar(5)) +
+		' to ' + cast(@newdeptid as varchar(5))
+		end
+
+		--now we have the entire audit data
+		insert into Employee_Audit(msg,auditdate) values(@auditdata,getdate())
+
+		  --now we should delete the top 1st row after recording changes
+		  --so that the second row can be the top row
+		  delete from #temtableforupdation where empid=@id
+	end
+end
+
+select * from tblemployees where DeptNo in(1,2)
+--one row and many columns updation
+update tblemployees set empname='Sumathi',salary=7500,deptno=5 where empid=200
+
+select * from #temtableforupdation
+
+--many rows updation
+update tblemployees set salary=8000 where deptno in(1,3)
+select * from Employee_audit
