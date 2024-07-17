@@ -213,3 +213,67 @@ end
 
 close empcursor_static
 deallocate empcursor_static
+
+
+--eg 4 dynamic cursor
+declare @empname varchar(25),@empsal float
+
+declare emp_dynamic cursor dynamic
+for select empname,salary from tblemployees
+
+open emp_dynamic
+fetch next from emp_dynamic into @empname,@empsal
+
+while @@FETCH_STATUS = 0
+ begin
+  if(@empsal <6700)
+    begin
+	 print cast(@empsal as varchar(10))
+	 update tblemployees
+	 set salary = salary + 100 where current of emp_dynamic
+	 select @empsal= salary from tblemployees where empname =@empname
+
+	 print @empname + ' s salary has been updated to :' + cast(@empsal as varchar(10))
+    end
+	else
+	  begin
+	   print @empname + ' ' + 'is earning good'
+	  end
+	fetch next from emp_dynamic into @empname,@empsal
+end
+close emp_dynamic
+deallocate emp_dynamic
+
+--file groups
+sp_help tblemployees
+
+--example
+create database Healthcare on primary
+(
+--primary group
+Name='HC',
+filename ='c:\Program Files\Microsoft SQL\MSSQL15.MSSQLSERVER\MSSQL\DATA\Healthcare.mdf',
+size = 5mb,
+maxsize=unlimited,
+filegrowth=1024kb
+),
+--secondary filegroup
+--first file in secondary group
+filegroup healthgrp1
+(
+Name='HealthCarefile1',
+filename='c:\program files\Microsoft SQL\MSSQL15.MSSQLSERVER\MSSQL\DATA\HealthCarefile1.ndf',
+size=1mb,
+maxsize=unlimited,
+filegrowth=1024kb),
+--like wise we can create many secondary groups
+--for log file
+filegroup Healthloggrp
+(
+Name='HealthLogFile',
+filename='c:\program files\Microsoft SQL\MSSQL15.MSSQLSERVER\MSSQL\DATA\Healthlogfile1.ldf',
+size=5mb,
+maxsize=unlimited,
+filegrowth=1024kb)
+
+

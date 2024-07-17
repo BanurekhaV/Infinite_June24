@@ -19,11 +19,7 @@ Keyset : These cursors are driven by keysets of unique values
 
 
 
-Bindu needs an increment
-Anitha Gayathri needs an increment
-Adikeshava Earns 8000
-Abishek Lomte Earns 8000
-Abishek Kumar needs an increment
-
-
-File Growth :
+File Groups : Primary  and secondary
+  when we create a database, sql server creates 2 files
+    1. A data file (.mdf)
+    2. Transaction Log file (.ldf)
