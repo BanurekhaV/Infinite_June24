@@ -1,0 +1,94 @@
+use infinitedb
+use InfiniteDB
+--Instead of Triggers
+drop trigger trg_insteadof_insert
+create or alter trigger trg_insteadof_insert
+on tbldepartment
+instead of insert,update,delete
+as
+begin
+  select 'Permission denied--contact admin'
+end
+
+select * from tbldepartment
+insert into tbldepartment values(25,'aaa',null,'bb')
+update tbldepartment set budget=10000 where deptno=21
+
+--views :
+--1.
+create view vwmyview1
+as
+select empid,empname,gender,deptno from tblemployees
+
+select * from vwmyview1 where deptno=4
+
+sp_helptext vwmyview1
+
+insert into vwmyview1(empid,empname,gender,deptno) values(500,'Shivraj','Male',3)
+ -- the above insert fails as we are not supplying values for all constrained columns
+ --viz salary and phoneneo
+
+ --view 2
+ 
+ select * from dummy1
+
+ create view vwdummy
+ as select dummyid,dummyname from dummy1
+
+ insert into vwdummy values(100,'zz')
+ update vwdummy set dummyname='XX' where dummyid=100
+ delete from vwdummy where dummyid=100
+
+ --the above crud operations works on the view because it is having columns without constraints
+
+ --3. view from 2 tables
+ drop view vwempdept
+create view vwempdept
+as
+select empid,Empname,gender, salary,phoneno,tbldepartment.Deptname 
+from tblemployees join tbldepartment
+on tblemployees.deptno = tbldepartment.deptno
+
+select * from vwempdept
+
+--now let us insert one row into the view
+insert into vwempdept values(500,'Shivraj','Male',6800,012030,'HR')-- does not insert
+
+/*Msg 4405, Level 16, State 1, Line 54
+View or function 'vwempdept' is not updatable because the modification affects 
+multiple base tables.*/
+
+select * from tblDepartment
+select * from tblemployees
+--in order to be able to insert into the above view, we can make use of instead of triggers
+--applied on the view vwempdept
+
+alter table tbldepartment
+drop constraint [con_uniq_loc]
+
+create or alter trigger trig_onView
+on vwempdept
+instead of insert
+as
+begin
+ declare @departmentid int
+ --first let us check if the given department in the insert clause is valid('HR')
+ set @departmentid= (select deptno from tbldepartment d, inserted 
+ where inserted.Deptname=d.deptname)
+ select @departmentid
+
+ --let us check if the data in @departmentid is null or valid
+ if(@departmentid is null)
+  begin
+   raiserror('Invalid Department Name..Statement Terminated',16,1)
+  return
+  end
+
+  --if @depaetmentid has valid value
+  insert into tblemployees(Empid,Empname,Gender,Salary,deptno,phoneno)
+  select empid,empname,gender,salary,@departmentid,phoneno from inserted
+  end
+
+  insert into vwempdept values(500,'Shivraj','Male',6800,012030,'HR')
+
+  select * from tblemployees

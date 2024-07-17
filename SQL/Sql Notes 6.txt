@@ -63,3 +63,6 @@ as
 begin
 
 end
+
+
+Views : are virtual tables
