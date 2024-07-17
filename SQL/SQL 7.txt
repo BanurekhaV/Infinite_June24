@@ -92,3 +92,124 @@ begin
   insert into vwempdept values(500,'Shivraj','Male',6800,012030,'HR')
 
   select * from tblemployees
+
+
+ --DDL Triggers
+ --Database Scoped 
+ create database DummyDB
+
+ use dummydb
+
+ drop trigger trg_restrict_create_table
+ create or alter trigger trg_restrict_create_table
+ on database
+ for create_table
+ as
+ begin
+  print 'Access Denied'
+  rollback transaction
+  end
+
+  drop trigger trg_allow_create_table
+  create or alter trigger trg_allow_create_table
+ on database
+ for create_table
+ as
+ begin
+  print 'Table created successfully'
+commit transaction
+  end
+  create table newtable1(id int, names varchar(20))
+
+  --server scoped
+  create trigger trg_restrict_all
+  on all server
+  for create_table,alter_table,drop_table
+  as
+   begin
+     print 'you cannot create objects in any database of this server'
+	 rollback transaction
+	 end
+
+	 --to drop a database level trigger
+	 drop trigger if exists trg_restrict_create_table on database
+	  drop trigger if exists trg_allow_create_table on database
+
+	 --to drop server scoped triggers
+	 drop trigger if exists trg_restrict_all on all server
+
+--Cursors
+--1. 
+select * from products
+
+--declare variables to store the row by row values from a cursor
+declare @pname varchar(25),@price int,@qty int
+--declare a cursor
+declare prd_cursor cursor
+for select productname,price,quantityavailable from products
+
+--open the cursor
+open prd_cursor
+--read the data
+fetch next from prd_cursor into @pname,@price,@qty
+
+--iterate the cursor set
+while @@FETCH_STATUS = 0
+ begin
+  print 'The Product : '+ @pname +  ' costs : ' + cast(@price as varchar(6)) +
+  ' and the quantity available is : '+ cast(@qty as varchar(4))
+
+  --start fetching the balance rows
+  fetch next from prd_cursor into @pname,@price,@qty
+end
+
+--close the cursor
+close prd_cursor
+--deallocate cursor
+deallocate prd_cursor
+
+--2.
+declare @sal float, @ename varchar(30)
+declare empcursor cursor
+for select Empname,Salary from tblemployees
+open empcursor
+fetch next from empcursor into @ename,@sal
+
+while @@FETCH_STATUS =0
+ begin
+  if(@sal >6700)
+     begin
+	   print @ename  + ' Earns ' + cast(@sal as varchar(10))
+	 end
+   else
+     begin
+	   print @ename + ' needs an increment'
+	 end
+	 fetch next from empcursor into @ename,@sal
+	end
+
+close empcursor
+deallocate empcursor
+	  
+--3.static cursor
+declare @staticsal float, @staticname varchar(25)
+
+declare empcursor_static cursor static
+for select empname,salary from tblemployees
+open empcursor_static
+fetch relative 5 from empcursor_static into @staticname, @staticsal
+while @@FETCH_STATUS = 0
+ begin
+   if(@staticsal >6700)
+     begin
+	   print @staticname  + ' Earns ' + cast(@staticsal as varchar(10))
+	 end
+   else
+     begin
+	   print @staticname + ' needs an increment'
+	 end
+  fetch prior from empcursor_static into @staticname, @staticsal
+end
+
+close empcursor_static
+deallocate empcursor_static

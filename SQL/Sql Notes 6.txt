@@ -66,3 +66,8 @@ end
 
 
 Views : are virtual tables
+
+DDL triggers : They are of 2 types
+
+ 1. Database Scoped DDL triggers (database level)
+ 2. Server Scoped DDL Triggers (Server Level - all database)
