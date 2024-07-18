@@ -248,12 +248,13 @@ deallocate emp_dynamic
 sp_help tblemployees
 
 --example
+
 create database Healthcare on primary
 (
 --primary group
-Name='HC',
-filename ='c:\Program Files\Microsoft SQL\MSSQL15.MSSQLSERVER\MSSQL\DATA\Healthcare.mdf',
-size = 5mb,
+Name='Healthcare',
+filename ='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\Healthcare1.mdf',
+size=5mb,
 maxsize=unlimited,
 filegrowth=1024kb
 ),
@@ -262,7 +263,7 @@ filegrowth=1024kb
 filegroup healthgrp1
 (
 Name='HealthCarefile1',
-filename='c:\program files\Microsoft SQL\MSSQL15.MSSQLSERVER\MSSQL\DATA\HealthCarefile1.ndf',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\HealthCarefile1.ndf',
 size=1mb,
 maxsize=unlimited,
 filegrowth=1024kb),
@@ -271,9 +272,65 @@ filegrowth=1024kb),
 filegroup Healthloggrp
 (
 Name='HealthLogFile',
-filename='c:\program files\Microsoft SQL\MSSQL15.MSSQLSERVER\MSSQL\DATA\Healthlogfile1.ldf',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\Healthlogfile1.ldf',
+size=5mb,
+maxsize=unlimited,
+filegrowth=1024kb)
+
+-------------------------------------------------------------
+
+create database Homecare on primary
+(
+--primary group
+Name='Homecare',
+filename ='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\Homecare1.mdf',
+size=5mb,
+maxsize=unlimited,
+filegrowth=1024kb
+),
+--secondary filegroup
+--first file in secondary group
+filegroup homegrp1
+(
+Name='HomeCarefile1',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\HomeCarefile1.ndf',
+size=1mb,
+maxsize=unlimited,
+filegrowth=1024kb),
+--like wise we can create many secondary groups
+--for log file
+filegroup Homeloggrp
+(
+Name='HomeLogFile',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\Homelogfile1.ldf',
 size=5mb,
 maxsize=unlimited,
 filegrowth=1024kb)
 
 
+use Homecare
+create table customers(custid varchar(7),
+Custname varchar(30),
+Custcity varchar(20)) on homegrp1
+
+sp_help customers
+sp_help suppliers
+sp_help justtable
+
+create table suppliers(suppid varchar(7) primary key,
+suppname varchar(30),
+suppcity varchar(20)) on homegrp1
+
+create table justtable(id int, names varchar(20))
+
+--query the database file to understand the granularity
+
+select DB_NAME() as [DatabaseName],Name,FILE_ID,physical_name,
+(size * 8.0/1024)as Size,
+((size * 8.0/1024)-(FILEPROPERTY(name,'SpaceUsed')*8.0/1024)) as FreeSpace
+from sys.database_files
+
+ --or type as below
+dbcc showfilestats
+--Note : if we have 40000 rows in a table , then the resultant size will be
+--(40000 * 8.0/1024) = 312 mb free space

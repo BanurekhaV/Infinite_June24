@@ -19,7 +19,10 @@ Keyset : These cursors are driven by keysets of unique values
 
 
 
-File Groups : Primary  and secondary
+File Groups : Primary group which is the default group
+we can create many secondary groups
+Multiple file groups helps to store data in a granular manner
+
   when we create a database, sql server creates 2 files
     1. A data file (.mdf)
     2. Transaction Log file (.ldf)

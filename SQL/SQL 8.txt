@@ -1,0 +1,84 @@
+--few more functions
+
+create table Marks(stdname varchar(25),cls_subject varchar(12),
+marks_secured int)
+
+insert into marks values('Gurukiran','Maths',80),('Gurukiran','Science',70),('Gurukiran','English',65),
+('Raghav','maths',68),('Raghav','Science',85),('Raghav','English',90),
+('Sripriya','Maths',65),('Sripriya','Science',90),('Sripriya','English',60)
+
+select * from Marks
+
+--rownumber()
+select stdname,cls_subject,marks_secured,ROW_NUMBER() over (order by marks_secured desc)Row_Nos from Marks
+
+--rank()
+select stdname,cls_subject,marks_secured,rank() over (order by marks_secured desc)Rank from Marks
+
+--dense_rank()
+select stdname,cls_subject,marks_secured,dense_rank() over (order by marks_secured desc)Rank from Marks
+
+
+--ranks with partition
+update marks set marks_secured=80 where stdname='Raghav' and cls_subject='Maths'
+
+select stdname,cls_subject,marks_secured,rank() over (partition by cls_subject order by marks_secured desc)Rank from Marks
+
+select stdname,cls_subject,marks_secured,dense_rank() over (partition by cls_subject order by marks_secured desc)Rank from Marks
+
+select coalesce(null,null,null,4,null)
+
+select isnull(null,isnull(4,null))
+
+use northwind
+
+--let us concatenate name parts to a full name
+select * from employees
+--1.
+select Titleofcourtesy,firstname,lastname,Titleofcourtesy + ' '+coalesce(firstname,'') + ' '+ coalesce(lastname,'') as FullName
+from employees
+
+--2.
+declare @s1 char,@s2 char,@s3 char,@s4 char
+select coalesce(@s1,@s2)as 'Coalesce Results',
+ case 
+   when @s1 is not null then @s1
+   when @s2 is not null then @s2
+   end as 'Case Results'
+
+ --3.
+ declare @str1 char,@str2 char,@str3 char,@str4 char='4'
+select coalesce(@str1,@str2,@str3,@str4)as 'Coalesce Results',
+ case 
+   when @str1 is not null then @str1
+   when @str2 is not null then @str2
+      when @str3 is not null then @str3
+	     when @str4 is not null then @str4
+   end as 'Case Results'
+
+ --roll up operator
+ --subtotals and grand totals of columns
+ --is an extension to group by clause
+ select deptno,sum(salary) as Total from tblemployees
+ group by deptno
+
+ select deptno,sum(salary) as Total from tblemployees
+ group by rollup(deptno)
+
+ --
+ update tblemployees set deptno=3 where empid=100
+
+ select coalesce(deptno,100)as Department, sum(Salary) as 'Total Salary'
+ from tblemployees
+ group by rollup(deptno)
+
+ --ex.1 group by deptname rollup
+
+ --subtototals using roll up
+ --we want the sum of employees salary at a department level and also at a gender level
+ select coalesce(deptno,500)as Department,
+  coalesce(gender,'All Genders')as Gender, sum(salary)as TotalSalary
+  from tblemployees 
+  group by rollup(deptno,gender)
+
+  select * from tblemployees where deptno=3
