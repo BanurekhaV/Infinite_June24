@@ -1,0 +1,70 @@
+Additional Functions:
+
+row_number() - allocates numbers based on the rows over a particular column
+rank() - allocates rank over a particular column, but skips the sequence of the next number, in case there are more rows taking
+     up the same rank
+dense_rank() - allocates rank over a particular column without skipping any sequence
+
+rank over partitions : same as the rank(), but divides the rows based on a common value
+
+Rollup : is an extension of the group by clause to calculate the subtotals and grand totals for a set of columns
+
+Cube : is also similar to rollup, used with group by clause, but can calculate subtotals and grand totals for all permutations of the columns specified 
+
+
+Normalization : Is a process of breaking down the complex table structure into simpler small ones
+ Why ? : Data Redundancy is the root cause of several problems associated with relational schemas
+         It causes several anomalies : insert, update, delete
+         Wastage of storage
+
+
+The normalization process is based on the primary or candidate keys and functional dependencies among their attributes/properties/columns
+
+Functional Dependency : describes the relationship between attributes in a relation
+    if a and b are attributes of relation r, and for every value of b if there is exactly only one value of a, then b is said to be functionally dependent on a
+
+-- Normal Forms
+   - 1NF
+   - 2NF
+   - 3NF
+   - BoyceCodd NF
+In practice 3NF is often good enough
+
+1 NF : A table is in 1NF when every row contains exactly one value for each attribute
+
+2 NF : A table that is already in 1NF and every non-prime attribute in the relation/table is fully functionally dependent on the primary key  (composite/whole key)
+       - remove all partial dependencies  
+  2 NF prohibits partial dependencies
+
+Example :
+Emp{Eno, Dept, Prjcode, hours}  : Eno,prjcode are pk, then dept and hours are non prime attributes
+
+on decomposition
+
+Emp {Eno, Dept}   - Eno (primary key)
+Projects {Eno, Prjcode, Hours}  - (Eno,Prjcode -  primary key, and hours non prime)
+
+
+
+a->b->c : a=b abd b=c , then a=c is transitive
+
+3 NF : A table is already in 2 NF ,and no non prime attribute is transitively dependent on the primary key 
+  3NF prohibits transitive dependency
+example :
+
+Emp { Eno, Dept, Dept_head}   Eno - > dept - > dept_head
+                              dept - > dept head
+
+dept_head attribute is not directly dependent on the primary key, but transitively dependent
+
+So as per 3 NF, we decompose the table as
+
+Emp {Eno, Dept}
+Dept{Dept, Dept_Head}
+Projects{Eno, Prjcode, Hours}
+
+Dept table connects with Emp table on Dept and connects to Projects on Eno
+
+select dept_head, Eno, Prjcode, hours from dept join emp on dept.dept=emp.dept join projects on emp.eno = projects.eno
+
+

@@ -1,0 +1,39 @@
+ADO.Net : Activex Data Objects, a database technology 
+ - is a part of the .net framework that provides classes and functions to bridge the front end and the backend databases
+ - the ADO.net object encapsulates all the data access operations and allows the Frontend to perform CRUD by hiding the details of the movement of data
+ - scalable and interoperable
+
+Connection Architecture :
+
+are of 2 types
+   1. Connected Architecture : the application remains connected with the database throughout the processing
+
+   2. Disconnected Architecture : the application automatically connects/disconnects during the process. The application uses a temporary data on the application side called as DataSet
+
+Connection class : helps in establishing the connection with the database server, database using credentials
+
+Command class : helps in execution sql statements/procedures . This has functions viz.
+     ExecuteReader() - returns data to the client as rows of information using a DataReader Object. Typically a sql select or a procedure with select statements are executed with this function
+     ExecuteNonQuery() - returns an int(no. of rows affected). is used during dml operations or in procedures with dml statements
+
+DataReader class
+
+DataAdapter class
+
+Dataset class
+
+ -- Use the System.Data namespace also for certain other classes
+-- Use the System.Data.SqlClient namespace 
+
+
+--if windows authentication
+con = new SqlConnection("data source = LAPTOP-TJJ7D977; initial catalog = InfiniteDB;" +
+                "integrated security = true;");
+
+--if sql authentication
+con = con = new SqlConnection("data source = LAPTOP-TJJ7D977; initial catalog = InfiniteDB;" +
+                "user id= sa; password=123;");
+
+--or as below
+con = new SqlConnection("server = LAPTOP-TJJ7D977; database = InfiniteDB;" +
+                "integrated security = true;");
