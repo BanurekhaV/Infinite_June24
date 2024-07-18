@@ -82,3 +82,12 @@ select coalesce(@str1,@str2,@str3,@str4)as 'Coalesce Results',
   group by rollup(deptno,gender)
 
   select * from tblemployees where deptno=3
+
+
+ --ex 2. query as above to display dept name wise, gender wise
+
+  --cube operator
+  select coalesce(deptno,500)as Department,
+  coalesce(gender,'All Genders')as Gender, sum(salary)as TotalSalary
+  from tblemployees 
+  group by cube(deptno,gender)
