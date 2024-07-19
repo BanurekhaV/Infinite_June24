@@ -47,7 +47,7 @@ namespace Connected_Eg1
 
             while(dr.Read())
             {
-                Console.WriteLine(dr[0] + " | " + dr[1] + " | " + dr[2] + " | " + dr[3] + " | " + dr[4]);
+                Console.WriteLine(dr["Empid"] + " | " + dr["empname"] + " | " + dr["gender"] + " | " + dr["salary"] + " | " + dr["deptno"]);
             }
         }
 

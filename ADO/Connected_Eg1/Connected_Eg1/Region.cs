@@ -95,8 +95,19 @@ namespace Connected_Eg1
             cmd = new SqlCommand("GetDescription", con);
            
             cmd.CommandType = CommandType.StoredProcedure;  // exec GetDescription @rid
-            cmd.Parameters.AddWithValue("@rid", rid);
-             
+           // option 1.
+           // cmd.Parameters.AddWithValue("@rgid", rid);
+
+            //or
+            //option 2.
+            SqlParameter param1 = new SqlParameter();
+            param1.ParameterName = "@rgid";
+            param1.Value = rid;
+            param1.DbType = DbType.Int32;
+            param1.Direction = ParameterDirection.Input;  
+
+            cmd.Parameters.Add(param1);
+            
             string regionname = cmd.ExecuteScalar().ToString(); 
            
             return regionname;
