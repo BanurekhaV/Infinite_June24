@@ -93,7 +93,8 @@ namespace Connected_Eg1
         {
             con = getcon();
             cmd = new SqlCommand("GetDescription", con);
-            cmd.CommandType = CommandType.StoredProcedure;
+           
+            cmd.CommandType = CommandType.StoredProcedure;  // exec GetDescription @rid
             cmd.Parameters.AddWithValue("@rid", rid);
              
             string regionname = cmd.ExecuteScalar().ToString(); 
