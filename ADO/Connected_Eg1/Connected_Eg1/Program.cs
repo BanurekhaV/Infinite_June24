@@ -15,9 +15,11 @@ namespace Connected_Eg1
         public static SqlDataReader dr;
         static void Main(string[] args)
         {
-            InsertData();  
-          //  SelectData();
-           // Select_With_Parameters();
+            // InsertData();  
+           // DeleteData();
+             SelectData();
+            // Select_With_Parameters();
+
             Console.Read();
         }
 
@@ -104,6 +106,34 @@ namespace Connected_Eg1
             {
                 Console.WriteLine("Deptnumber : {0}", dr[0]);
                 Console.WriteLine("Deptname : {0}", dr[1]);
+            }
+        }
+
+        public static void DeleteData()
+        {
+            con = getConnection();
+            Console.WriteLine("Enter Empid to delete");
+            int empid = Convert.ToInt32(Console.ReadLine());
+            SqlCommand cmd1 = new SqlCommand("select * from tblemployees where empid=@empid", con);
+            cmd1.Parameters.AddWithValue("@empid", empid);
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+            while(dr1.Read())
+            {
+                for(int i=0; i<dr1.FieldCount;i++)
+                {
+                    Console.WriteLine(dr1[i]);
+                }
+            }
+            con.Close();
+            Console.WriteLine("Are you sure to delete this Employee ? Y/N");
+            string answer = Console.ReadLine();
+            if (answer == "y" || answer == "Y")
+            {
+                cmd = new SqlCommand("delete from tblemployees where empid=@empid", con);
+                cmd.Parameters.AddWithValue("@empid", empid);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Record deleted successfully");
             }
         }
     }
