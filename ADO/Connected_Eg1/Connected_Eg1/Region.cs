@@ -30,6 +30,20 @@ namespace Connected_Eg1
             SqlDataReader sdr = DataAccess.DisplayRegion();
             return sdr;
         }
+
+        public int getRegionCount()
+        {
+           int count =  DataAccess.RegionCount();
+           return count;
+        }
+
+        public string GetRegion()
+        {
+            Console.WriteLine("Enter the region Id:");
+            RegionId = Convert.ToInt32(Console.ReadLine());
+           string rname = DataAccess.GetRegion(RegionId);
+            return rname;
+        }
     }
     //-----------------------------Data Access Layer DAL-------------------
     public class DataAccess
@@ -47,7 +61,7 @@ namespace Connected_Eg1
         }
 
         public static string InsertRegion(int Rid, string rdesc)
-        {
+        {            
             con = getcon();
             cmd = new SqlCommand("insert into region values(@rid,@rdesc", con);
             cmd.Parameters.AddWithValue("@rid", Rid);
@@ -66,7 +80,31 @@ namespace Connected_Eg1
             dr = cmd.ExecuteReader();
             return dr;
         }
+
+        public static int RegionCount()
+        {
+            con = getcon();
+          cmd= new SqlCommand("select count(regionid) from region", con);
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count;
+        }
+
+        public static string GetRegion(int rid)
+        {
+            con = getcon();
+            cmd = new SqlCommand("GetDescription", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@rid", rid);
+             
+            string regionname = cmd.ExecuteScalar().ToString(); 
+           
+            return regionname;
+        }
+               
     }
+   
+
+    
 
     //---------------------Client Program-------------------------
 
@@ -76,12 +114,15 @@ namespace Connected_Eg1
         {
             Region region = new Region();
             SqlDataReader myreader = region.DisplayRegion();
-            while(myreader.Read())
+            while (myreader.Read())
             {
                 Console.WriteLine(myreader[0] + " " + myreader[1]);
             }
-
+            Console.WriteLine("----------------------------------------");
             //insert region
+            Console.WriteLine( "The total no. of Regions are : {0}", region.getRegionCount());
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("The Region Description is : {0}", region.GetRegion()); 
             Console.Read();
              
         }
