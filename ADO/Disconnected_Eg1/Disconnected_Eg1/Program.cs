@@ -15,7 +15,8 @@ namespace Disconnected_Eg1
         static void Main(string[] args)
         {
             // Disconnected_approach();
-            Procedures_with_adapter();
+            //  Procedures_with_adapter();
+            AddRecord_Region();
             Console.Read();
         }
 
@@ -77,6 +78,54 @@ namespace Disconnected_Eg1
                     Console.Write(" ");
                 }
                 Console.WriteLine();
+            }
+        }
+
+        public static void AddRecord_Region()
+        {
+            try
+            {
+                con = new SqlConnection("data source = LAPTOP-TJJ7D977; initial catalog = Northwind;" +
+                   "integrated security = true;");
+                con.Open();
+                da = new SqlDataAdapter("select * from Region", con);
+                DataSet ds = new DataSet();
+
+                da.Fill(ds, "NorthwindRegion");
+                DataTable dt = ds.Tables["NorthwindRegion"];
+
+                //let us add one row in the datatable to accomodate a record
+                DataRow row = ds.Tables["NorthwindRegion"].NewRow();
+                //giving values to the row (hard coding)
+                row["RegionID"] = 5;
+                row["RegionDescription"] = "SouthEast";
+
+                //add the new row to the rows collection of the table
+                ds.Tables["NorthwindRegion"].Rows.Add(row);
+
+                SqlCommandBuilder scb = new SqlCommandBuilder(da);
+
+                da.InsertCommand = scb.GetInsertCommand();
+
+                da.Update(ds, "NorthwindRegion");
+                Console.WriteLine("----------After Insertion----------");
+                da.Fill(ds); //to refresh the dataset after changes in the database table
+                dt = ds.Tables["NorthwindRegion"];  // to point to the beginning of the datatable
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    foreach (DataColumn dc in dt.Columns)
+                    {
+                        Console.Write(dr[dc]);
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            catch(SqlException se)
+            {
+                Console.WriteLine(se.Message);
+                Console.WriteLine("Duplicate Region ID is being inserted..");
             }
         }
     }
