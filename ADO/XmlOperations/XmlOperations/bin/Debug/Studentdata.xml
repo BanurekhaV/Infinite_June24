@@ -1,0 +1,18 @@
+<DS xmlns="StdNameSpace">
+  <Student>
+    <Name>Naveen</Name>
+    <Address>Bhopal</Address>
+  </Student>
+  <Student>
+    <Name>Chithra</Name>
+    <Address>Chennai</Address>
+  </Student>
+  <Student>
+    <Name>Rakshitha</Name>
+    <Address>Jaipur</Address>
+  </Student>
+  <Student>
+    <Name>Shakshi</Name>
+    <Address>Ranchi</Address>
+  </Student>
+</DS>

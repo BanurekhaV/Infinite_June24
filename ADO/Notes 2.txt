@@ -1,0 +1,58 @@
+-- XML : Extensible Markup lang. 
+- It is a text based mark up.
+- it is derived from SGML ( standard generalized markup lang)
+- xml tags identify the data that are used to store and organize
+- It is a public standard (W3C open standard)
+
+
+Xml Usage : xml simplifies creation of html documents for small or large websites
+- it used to store and exchange data 
+- enables customization of data
+- xml can express any data type
+
+<message>
+ <text>
+   fdgshlj
+ </text
+</message>
+
+<   &lt
+>   &gt
+&   &amp
+'   &apos
+"   &quot
+
+xml documents can be validated against  (well formed)
+
+1. DTD - Document Type Definition
+2. XSD - xml schema definition
+
+DTD : 
+<?Xml version="1.0"?>
+<!Doctype Employee System "employee.dtd>
+<employee>
+   <firstname>Amitabh</firstname>
+   <lastname>Bachaan</lastname>
+   <email>ab@email.com</email>
+   <age>80</age>
+</employee>
+<employee>
+   <firstname>Shahrukh<firstname>
+   <lastname>Khan</lastname>
+   <email>srk@email.com</email>
+   <age>55</age>
+</employee>
+
+
+XSD :
+<?Xml version="1.0"?>
+<employee
+xmlns="http://www.infinite.com"
+xmlns:xsi="http://www.w3.org/2001/XMlSchema-instance
+xsi:schemaLocation="http://www.infinite.com employee.xsd>
+<firstname>Amitabh</firstname>
+   <lastname>Bachaan</lastname>
+   <email>ab@email.com</email>
+   <age>80</age>
+</employee>
+
