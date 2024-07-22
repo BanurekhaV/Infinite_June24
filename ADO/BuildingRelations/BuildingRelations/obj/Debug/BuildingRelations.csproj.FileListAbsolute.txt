@@ -1,0 +1,7 @@
+C:\Banu\Infinite\Batch_June24\ADO\BuildingRelations\BuildingRelations\bin\Debug\BuildingRelations.exe.config
+C:\Banu\Infinite\Batch_June24\ADO\BuildingRelations\BuildingRelations\bin\Debug\BuildingRelations.exe
+C:\Banu\Infinite\Batch_June24\ADO\BuildingRelations\BuildingRelations\bin\Debug\BuildingRelations.pdb
+C:\Banu\Infinite\Batch_June24\ADO\BuildingRelations\BuildingRelations\obj\Debug\BuildingRelations.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\ADO\BuildingRelations\BuildingRelations\obj\Debug\BuildingRelations.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\ADO\BuildingRelations\BuildingRelations\obj\Debug\BuildingRelations.exe
+C:\Banu\Infinite\Batch_June24\ADO\BuildingRelations\BuildingRelations\obj\Debug\BuildingRelations.pdb
