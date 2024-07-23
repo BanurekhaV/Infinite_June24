@@ -1,0 +1,20 @@
+Linq to SQL : Offers runtime infrastructure for the management of relational data as objects
+
+Tables --> Classes
+Columns --> Properties
+Rows ---> Instances
+StoredProcedures ---> Functions/Methods
+
+In order to work with Linq-Sql, we need to convert all relational objects to programming objects. This process of mapping is known as ORM (Object Relational mapper/mapping)
+
+Advantages : We can query database object as a .net object
+development becomes faster
+intellisense support
+type safety is ensured by the compiler
+Can Handle SQL Injection attack
+
+mapped objects are generated using either
+1. Visual Studio (using Linq-sql classes, generating a .dbml file, that has the mappings)
+2. SQL Metal (a tool which is an .exe, that generates the .dbml file)
+
+Steps for working with VS:

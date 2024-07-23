@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InfiniteDB" Class="LSCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-TJJ7D977;Initial Catalog=InfiniteDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="Linq_To_Sql_VS.Properties.Settings" SettingsPropertyName="InfiniteDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblDepartment" Member="tblDepartments">
+    <Type Name="tblDepartment">
+      <Column Name="DeptNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DeptName" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Budget" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Loc" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="tblDepartment_tblemployee" Member="tblemployees" ThisKey="DeptNo" OtherKey="DeptNo" Type="tblemployee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblemployees" Member="tblemployees">
+    <Type Name="tblemployee">
+      <Column Name="Empid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Empname" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DeptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Phoneno" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="remarks" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="tblDepartment_tblemployee" Member="tblDepartment" ThisKey="DeptNo" OtherKey="DeptNo" Type="tblDepartment" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

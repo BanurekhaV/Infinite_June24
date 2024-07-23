@@ -19,6 +19,17 @@ LINQ - Datatable (collection - 2dimension)
 LINQ - SQL
 
 Linq has 2 ways of execution
-   1. Deferred   : default execution
+   1. Deferred   : default execution. Also known as lazy operator
+     - Query is not executed at the point of its declaration/construction. It is executed when we access the query result. 
+     - Projection Operators used : select, selectMany
+     - Restriction Operators used  : where 
+     - Paging Operators used : take,skip
+ 
 
-   2. Immediate : 
+   2. Immediate : Is also Known as Greedy Operators
+    - Query is executed at the point of declaration/construction
+    - Aggregate Functions, Element Operators (first, last, single, tolist, toarray, todictionary)
+
+Benefits of deferred execution : Avoids unnecessary query execution and hence improves performance
+    - Query Construction and execution are decoupled
+    - A deferred query is re-evaluated  when we enumerate , hence always gets the latest data

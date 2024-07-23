@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LSC">
+  <DataContextMoniker Name="/LSCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="48783bde-c2d2-4c3b-bfa3-3e188cb71dc3" absoluteBounds="1.125, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LSCDataContext/tblDepartment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="368a3e46-3238-4d13-8b89-3143449f833c" absoluteBounds="1.1400000000000001, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7d2dfdd-e46f-49b6-ab25-4e565c79c984" absoluteBounds="4, 1.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LSCDataContext/tblemployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79677548-5b78-49f3-8015-3ed4694fb757" absoluteBounds="4.015, 2.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 2.91429768880208); (4 : 2.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LSCDataContext/tblDepartment/tblDepartment_tblemployee" />
+      <nodes>
+        <classShapeMoniker Id="48783bde-c2d2-4c3b-bfa3-3e188cb71dc3" />
+        <classShapeMoniker Id="e7d2dfdd-e46f-49b6-ab25-4e565c79c984" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
