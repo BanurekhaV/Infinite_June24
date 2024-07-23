@@ -18,3 +18,7 @@ LINQ - Objects (classes)
 LINQ - Datatable (collection - 2dimension)
 LINQ - SQL
 
+Linq has 2 ways of execution
+   1. Deferred   : default execution
+
+   2. Immediate : 
