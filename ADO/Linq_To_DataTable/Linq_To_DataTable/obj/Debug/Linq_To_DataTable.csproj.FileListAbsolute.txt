@@ -1,0 +1,7 @@
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_DataTable\Linq_To_DataTable\bin\Debug\Linq_To_DataTable.exe.config
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_DataTable\Linq_To_DataTable\bin\Debug\Linq_To_DataTable.exe
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_DataTable\Linq_To_DataTable\bin\Debug\Linq_To_DataTable.pdb
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_DataTable\Linq_To_DataTable\obj\Debug\Linq_To_DataTable.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_DataTable\Linq_To_DataTable\obj\Debug\Linq_To_DataTable.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_DataTable\Linq_To_DataTable\obj\Debug\Linq_To_DataTable.exe
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_DataTable\Linq_To_DataTable\obj\Debug\Linq_To_DataTable.pdb

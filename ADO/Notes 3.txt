@@ -1,0 +1,20 @@
+LINQ : Language Integrated Query
+ - is a query lang that is a standard to query any data source
+ - less code
+ - more readable
+ - provides intellisense support
+ - compile time safety
+ - familiar lang
+
+There 2 basic ways to write linq queries
+  1. Query Syntax/Query Expression
+          from <range variable> in <IEnumerable>/<IQueryable> standard operators <lambda exp>
+                               select or group by
+  2. Method Syntax /Method Extensions /fluent ( makes use of extension operators and lambda)
+
+
+LINQ - Collections (arrays)
+LINQ - Objects (classes)
+LINQ - Datatable (collection - 2dimension)
+LINQ - SQL
+

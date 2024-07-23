@@ -16,9 +16,9 @@ namespace XmlOperations
         static void Main(string[] args)
         {
             // XmlWriter();
-            // XmlReader();
-            XmlSchemaWriter();
-            XmlSchemaReader();
+            XmlReader();
+           // XmlSchemaWriter();
+            //XmlSchemaReader();
             Console.Read();
         }
 
@@ -55,11 +55,20 @@ namespace XmlOperations
                 }
                 Console.WriteLine();
 
-                foreach(var row in dt.AsEnumerable())
+                foreach(DataRow r in dt.Rows)
                 {
-                    for( int j = 0; j< dt.Columns.Count; j++)
+                    for (int j = 0; j < dt.Columns.Count; j++)
                     {
-                        Console.Write("\t" + "\t" + row[j]);                       
+                        Console.Write("\t" + "\t" + r[j]);
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine("------------------------------------------------------");
+                foreach (var row in dt.AsEnumerable())
+                {
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        Console.Write("\t" +    "\t" + row[j]);
                     }
                     Console.WriteLine();
                 }
