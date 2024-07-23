@@ -18,3 +18,19 @@ mapped objects are generated using either
 2. SQL Metal (a tool which is an .exe, that generates the .dbml file)
 
 Steps for working with VS:
+1. Create a ConsoleApplication for .netframework
+2. Right click on the project and add a new Item
+3. Search for Linq-toSql classes (if not found install them thru tools->Get tools and features-->individual component--> search for linq to sql classes and check the check box)
+4. You may want to change the name of the .dbml file
+5. Observe that system.data.linq namespace is added in the reference
+6. Also observe that there are 2 files generated viz. dbml layout and designer.cs
+7. explore the designer.cs file that has a context class with parameterized constructors
+8. Go to view and select SQL server object explorer, and locate the local as well as remote instance of the sql server ( if not found, you can add a new server)
+9. Select the database and drag and drop any tables that you wish to work with on to the left hand side of the layout, and any functions, stored procedures to the right hand side of the layout
+10. Allow the dbml to map the objects (wait for sometime)
+11. Build your application
+12. Check the designer.cs file for an empty constructor and all the table mappings
+13. Now Create an object of the context class and instantiate it
+14. Now you are free to work with the sql objects converted into .net objects
+
+

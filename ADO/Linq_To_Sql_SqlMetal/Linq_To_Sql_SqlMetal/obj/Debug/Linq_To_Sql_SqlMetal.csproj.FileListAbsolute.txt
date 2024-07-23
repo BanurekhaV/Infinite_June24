@@ -1,0 +1,10 @@
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\bin\Debug\Linq_To_Sql_SqlMetal.exe.config
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\bin\Debug\Linq_To_Sql_SqlMetal.exe
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\bin\Debug\Linq_To_Sql_SqlMetal.pdb
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\obj\Debug\Linq_To_Sql_SqlMetal.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\obj\Debug\Linq_To_Sql_SqlMetal.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\obj\Debug\Linq_To_Sql_SqlMetal.exe
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\obj\Debug\Linq_To_Sql_SqlMetal.pdb
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Banu\Infinite\Batch_June24\ADO\Linq_To_Sql_SqlMetal\Linq_To_Sql_SqlMetal\obj\Debug\Linq_To_Sql_SqlMetal.csproj.CopyComplete
