@@ -18,6 +18,7 @@ mapped objects are generated using either
 2. SQL Metal (a tool which is an .exe, that generates the .dbml file)
 
 Steps for working with VS:
+-------------------------
 1. Create a ConsoleApplication for .netframework
 2. Right click on the project and add a new Item
 3. Search for Linq-toSql classes (if not found install them thru tools->Get tools and features-->individual component--> search for linq to sql classes and check the check box)
@@ -32,5 +33,9 @@ Steps for working with VS:
 12. Check the designer.cs file for an empty constructor and all the table mappings
 13. Now Create an object of the context class and instantiate it
 14. Now you are free to work with the sql objects converted into .net objects
+
+
+Steps for working with Sql Metal.exe
+------------------------------------
 
 

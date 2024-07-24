@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InfiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="productId" />
+    </Key>
+    <Property Name="productId" Type="int" Nullable="false" />
+    <Property Name="Productname" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Price" Type="int" />
+    <Property Name="QuantityAvailable" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductSales">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="QuantitySold" Type="int" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DeptNo" />
+    </Key>
+    <Property Name="DeptNo" Type="int" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Budget" Type="float" />
+    <Property Name="Loc" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblemployees">
+    <Key>
+      <PropertyRef Name="Empid" />
+    </Key>
+    <Property Name="Empid" Type="int" Nullable="false" />
+    <Property Name="Empname" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Gender" Type="char" MaxLength="7" />
+    <Property Name="Salary" Type="float" />
+    <Property Name="DeptNo" Type="int" />
+    <Property Name="Phoneno" Type="varchar" MaxLength="10" />
+    <Property Name="remarks" Type="varchar(max)" />
+  </EntityType>
+  <Association Name="FK__ProductSa__Produ__6383C8BA">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="ProductSales" Type="Self.ProductSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="productId" />
+      </Principal>
+      <Dependent Role="ProductSales">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblemploy__DeptN__267ABA7A">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblemployees" Type="Self.tblemployees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DeptNo" />
+      </Principal>
+      <Dependent Role="tblemployees">
+        <PropertyRef Name="DeptNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InfiniteDBModelStoreContainer">
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductSales" EntityType="Self.ProductSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblemployees" EntityType="Self.tblemployees" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ProductSa__Produ__6383C8BA" Association="Self.FK__ProductSa__Produ__6383C8BA">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductSales" EntitySet="ProductSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblemploy__DeptN__267ABA7A" Association="Self.FK__tblemploy__DeptN__267ABA7A">
+      <End Role="tblDepartment" EntitySet="tblDepartment" />
+      <End Role="tblemployees" EntitySet="tblemployees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
