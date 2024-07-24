@@ -1,0 +1,14 @@
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\bin\Debug\CodeFirst.exe.config
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\bin\Debug\CodeFirst.exe
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\bin\Debug\CodeFirst.pdb
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\bin\Debug\EntityFramework.dll
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\bin\Debug\EntityFramework.xml
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.csproj.CopyComplete
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.exe
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.pdb
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.Migrations.InitialCreate.resources
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.cache

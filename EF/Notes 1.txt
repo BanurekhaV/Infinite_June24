@@ -10,7 +10,7 @@ Types of Entities :
 EF supports 3 approaches to work the data
 
 1. Data First Approach( Existing database) : Relations are simply mapped to classes as Models
-2. Code First Approach(New Database) : Classes gets mapped to relations using migrations
+2. Code First Approach(New Database) : Classes gets mapped to relations using a technique called migrations
 3. Model First Approach (Create Models in design Mode, then we convert the models into classes, which are then mapped to relations)
 
 Data Base Context : Is an instance of the database that represents all the objects. Groups any changes that has to be written back to the database as a unit.

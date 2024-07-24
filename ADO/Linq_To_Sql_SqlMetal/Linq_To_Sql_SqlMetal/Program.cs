@@ -13,6 +13,7 @@ namespace Linq_To_Sql_SqlMetal
         static NorthwindContext db = new NorthwindContext(connstr);
         static void Main(string[] args)
         {
+            Customers c1 = new Customers();
             var cust = from c in db.Customers
                        orderby c.ContactName
                        select c;
