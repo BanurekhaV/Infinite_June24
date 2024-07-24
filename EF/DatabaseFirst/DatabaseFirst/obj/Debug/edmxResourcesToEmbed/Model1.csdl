@@ -79,5 +79,8 @@
       <End Role="tblDepartment" EntitySet="tblDepartments" />
       <End Role="tblemployees" EntitySet="tblemployees" />
     </AssociationSet>
+    <FunctionImport Name="sp_parameter1" ReturnType="Collection(String)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

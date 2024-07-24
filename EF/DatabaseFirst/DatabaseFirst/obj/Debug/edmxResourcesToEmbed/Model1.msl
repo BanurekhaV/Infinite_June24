@@ -43,5 +43,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_parameter1" FunctionName="InfiniteDBModel.Store.sp_parameter1" />
   </EntityContainerMapping>
 </Mapping>

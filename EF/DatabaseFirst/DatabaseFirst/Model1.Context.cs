@@ -12,6 +12,8 @@ namespace DatabaseFirst
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class InfiniteDBEntities : DbContext
     {
@@ -29,5 +31,14 @@ namespace DatabaseFirst
         public virtual DbSet<ProductSale> ProductSales { get; set; }
         public virtual DbSet<tblDepartment> tblDepartments { get; set; }
         public virtual DbSet<tblemployee> tblemployees { get; set; }
+    
+        public virtual ObjectResult<string> sp_parameter1(string name)
+        {
+            var nameParameter = name != null ?
+                new ObjectParameter("name", name) :
+                new ObjectParameter("name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("sp_parameter1", nameParameter);
+        }
     }
 }

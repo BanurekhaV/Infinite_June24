@@ -26,4 +26,4 @@ Life cycle of Entity Object /Entity States :
 4. Modified : This state is when the entity is being modified. The entity will be tracked by the context,
 and the data will exist in the database. Some or all property values can change. Once we call SaveChanges(), the state will be unchanged.
 
-5. UnChanged : The entity either has been inserted or mofified
+5. UnChanged : The entity either has been inserted or modified
