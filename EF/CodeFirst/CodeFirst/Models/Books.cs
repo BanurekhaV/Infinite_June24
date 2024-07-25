@@ -15,5 +15,7 @@ namespace CodeFirst.Models
         public int BookId { get; set; }
         public string BookName { get; set; }
         public double Price { get; set; }
+
+        public DateTime YearPublished { get; set; }
     }
 }

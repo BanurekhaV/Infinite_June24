@@ -12,5 +12,6 @@ namespace CodeFirst.Models
         public BooksDBContext() : base("name=BooksConnection") { }
 
         public DbSet<Books> book { get; set; }
+        public DbSet<Authors> author { get; set; }
     }
 }

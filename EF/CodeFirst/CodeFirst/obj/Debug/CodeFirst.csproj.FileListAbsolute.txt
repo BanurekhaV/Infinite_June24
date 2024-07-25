@@ -12,3 +12,4 @@ C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.exe
 C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.pdb
 C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.Migrations.InitialCreate.resources
 C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.cache
+C:\Banu\Infinite\Batch_June24\EF\CodeFirst\CodeFirst\obj\Debug\CodeFirst.Migrations.addedAuthorsModel.resources
