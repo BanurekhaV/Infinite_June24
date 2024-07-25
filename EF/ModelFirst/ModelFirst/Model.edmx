@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Cars" EntityType="Model.Store.Cars" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Manufacturers" EntityType="Model.Store.Manufacturers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ManufacturerCar" Association="Model.Store.ManufacturerCar">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="CarId" />
+    </Key>
+    <Property Name="CarId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CarName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarCost" Type="float" Nullable="false" />
+    <Property Name="ManufacturerID" Type="int" Nullable="false" />
+    <Property Name="ManufacturerMfrId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturers">
+    <Key>
+      <PropertyRef Name="MfrId" />
+    </Key>
+    <Property Name="MfrId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarType" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="ManufacturerCar">
+    <End Role="Manufacturer" Type="Model.Store.Manufacturers" Multiplicity="1" />
+    <End Role="Car" Type="Model.Store.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="MfrId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ManufacturerMfrId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cars" EntityType="Model.Car" />
+          <EntitySet Name="Manufacturers" EntityType="Model.Manufacturer" />
+          <AssociationSet Name="ManufacturerCar" Association="Model.ManufacturerCar">
+            <End Role="Manufacturer" EntitySet="Manufacturers" />
+            <End Role="Car" EntitySet="Cars" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="CarId" />
+          </Key>
+          <Property Name="CarId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarName" Type="String" Nullable="false" />
+          <Property Name="CarCost" Type="Double" Nullable="false" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.ManufacturerCar" FromRole="Car" ToRole="Manufacturer" />
+          <Property Name="ManufacturerMfrId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="MfrId" />
+          </Key>
+          <Property Name="MfrId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MName" Type="String" Nullable="false" />
+          <Property Name="CarType" Type="String" Nullable="false" />
+          <NavigationProperty Name="Cars" Relationship="Model.ManufacturerCar" FromRole="Manufacturer" ToRole="Car" />
+        </EntityType>
+        <Association Name="ManufacturerCar">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="1" />
+          <End Type="Model.Car" Role="Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="MfrId" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="ManufacturerMfrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ModelContainer">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Car)">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="CarId" ColumnName="CarId" />
+          <ScalarProperty Name="CarName" ColumnName="CarName" />
+          <ScalarProperty Name="CarCost" ColumnName="CarCost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ManufacturerMfrId" ColumnName="ManufacturerMfrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Manufacturer)">
+        <MappingFragment StoreEntitySet="Manufacturers">
+          <ScalarProperty Name="MfrId" ColumnName="MfrId" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+          <ScalarProperty Name="CarType" ColumnName="CarType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

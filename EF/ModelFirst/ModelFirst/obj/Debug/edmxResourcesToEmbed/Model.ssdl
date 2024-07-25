@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Cars" EntityType="Model.Store.Cars" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Manufacturers" EntityType="Model.Store.Manufacturers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ManufacturerCar" Association="Model.Store.ManufacturerCar">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="CarId" />
+    </Key>
+    <Property Name="CarId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CarName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarCost" Type="float" Nullable="false" />
+    <Property Name="ManufacturerID" Type="int" Nullable="false" />
+    <Property Name="ManufacturerMfrId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturers">
+    <Key>
+      <PropertyRef Name="MfrId" />
+    </Key>
+    <Property Name="MfrId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarType" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="ManufacturerCar">
+    <End Role="Manufacturer" Type="Model.Store.Manufacturers" Multiplicity="1" />
+    <End Role="Car" Type="Model.Store.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="MfrId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ManufacturerMfrId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

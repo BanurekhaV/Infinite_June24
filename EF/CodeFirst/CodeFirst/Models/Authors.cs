@@ -12,5 +12,7 @@ namespace CodeFirst.Models
         [Key]
         public int AuthorId { get; set; }
         public string AuthorName { get; set; }
+
+        public virtual ICollection<Books> Book { get; set; }
     }
 }

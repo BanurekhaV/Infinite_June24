@@ -1,1 +1,36 @@
 Code First Approach : 
+1. Create a console Application
+2. Add a Folder to the Project called 'Models'
+3. Inside the Model Folder add a class/classes 
+3. Use the System.ComponentModel.DataAnnotations namespace to provide additional information like Key table name etc.
+4. Create a relevant DbContext class inside the Models folder.(either add EF into the project or add reference to System.Data.entity to inherit from DbContext base class
+5. go to App.config file and after </startup> type
+     </startup>
+  <connectionStrings>
+    <add name="BooksConnection"
+           connectionString="Data Source = Laptop-tjj7d977; initial catalog=BookstoreDB;
+           integrated security =true;"
+          providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <entityFramework>
+
+6. The name that we have added in the appconfig file has to be provided in the constructor of the Context class as 
+
+public BooksDBcontext() :base("name=BooksConnection"){ }
+7. build the application once
+8. go to package manager console from tools->nugetpackages->pmc
+9. First time give the below 3 commands 
+  pm> enable-migrations ( This will add migrations folder with all initial configuration information
+ - Change the AutoMigrationEnabled = true from false
+
+next 
+pm> add-migration "<some meaningful name>" ( this enables creation of relevant entity objects)
+next
+pm>update-database -v(verbose option) (This will ensure all mapped objects are created in the database)
+
+Observe in the sql server that a new database with all tables along with migration_table created
+
+--Any further changes to the models, will call for only add-migration and update-database options at the pm console.
+
+
+  

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cars" EntityType="Model.Car" />
+    <EntitySet Name="Manufacturers" EntityType="Model.Manufacturer" />
+    <AssociationSet Name="ManufacturerCar" Association="Model.ManufacturerCar">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="CarId" />
+    </Key>
+    <Property Name="CarId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarName" Type="String" Nullable="false" />
+    <Property Name="CarCost" Type="Double" Nullable="false" />
+    <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Manufacturer" Relationship="Model.ManufacturerCar" FromRole="Car" ToRole="Manufacturer" />
+    <Property Name="ManufacturerMfrId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="MfrId" />
+    </Key>
+    <Property Name="MfrId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MName" Type="String" Nullable="false" />
+    <Property Name="CarType" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cars" Relationship="Model.ManufacturerCar" FromRole="Manufacturer" ToRole="Car" />
+  </EntityType>
+  <Association Name="ManufacturerCar">
+    <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="1" />
+    <End Type="Model.Car" Role="Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="MfrId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ManufacturerMfrId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
