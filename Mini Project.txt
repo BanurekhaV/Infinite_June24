@@ -1,0 +1,26 @@
+Mini Project : Railway Reservation System
+  CSharp with Sql using ADO/EF
+Duration : 10 Days
+Project Start Date : 25th July 2024
+Project End Date : 5th Aug 2024
+
+
+Trains
+
+tno tname from dest price class_of_travel train_status seats_available
+
+1221 VandeBharath   Chennai   Bangalore  2345  inactive 120
+
+14543 Rajdhani exp   Chennai  Delhi 1AC  3500   active  24
+14543 Rajdhani exp   Chennai Delhi  2AC  3000   active  54
+
+
+_can book tickets only on valid trains
+_ Allow bulk booking max upto 3
+-Check availability and confirm booking
+-After Booking, an entry to be made in the bookings table, and the no.seats available should be updated
+_Allow cancellation of booked tickets (partial also)
+_Make an entry in the cancellation table and also update the no.seats available
+_print both the bookings as well as cancellation information
+
+Can have users and admin to do respective tasks

@@ -1,0 +1,56 @@
+Web Technologies : 
+
+WWW : World Wide Web
+  Network of Information
+    - A uniform naming scheme for locating resources on the web (URI)
+    - Protocol, for access to the named resources over the web (HTTP)
+    - Hyper Text, for easy navigation among resources   (HTML)
+
+Every resource(html document, images, videos, programs, application) on the web has an address that can be accessed using URI
+
+Eg : http://www.mypage.com/mydir
+1. the protocol to access the resource
+2. the name of the machine hosting the resources
+3. The resource itself
+
+URI > (URN || URL)
+
+Anatomy of a web Page
+Html + css + JavaScript  = Content + Styles + Behaviours
+
+Separation of concerns  ?? easier maintenance, and faster development, decoupled
+
+HTML is the Life Blood of the WWW
+CSS  - No Plain HTML, do it in style
+JavaScript - Gives behaviour to the data. Works behind the screen - Validating Inputs, Interactions with the server
+
+Web Site : Front End interface thru which the public interacts with the business online
+       - is like a foundation that can host a web Application/s
+       - can have message boards, blogs, photo gallery and many others  
+
+Web Application : services specific to a business model/needs. Integrates with the IT infrastructure      
+
+Web Server : Is the actual infrastructure that hosts all the above
+
+W3C - WorldWideWeb Consortium was formed in the year 1994 by Tim Lee. 
+It aims at a way of standardising the protocols, technologies to build content, security etc..
+
+HTML :
+Tags, Attributes and Elements : these stuff makes up the html
+
+Title - page titles
+Paragraphs - structuring the content 
+headings - help to identify the importance of the content (6 levels)
+Lists
+Links
+Images
+Tables
+Forms
+
+
+Semantic Tags : are tags that convey a meaning to both the developer as well as the browser
+Non Semantic tags : tags that don't convey any meaning
+
+Ordered List
+unordered List
+Descriptive List

@@ -1,0 +1,19 @@
+Model First Approach: 
+1. Create a console Application
+2. Right click on the project and add a new Item named  'Ado.net Entitymodel'
+3. It will create a Model object. You may want to change the name you can
+4. It opens a ado,net entity datamodel wizard. Select the 2nd option
+5. Observe an empty designer surface. (Model.edmx)
+6. Here right click on the surface and add entity /ties
+7. Give required scalar properties along with respective data types from the properties window
+8. Once all entities are added, then right click on the surface and add association
+9. Now again right click and select Generate Database from Model Option(this will generate the required sql script)
+10. observe and click finish button. (This will create Model.edmx.sql file with the script)
+11. In the above created file, right click and press execute option
+12. It opens up a dialog box asking us to give server details.
+13. Select appropriate options and click ok
+14. Now we will see the database objects created (both in the sql server object explorer as well as sql server)
+
+15. Build the project and you are ready to work with the database
+16. Create an instance of the context class (ModelContainer) and start CRUD operations
+17. Also check your App.config file which has an automatic entry for the connectionstring

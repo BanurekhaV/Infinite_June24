@@ -1,0 +1,49 @@
+SQL Profiler :is a GUI tool that helps
+  - step through the queries to find the cause of the problem
+  - Find and diagnose slow running queries
+  - Capture the series of t-sql statements that was the reason to any problems
+  - Monitor Performance
+
+
+use Healthcare
+
+create table TestTable
+(Id int primary key,
+Val char(1))
+
+insert into testtable values (1,'A'),(2,'B'),(3,'C')
+
+--let us create some procedures to add and retrieve data
+create or alter proc InsertData @tid int, @tval char(1), @res varchar(10) output
+as
+begin
+ begin try
+  begin transaction
+   insert into TestTable(Id,Val)
+   values(@tid,@tval)
+
+   commit
+   set @res='Ok'
+
+  end try
+  begin catch
+    if @@TRANCOUNT > 0
+	 rollback
+	 set @res='Error'
+  end catch
+  
+end
+
+declare @odata varchar(10)
+exec insertdata @tid=4,@tval='D',@res=@odata output
+select @odata
+
+--2nd procedure to retrieve data
+create proc GetData @pval char(1)
+as
+begin
+ select Id,val from TestTable
+ where val=@pval
+ end
+
+ exec getdata 'D'
