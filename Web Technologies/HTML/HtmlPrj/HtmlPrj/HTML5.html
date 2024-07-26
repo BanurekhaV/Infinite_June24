@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <canvas id="mycanvas" width="200" height="100" style="border:1px solid #808080;">
+
+    </canvas>
+    <script>
+
+        var c = document.getElementById("mycanvas");
+        var d = c.getContext("2d");
+        d.beginPath();
+        //d.arc(95, 50, 40, 0, 2 * Math.PI);
+        //d.stroke();
+        d.lineWidth = "5";
+        d.strokeStyle = "blue";
+        d.moveTo(0, 75);
+        d.lineTo(250, 75);
+        d.stroke();
+        d.beginPath();
+        d.strokeStyle = "purple";
+        d.moveTo(50, 0);
+        d.lineTo(150, 130);
+        d.stroke();
+    </script>
+</body>
+</html>

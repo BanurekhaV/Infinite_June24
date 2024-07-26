@@ -49,5 +49,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Animation.html" />
+    <Content Include="ExternalStyles.html" />
+    <Content Include="Form.html" />
+    <Content Include="HTML5.html" />
+    <Content Include="ImagesnOthers.html" />
+    <Content Include="multiColumn.html" />
+    <Content Include="MyStyle.css" />
+    <Content Include="Registration.html" />
+    <Content Include="Table.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
