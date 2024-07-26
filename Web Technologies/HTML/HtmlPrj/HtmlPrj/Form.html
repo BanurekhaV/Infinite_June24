@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1 style="color:darkblue;"><centre>Registration Form</centre></h1>
+    <p style="background-color:aqua;color:black;font-size:48px;">Please Register Here...</p>
+    <form action="Registration.html" method="post">
+        <fieldset>
+            <legend>Personal Info.</legend>
+            FirstName :  &nbsp;&nbsp;&nbsp;
+            <input type="text" name="fname" />
+            <br /><br />
+            Last Name : &nbsp;&nbsp;&nbsp;
+            <input type="text" name="lname" /> <br /><br />
+            Email Id : &nbsp;&nbsp;<input type="email" name="email" /> <br /><br />
+            Address  : &nbsp;&nbsp;<textarea rows="4" cols="30"></textarea> <br /><br />
+            Age      : &nbsp;&nbsp;<input type="number" min="21" max="35" name="age" />
+            Gender   : &nbsp;&nbsp; <input type="radio" name="gender" value="male"  />Male &nbsp;
+            <input type="radio" name="gender" value="female" />Female &nbsp;
+            <input type="radio" name="gender" value="others" />Others  <br /><br />
+            City : &nbsp;&nbsp;<select name="city">
+                <option value="blr">Bengaluru</option>
+                <option value="chn">Chennai</option>
+                <option value="hyd">Hyderabad</option>
+                <option value="pun">Pune</option>
+            </select><br /><br />
+            <input list="Qualifications" />
+            <datalist id="Qualifications">
+                <option value="12th"></option>
+                <option value="UG"></option>
+                <option value="PG"></option>
+            </datalist><br /><br />
+        </fieldset>
+ 
+        
+                        <fieldset>
+                            <legend>Documents</legend>
+                            ID Proof : <br />
+                            <input type="checkbox" name="id1" value="ac" />Aadhar Card <br />
+                            <input type="checkbox" name="id2" value="dl" />Driving License <br />
+                            <input type="checkbox" name="id3" value="pc" />Pan Card <br />
+                            <br />
+                            Upload Proof of Identity : &nbsp;&nbsp;<input type="file" /><br />
+                        </fieldset>
+        <input type="submit" value="Register" />
+        <input type="reset" value="Clear" />
+    </form>
+</body>
+</html>
