@@ -6,6 +6,7 @@
     <title></title>
 </head>
 <body onload="checkScope()">
+    <!--
     <script>
         var a = 25;
         var b = 15;
@@ -32,22 +33,39 @@
         document.write(lb);
 
         document.write("(a && b) => ");  
-        res = (b && a);
+        res = (a && b);
         document.write(res);
         document.write(lb);
 
+       
         document.write("(a>b)? 100:200) => ");
          res = (a>b)?100:200;
         document.write(res);
         document.write(lb);
 
-        document.write("a===c = ");
-        res = a===c;
+        document.write("a===b = ");
+        res = a===b;
         document.write(res);
         document.write(lb);
 
         console.log("All the very Best!!");
 
+    </script> 
+
+       2. local/global scope -->
+
+    <script>
+        var myvarg = 'global'; //global variable
+        function checkScope() {
+            result = prompt('Enter Name');
+            document.write('Your Name is : ' + result + "<br/>");
+            result = confirm("Are you Sure");
+            document.write("you selected : " + result + "<br/>");
+            var myvar = 'local'; //declaring a local variable with the same name as that of the global variable
+            document.write(myvar);
+        }
+        //document.write("<hr/>");
+       console.log(myvarg);
     </script>
 
 </body>

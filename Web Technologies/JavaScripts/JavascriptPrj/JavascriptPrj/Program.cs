@@ -10,6 +10,7 @@ namespace JavascriptPrj
     {
         static void Main(string[] args)
         {
+           
         }
     }
 }

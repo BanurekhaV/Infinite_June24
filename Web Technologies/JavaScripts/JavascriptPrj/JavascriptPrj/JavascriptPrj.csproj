@@ -49,5 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Js1.html" />
+    <Content Include="Js_Conditions.html" />
+    <Content Include="Loops.html" />
+    <Content Include="Operators.html" />
+    <Content Include="Truth_Falsy.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

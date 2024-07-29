@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var v1 = null;
+        var v2 = 'hi';
+
+        var result = v1 && v2;
+        document.write(result);
+
+        document.write("<hr/>")
+
+        result = v2 || v1;  // short circuiting stops at v2 without checking v1
+        document.write(result);
+
+        function returnfalsy() {
+            return "";
+        }
+
+        const e1 = null; //[1, 2]
+        const e2 = returnfalsy();
+        const e3 = { name: "Infinite" }
+
+       // const answer = e1 && e2 && e3;
+
+        const answer = e1 || e2 || e3
+
+        //the expression e1 results in a truthy value, and hence e2 will be returned, but since we are continuing
+        // the check, it anyways returns e2, as it is falsy without even checking for e3
+        //this is known as short-circuiting
+
+        console.log(answer);
+    </script>
+</body>
+</html>

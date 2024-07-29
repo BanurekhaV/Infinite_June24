@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- 1. 
+    <script>
+        function sayHello(name, age) {
+            document.write(name + ' is ' + age + ' years old');
+        }
+
+        //function with return value
+        function concatenate(fname, lname) {
+            var fullname = fname + lname;
+            return fullname;
+        }
+
+        function caller() {
+            var outdata = concatenate('Amish', 'Tripathi');
+            document.write(outdata);
+        }
+    </script>
+</head>
+
+<body>
+    <p>click the button and call the function</p>
+    <form>
+        <input type="button" onclick="sayHello('Ajith', 25)" value="call function" />
+        <button onclick="caller()">get fullname</button>
+    </form>
+</body>  
+
+      2. anonymous function  -->
+    </head>
+    <body>
+        <!--automatically invoked functions-->
+        <p id="res"></p>
+        <p id="arrow"></p>
+        <p id="gd">Get Date</p>
+        <script>
+            (function () {
+                document.getElementById('res').innerHTML = "Hi .. Calling Self..";
+            })();
+
+            //2. arrow functions
+            const x = (x, y) => x * y;
+            document.getElementById('arrow').innerHTML = x(5, 5);
+
+            //3. date function
+            var currentdate = new Date();
+            currentdate.setDate(currentdate.getDate() + 100);
+        </script>
+        <input type="button" onclick="document.getElementById('gd').innerText = currentdate" value="Getdate" />
+    </body>
+</html>
