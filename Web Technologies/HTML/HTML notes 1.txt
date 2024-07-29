@@ -54,3 +54,39 @@ Non Semantic tags : tags that don't convey any meaning
 Ordered List
 unordered List
 Descriptive List
+
+Span and div
+
+span element is inline usually used for small chunk of in-line html, whereas div element is block-line and is used to group large chunks of code
+
+<div id="aaa">
+<p>This is <span class="bbb">crazy code</span>
+</>
+<h3>   </h3>
+
+</div>
+
+
+CSS : Cascading Style Sheets
+
+   1. Inline style
+   2. Internal style  : separate styles to be applied for the current document
+   3. External style  : common style sheet fil, that can be reused in any document
+
+Tag Selector
+Id Selector
+class Selectors
+
+
+h2{color:red;}
+.cls1{color:red;}
+.cls2{color:red;}  
+
+the above repeating properties can be grouped
+
+h2,.cls1,.cls2{color:red;}
+
+nesting : 
+#t1{background-color:green;padding:1em}
+#t1 h1{color:yellow;}
+#t1 p{font-weight:bold;}

@@ -1,0 +1,62 @@
+Java Script : Easy to use programming language that can be embedded in the header/body of the web pages
+- Used to enhance the dynamics and interactive features of the web page
+- Perform calculations, validations, interactive games, add special effects, customize graphics selections, security password
+- Is a scripting that makes web pages live
+- Invented by Brendan Eich.
+- Browser detection
+- cookies storing
+- Validating input Forms
+
+What JS can do?
+-Modify the html page , write text, add or remove tags, change styles
+-Executes code on events like mouse movements, key board strokes etc
+
+Limitations of JS:
+- Cant read/write to hard disk, copy files and call other programs
+- Doesn't have direct access to OS. Newer browsers provide such abilities but in a limited manner
+- Cant do network requests on its own domain without limitation
+- Does not support multithreading/multiprocessing capabilities
+
+
+Document Object Model
+Webpage document is an object with properties and methods
+
+document.bgcolor='red', document.getElementId('aa')
+document.open()
+document.write("Hello World")
+
+handling events
+onClick="myfunc()"
+
+internal javascript : @head element or @body element
+<script>
+ alert("Hi there")
+</script>
+
+
+External JavaScript :
+<script src="<path\myjs.js"></script>
+
+inline javascript :
+<a href="aa.html" onClick=alert"("Hellloooo);">click me</a>
+
+Simple JavaScript:
+
+<html>
+<head>
+<script language="JavaScript">
+<!--start js code-->
+  function msgbox(text){
+  alert("hello" + text);}
+
+//end of js
+</script>
+</head>
+
+<body>
+<form>
+ <input type ="text" name="nm">
+<input type="submit" value="ShowMe" onClick=msgbox(form.nm.value)">
+</form>
+</body>
+</html>

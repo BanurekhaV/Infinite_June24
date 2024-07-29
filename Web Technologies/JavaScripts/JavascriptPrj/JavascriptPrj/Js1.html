@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        alert("Hello JS");
+    </script>
+</head>
+<body>
+    <p>Hi Paragraph</p>
+
+    <a href="C:\Banu\Infinite\Batch_June24\Web Technologies\HTML\first.html" onclick="alert('helloooo');">Click me</a>
+</body>
+
+    eg:2
+
+<body>
+    <h2>What Javascript can  do ?</h2>
+
+    <p id="num">Javascript can change HTML Content</p>
+    <p id="str">Name</p>
+    <p id="obj">Object</p>
+
+    <script>
+        var length = 15; //number
+        var myname = "Infinite"; //string
+        var x = { firstname: "Abdul", lastname: "Kalaam" };  //object
+
+        /*document.getElementById("num").innerHTML = length;
+        document.getElementById('str').innerHTML = myname;
+        document.getElementById('obj').innerHTML = x.firstname + ' ' + x.lastname;*/
+
+    </script>
+    <button type="button" onclick="document.getElementById('num').innerHTML = length">Click for Length</button>
+    <button type="button" onclick="document.getElementById('str').innerText = myname">Click for Name</button>
+    <button type="button" onclick="document.getElementById('obj').innerHTML = x.firstname + x.lastname">Click for Object</button>
+</body>
+
+    eg:3
+
+
+<body>
+    <input id="userdata" size="50" /><button onclick="userSubmit()">Submit</button>
+    <br/>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        function userSubmit() {
+            var Uinput = document.getElementById('userdata').value;
+            document.getElementById('result').innerText = 'You Have Types :' + Uinput;
+        }
+    </script>
+
+</body>
+
+    eg 4: -->
+  <head>
+      <script>
+          function change() {
+              var parameters = document.getElementsByTagName('p'); //parameters can now be a collection of paragraph tags
+              document.getElementById('result').innerHTML = parameters[1].innerHTML;
+              document.getElementById('result1').innerHTML = '<p><font color=blue>I have been Changed</font>';
+              alert("Value and Style changed");
+          }
+      </script>
+  </head>
+<body>
+    <p id="result">This is a Javascript Functionality</p>
+    <p>Paragraph 2 </p> <br />
+    <h3> This Heading 3</h3>
+    <p id="result1">I am the third Paragraph in this document</p><br/>
+    <button onclick="change()">Click here to see Javascript in action</button>
+</body>
+</html>
