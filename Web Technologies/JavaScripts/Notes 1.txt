@@ -60,3 +60,66 @@ Simple JavaScript:
 </form>
 </body>
 </html>
+
+--JavaScript statemets are composed of
+  - values, operators, expressions,keywords and comments
+
+-Fixed Numbers with or without decimals
+-strings enclosed either in single or double quote
+-variable names are case sensitive
+-if we declare a variable and do not assign values then it will be undefined
+-if we redeclare a variable with value, it does not loose the value
+-empty values are different from undefined values
+   var myvar=""  (empty value of string type)
+-null are object data type
+
+Comparison operators in js:
+== : are data's equal
+=== : both the data and the datatypes equality
+!= : not equal to
+!== : values and datatype are not equal
+
+Examples :
+ function sayHi(name){
+alert("Hi " + name);}
+
+var wish = sayHi ; //assigning a function to a variable using reference
+
+wish('Ramu'); //we are calling the variable that calls a function
+
+
+ex 2:
+
+var x= 'abcd'
+
+x=true 
+
+Variables are global or local. Global and Local variables with the same name are different
+
+Local Scope:
+function myfunc1(){
+var a= 15;
+return a*a;}
+
+<script>
+  var a=5;  //global scope
+  function myfunc1(){
+   return a*a;}
+</script>
+
+----------------------------------------------------
+
+truthy and falsy 
+
+Falsy : 0, false, undefined,null, " "   -- their boolean representations are false
+
+Truthy : true, 1,3.4,'hi',{}   : Boolean representations are true
+
+
+&& : the operator returns the second operand, if the first is a truthy
+
+var v1= 2
+var v2='hi'
+
+var res = v1 && v2
+

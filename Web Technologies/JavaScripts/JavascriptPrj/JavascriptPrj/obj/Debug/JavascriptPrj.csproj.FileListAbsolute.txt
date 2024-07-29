@@ -1,0 +1,7 @@
+C:\Banu\Infinite\Batch_June24\Web Technologies\JavaScripts\JavascriptPrj\JavascriptPrj\bin\Debug\JavascriptPrj.exe.config
+C:\Banu\Infinite\Batch_June24\Web Technologies\JavaScripts\JavascriptPrj\JavascriptPrj\bin\Debug\JavascriptPrj.exe
+C:\Banu\Infinite\Batch_June24\Web Technologies\JavaScripts\JavascriptPrj\JavascriptPrj\bin\Debug\JavascriptPrj.pdb
+C:\Banu\Infinite\Batch_June24\Web Technologies\JavaScripts\JavascriptPrj\JavascriptPrj\obj\Debug\JavascriptPrj.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Batch_June24\Web Technologies\JavaScripts\JavascriptPrj\JavascriptPrj\obj\Debug\JavascriptPrj.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Batch_June24\Web Technologies\JavaScripts\JavascriptPrj\JavascriptPrj\obj\Debug\JavascriptPrj.exe
+C:\Banu\Infinite\Batch_June24\Web Technologies\JavaScripts\JavascriptPrj\JavascriptPrj\obj\Debug\JavascriptPrj.pdb
