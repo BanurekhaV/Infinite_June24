@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--
+     <script>
+         var books = 'maths';
+         if (books == 'history') {
+             document.write("<b>It is a History Book</b>");
+         } else if (books == 'maths') {
+             document.write("<b><i>It is a Maths Book</i></b>");
+         } else
+             document.write("Unknown Book");
+     </script>
+    <p>Now set the books to different values and test</p>
+    <hr/>
+
+    <script>
+        var grade = 'G';
+        document.write("Entering the Switch Block ...<br/>");
+        switch (grade) {
+            case 'G': document.write("Good Job ...<br/>");
+                break;
+            case 'O': document.write("OK Job ...<br/>");
+                break;
+            case 'I': document.write("To Improve ...<br/>");
+                break;
+            default: document.write("No matching grade...<br/>");
+        }
+        document.write("Exiting Switch Block ...<br/>");
+    </script>
+        eg : go to labels  -->
+
+    <script>
+        outerloop:
+        for (var i = 0; i < 5; i++) {
+            document.write("Outer Loop : " + i + "<br/>");
+            innerloop:
+            for (var j = 0; j < 5; j++) {
+                if (j > 3) break;  //breaks the inner loop
+                if (i == 2) break innerloop; // this also breaks the inner loop
+                if (i == 4) break outerloop; //quits the outer loop also
+                document.write("Inner Loop :" + j + "<br/>");
+            }
+
+        }
+
+    </script>
+</body>
+</html>

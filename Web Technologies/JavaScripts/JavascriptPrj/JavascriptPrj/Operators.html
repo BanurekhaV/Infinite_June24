@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="checkScope()">
+    <script>
+        var a = 25;
+        var b = 15;
+        var c = 'hi';
+        var lb = "<br/>";
+
+        document.write("a-b = ");
+        var res = a - b;
+        document.write(res);
+        document.write(lb);
+
+        document.write("(a==b) => ");
+        document.write(a==b);
+        document.write(lb);
+
+        document.write("(a || b) => "); 
+        res = (a || b);
+        document.write(res);
+        document.write(lb);
+
+        document.write("checking possibilities")
+        res = (b === 20 || a === 20);
+        document.write(res);
+        document.write(lb);
+
+        document.write("(a && b) => ");  
+        res = (b && a);
+        document.write(res);
+        document.write(lb);
+
+        document.write("(a>b)? 100:200) => ");
+         res = (a>b)?100:200;
+        document.write(res);
+        document.write(lb);
+
+        document.write("a===c = ");
+        res = a===c;
+        document.write(res);
+        document.write(lb);
+
+        console.log("All the very Best!!");
+
+    </script>
+
+</body>
+</html>

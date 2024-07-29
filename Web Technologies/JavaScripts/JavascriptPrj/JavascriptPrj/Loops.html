@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--
+    <p>Say What : ?</p><input id="saythis" size="35" />
+     <p> How many times :?</p>
+     <select id="thismanytimes">
+         <option value="1">1</option>
+         <option value="5">5</option>
+         <option value="10">10</option>
+         <option value="20">20</option>
+     </select>
+     <br/>
+     <button onclick="doLoop()">Do It</button>
+     <br/>
+     <div id="results">
+
+     </div>
+     <script>
+         function doLoop() {
+             var saywhat = document.getElementById('saythis').value;
+             var maxloop = document.getElementById('thismanytimes').value;
+             var str = ' ';
+             for (var i = 1; (i <= maxloop); i++) {
+                 str = str + ''+ i + ':' + saywhat + '<br/>';
+             }
+             document.getElementById('results').innerHTML = str;
+         }
+     </script> -->
+    <!--eg 2 loops
+    <script>
+        var count = 0;
+        document.write("Starting the Loop ...");
+        while (count < 10) {
+            if (count == 5) {
+                break;
+                     }
+            document.write("Current Count :  " + count + "<br/>");
+             count++;
+        }
+        document.write("Stopping the Loop ...");
+    </script>
+
+       eg 3:
+
+    <h1>In Loop - Iterating a Collection</h1>
+    <div id="results">Showing Results here</div>
+
+    <script>
+        var numbers = [2, 4, 6, 8, 10];
+        let str = ' ';
+        for (let x in numbers) {
+            str += numbers[x] + "<br/>";
+        }
+        document.getElementById("results").innerHTML = str;
+    </script>
+        eg : 4 -->
+     
+    <p id="demo"></p>
+
+    <script>
+        var flowers = ["Roses", "Lillies", "Jasmines", "Chrysanthimums"];
+        let f = " ";
+        for (var i of flowers) {
+            f += i + "<br/>";
+        }
+        document.getElementById("demo").innerHTML = f;
+    </script>
+</body> 
+        
+        
+
+</html>
