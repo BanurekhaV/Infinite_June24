@@ -49,5 +49,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Animation.html" />
+    <Content Include="ChangingContents.html" />
+    <Content Include="Events.html" />
+    <Content Include="Get_n_Set.html" />
+    <Content Include="Jq1.html" />
+    <Content Include="Jq2.html" />
+    <Content Include="Jq3.html" />
+    <Content Include="Jq4.html" />
+    <Content Include="Jq5.html" />
+    <Content Include="Jq6.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

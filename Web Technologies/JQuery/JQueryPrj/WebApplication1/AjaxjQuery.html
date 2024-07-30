@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $.ajax({
+                    url: "Sample.txt", success: function (result) {
+                        $('#div1').html(result);
+                    }
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <h2>Let the Ajax JQuery change the text</h2>
+    </div>
+    <br/>
+    <button>Make an Ajax Call</button>
+</body>
+</html>
