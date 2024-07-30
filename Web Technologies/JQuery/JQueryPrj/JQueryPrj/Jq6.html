@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .tclass *{
+            margin:10px;
+            padding:5px;
+            color:fuchsia;
+            border:2px solid grey;
+            display:block;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('span').parents('ul').css({ color: "red", border: "2px solid blue" });
+        })
+    </script>
+</head>
+<body class="tclass">body(GG_GParents)
+    <div>div(G GParents)
+     <ul>ul(G Parent)
+        <li>li(Parent)
+         <span>Span Element</span>
+         </li>
+        </ul>
+    
+    </div>
+
+</body>
+</html>

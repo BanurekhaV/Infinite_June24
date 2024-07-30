@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //jquery get
+            //$('#b1').click(function () {
+            //    alert("The Got Text is : " + $('#t1').text());
+            //});
+            //$('#b2').click(function () {
+            //    alert("The Got Text is : " + $('#t1').html());
+            //});
+            //$('#b3').click(function () {
+            //    alert("The Got Text is : " + $('#t2').val());
+            //});
+
+            //jquery set
+
+            $('#b1').click(function () {
+                $('#t1').text("We are setting the text");
+            });
+            $('#b2').click(function () {
+                $('#t1').html("<mark> We are setting the Html/text </mark>");
+            });
+            $('#b3').click(function () {
+                $('#t2').val("Happy Day..");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="t1">Health <i> Is </i> Wealth</p> <br/>
+    User Name : <input type="text" id="t2" /> <br/>
+    <button id="b1">Show Text</button>
+    <button id="b2">Show HTML</button>
+    <button id="b3">Show Value</button>
+</body>
+</html>
