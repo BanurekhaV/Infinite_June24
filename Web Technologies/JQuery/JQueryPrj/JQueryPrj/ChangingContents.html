@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--append,prepend,remove/empty etc-->
+
+    <script>
+       // $(document).ready(function () {
+            //$('button').click(function () {
+            //    $('div').empty();  //removes all child elements of the selected element
+            //    //remove() - removes the selected element and all its child elements
+            //});
+
+            ////append/prepend
+            //$('#btn1').click(function () {
+            //    $('p').append("<b> New Appended Text </b>");
+            //});
+            //$('#btn2').click(function () {
+            //    $('ol').prepend("<li> New Item </li>");
+            //})
+
+            //multiple values insertions
+            function appendMany() {
+                var txt1 = "<p> New Text </p>"; //create text with html
+                var txt2 = $("<h2></h2>").text("Heading 2");  //create text with jquery
+                var txt3 = document.createElement('p');
+                txt3.innerHTML = "New Paragraph"; //create text with DOM
+                $('body').append(txt1, txt2, txt3);
+            }
+      //  })
+    </script>
+</head>
+<body>
+    <!--html for append and prepend-->
+    <!--
+    <p>Summers are really Hot</p>
+    <p>Have lots of water and fruits to beat the heat</p> <br/><br/>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol> <br/>
+    <button id="btn1">Append</button>
+    <button id="btn2">Prepend</button> <br/>
+
+    <!--for removing elements
+    <div id="div1" style="height:150px;width:300px;border:1px solid red;background-color:aquamarine;">
+        Some elements inside Div
+        <p>Para 1</p>
+        <h4>Head 4</h4>
+        <p>Para 2</p>
+
+    </div> <br />
+    <button>Remove</button>  -->
+
+    <!--htnl for multiple appends-->
+    <h1>Multiple Values Appending</h1>
+    <p>Trying to insert many values at the runtime</p>
+    <button onclick="appendMany()">Append Many Values</button>
+</body>
+</html>
