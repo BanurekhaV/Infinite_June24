@@ -49,5 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bs1.html" />
+    <Content Include="Bs2.html" />
+    <Content Include="Carousel.html" />
+    <Content Include="Forms.html" />
+    <Content Include="Navbar.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
