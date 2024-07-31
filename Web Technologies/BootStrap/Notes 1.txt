@@ -1,0 +1,56 @@
+BootStrap : Free frontend framework for easier and faster web development
+-It includes html,css based design templates for tables,forms,navigations,typography,modals,images, carousels, and also many javascript plug-ins
+-It gives the ability to create responsive design
+
+Developed and released as an open source during 2011 by Mark Otto and Jacob at Twitter
+
+Advantages : Easy to learn and use
+             Responsive features to suit all devices
+             Core Framework was targeted as Mobile First Approach
+             It is compatible with all browsers
+
+How to get Bootstrap
+
+--download and install
+-include from cdn
+
+<link rel ="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+--for javascript
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+             
+Bootstrap grid system has 4 classes
+
+1. xs(for phones - screen size less than 768 px wide)
+2. sm(for tablets - screen size is = or > 768 px ")
+3. md(for small laptops - screens = or > 992 px ")
+4. lg(laptops/desktops - screen = or < 1200 px ")
+
+Bootstrap container classes (wraps the contents of the website)
+1. .container class which provides fixed width container
+2. .container-fluid class which provides a full width, spanning the entire viewport
+
+viewport - applies the responsive features of the bootstrap classes
+ <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+Components: A set of reusable and customizable aspects/objects of web development
+
+1. Jumbotron : making contents look larger and bigger to gain attention
+2. Alerts :Predefined pop up messages
+3. Buttons:
+4. Badges : labelling components
+5. progress Bar
+6. Nav Bar 
+7. Forms :
+8. List Groups : display series of contents
+9. Card : provides customizable,extensible and flexible contenet containers
+10. Carousels : image sliding (using css and js)
+11. BreadCrumbs : Provides location of the current page in the navigation hierarchy
+
+
+
+
