@@ -3,9 +3,44 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NavBar</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <style>
+     #txt{
+         text-align:justify;
+     }
+     footer{
+         background-color:silver;
+         text-align:center;
+         font-size:20px;
+         padding:20px;
+     }
+ </style>
+
 </head>
 <body>
-
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Infinite Limited.</a>
+            </div>
+            <ul class="navbar navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Document 1
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Doc 1.1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </body>
 </html>
