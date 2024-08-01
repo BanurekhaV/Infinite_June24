@@ -1,0 +1,21 @@
+State management : The ability to retain the state of the page in terms of its values in various controls
+
+Applications manages the state using techniques as below:
+
+1. Client Side techniques
+  a) ViewState
+  b) Hidden fields
+  c) Cookies
+  d) Query Strings
+
+
+a) View State : View State : is a variable of object type that need not be typecasted
+ - Can store any data including UDT(user defined type)
+ - It gets stored in the client application
+ - Can retain the state across multiple post backs of the same page
+
+
+b) Hidden Fields : is a control in the toolbox, which is not visible at runtime
+-It is a class that needs to be initialized, and also initialize all its members. This can be a load on the system
+-Can be used if in case we need to store few values only, and use Viewstate for many values
+-Like Viewstate, hidden fields also can maintain state only acoss the same page post backs
