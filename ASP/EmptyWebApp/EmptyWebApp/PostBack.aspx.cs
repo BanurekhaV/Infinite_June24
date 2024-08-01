@@ -25,12 +25,16 @@ namespace EmptyWebApp
             txtcount.Text = ClicksCount.ToString(); */
 
             //step 2
-            if(ViewState["clicks"]!=null)
+            /*if(ViewState["clicks"]!=null)
             {
                 ClicksCount = (int)ViewState["clicks"] + 1;
             }
           
             ViewState["clicks"] = ClicksCount; // viewstate variable is getting created here
+              txtcount.Text = ClicksCount.ToString(); */
+
+            //step 3
+            ClicksCount = Convert.ToInt32(txtcount.Text) + 1;
             txtcount.Text = ClicksCount.ToString();
         }
     }
