@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Parsing Text to JSON using JSON.parse()</h1>
+    <h2>Parsed object Info.</h2>
+    <p id="demo"></p> <br/>
+
+    <h2>Stringifier with replacer Info.</h2>
+    <p id="demo1"></p>
+
+    <script>
+        //1. parsing text to objects
+        const mydata = '{"name":"Infinite","City":"Bangalore","Age":25}'
+        const myobj = JSON.parse(mydata);
+        document.getElementById('demo').innerHTML = "Name = " + myobj.name + " , " +
+            "City = " + myobj.City + " , " + "Age = " + myobj.Age ;
+
+        //2. stringify Objects to text data
+        data = JSON.stringify(myobj);
+        document.write("Just Stringified " + data);
+
+        //3. replacers in stringify
+
+        var obj = { "name": "banu", "age": 28, "city": "chennai" };
+        var text = JSON.stringify(obj, function (key, value) {
+            if (key == "name") {
+                return value.toUpperCase();
+            } else if (key == "age") {
+                return value - 10;
+            }
+            else {
+                return value;
+
+            }
+        });
+        document.getElementById('demo1').innerHTML=text
+
+    </script>
+</body>
+</html>
