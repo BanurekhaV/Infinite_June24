@@ -21,5 +21,10 @@ namespace ValidationsPrj
                 Response.Redirect("Welcome.html");
             }
         }
+
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

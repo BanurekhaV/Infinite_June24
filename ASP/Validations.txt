@@ -11,3 +11,7 @@ In the web.config file, make an entry as below to enable javascript libraries to
   <appSettings>
     <add key="ValidationSettings:UnobtrusiveValidationMode" value="none"/>
   </appSettings>
+
+
+Note : Button control and drop down controls always result in a postback
+------------------------------------------------------------------------
