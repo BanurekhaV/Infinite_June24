@@ -1,0 +1,13 @@
+Validation Controls : These are some of the in-built controls in asp.net web form applications viz
+1. RequiredField  -  must field
+2. Range      - Data range of values
+3. Compare   - compare one input with another
+4. Regular Expression  - pattern matchings
+5. Custom - to handle any other validations that are beyond the above
+
+In the web.config file, make an entry as below to enable javascript libraries to execute validation functionalities
+
+<configuration>
+  <appSettings>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="none"/>
+  </appSettings>
