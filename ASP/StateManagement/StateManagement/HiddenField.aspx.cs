@@ -24,6 +24,8 @@ namespace StateManagement
 
         protected void BtnLoad_Click(object sender, EventArgs e)
         {
+           // Response.Redirect("TestForm.aspx"); data stored in the hiddenfield of one page is not 
+           //avaialable on other pages
             lblmessage.Text = HiddenField1.Value + " " + HiddenField2.Value;
         }
     }

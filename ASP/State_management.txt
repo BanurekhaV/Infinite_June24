@@ -18,4 +18,12 @@ a) View State : View State : is a variable of object type that need not be typec
 b) Hidden Fields : is a control in the toolbox, which is not visible at runtime
 -It is a class that needs to be initialized, and also initialize all its members. This can be a load on the system
 -Can be used if in case we need to store few values only, and use Viewstate for many values
--Like Viewstate, hidden fields also can maintain state only acoss the same page post backs
+-Like Viewstate, hidden fields also can maintain state only across the same page post backs
+
+
+c) Cookies : allow managing the state across pages
+     Cookies are of 2 types
+           1. Persistent Cookies( uses an object of HttpCookies class to persist the state)
+           2. Non persistent cookie (data is stored directly in the response object )
+
+d) Query String : allow managing the state across pages

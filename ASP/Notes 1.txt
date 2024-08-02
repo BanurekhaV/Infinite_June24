@@ -27,6 +27,9 @@ Jelly fish
 -Asp.net web form extends event driven model of interaction
 -HTTP a stateless protocol
 
+-Inline Code : <%       %> refers to the code that is written inside an asp.net web page that has an extension .aspx,  along with HTML source
+-Code Behind : refers to the code of an asp.net web page written in a separate class file with an extension .aspx.cs
+
 Page Life Cycle:
 S : Start of the Page
 I : Initialization (all controls are initialized)
@@ -34,6 +37,16 @@ L : Load
 V : Validate
 E : Event Handling
 R : Render (CSS/Styles/UI is applied)
+
+All web forms are instances of ASP.Net web Page class. The page class has the following objects with its properties that form the scope for programming
+ 1. Application
+ 2. Session
+ 3. Cache
+ 4. Request
+ 5. Response
+ 6. Server
+ 7. User
+ 8. Trace
 
 Page Life Cycle:
 
