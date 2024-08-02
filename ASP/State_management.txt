@@ -26,4 +26,16 @@ c) Cookies : allow managing the state across pages
            1. Persistent Cookies( uses an object of HttpCookies class to persist the state)
            2. Non persistent cookie (data is stored directly in the response object )
 
-d) Query String : allow managing the state across pages
+d) Query String : allow managing the state across pages, using url
+             The data is sent thru the address bar making it visible. 
+              Sensitive data should not be sent via query string
+
+Url encoding (%20?), can be used for formatting the data.
+
+2. Server Side Techniques
+
+a) Session State : are like viewstates that keep track of the state of a page across sessions
+
+one session id /user
+
+b) Application State :  manages the entire application instance using application state

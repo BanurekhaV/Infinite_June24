@@ -68,8 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CookieDestination.aspx" />
+    <Content Include="FirstSession.aspx" />
     <Content Include="HiddenField.aspx" />
     <Content Include="CookieSource.aspx" />
+    <Content Include="QueryDestination.aspx" />
+    <Content Include="QuerySource.aspx" />
+    <Content Include="SecondSession.aspx" />
     <Content Include="TestForm.aspx" />
     <Content Include="ViewState.aspx" />
     <Content Include="Web.config" />
@@ -81,6 +85,13 @@
     </Compile>
     <Compile Include="CookieDestination.aspx.designer.cs">
       <DependentUpon>CookieDestination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstSession.aspx.cs">
+      <DependentUpon>FirstSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstSession.aspx.designer.cs">
+      <DependentUpon>FirstSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="HiddenField.aspx.cs">
       <DependentUpon>HiddenField.aspx</DependentUpon>
@@ -96,6 +107,27 @@
     </Compile>
     <Compile Include="CookieSource.aspx.designer.cs">
       <DependentUpon>CookieSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryDestination.aspx.cs">
+      <DependentUpon>QueryDestination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryDestination.aspx.designer.cs">
+      <DependentUpon>QueryDestination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuerySource.aspx.cs">
+      <DependentUpon>QuerySource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuerySource.aspx.designer.cs">
+      <DependentUpon>QuerySource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecondSession.aspx.cs">
+      <DependentUpon>SecondSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecondSession.aspx.designer.cs">
+      <DependentUpon>SecondSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestForm.aspx.cs">
       <DependentUpon>TestForm.aspx</DependentUpon>
