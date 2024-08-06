@@ -13,5 +13,5 @@ In the web.config file, make an entry as below to enable javascript libraries to
   </appSettings>
 
 
-Note : Button control and drop down controls always result in a postback
+Note : Button control and drop down controls always result in a postback (it is not default action for drop down ultil we specify the postback event)
 ------------------------------------------------------------------------
