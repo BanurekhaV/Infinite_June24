@@ -26,8 +26,8 @@ namespace CachingPrj
 
 
             //2.
-            //  Server.Transfer("OtherPage.aspx"); // other page in the same webserver
-            Server.MapPath("http://www.google.com");   //other page in another server
+              Server.Transfer("OtherPage.aspx"); // other page in the same webserver
+           // Server.Transfer("http://www.google.com");   //other page in another server
         }
     }
 }

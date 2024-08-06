@@ -67,11 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="NoLayout.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NoLayout.aspx.cs">
+      <DependentUpon>NoLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoLayout.aspx.designer.cs">
+      <DependentUpon>NoLayout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OurLayout.Master.cs">
       <DependentUpon>OurLayout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

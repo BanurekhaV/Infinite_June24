@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Employees>
+  <Employee>
+    <Id>100</Id>
+    <Name>Anitha</Name>
+    <City>Hyderabad</City>
+  </Employee>
+  <Employee>
+    <Id>101</Id>
+    <Name>Uhalatha</Name>
+    <City>Chennai</City>
+  </Employee>
+  <Employee>
+    <Id>102</Id>
+    <Name>Shivraj</Name>
+    <City>Bangalore</City>
+  </Employee>
+  <Employee>
+    <Id>103</Id>
+    <Name>Gurukiran</Name>
+    <City>Bangalore</City>
+  </Employee>
+</Employees>

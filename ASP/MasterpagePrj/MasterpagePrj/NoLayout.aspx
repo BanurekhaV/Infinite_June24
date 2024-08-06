@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NoLayout.aspx.cs" Inherits="MasterpagePrj.NoLayout" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NoLayout.aspx.cs" Inherits="MasterpagePrj.NoLayout"  Trace="true" %>
 
 <!DOCTYPE html>
 
