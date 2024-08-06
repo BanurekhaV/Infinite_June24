@@ -20,10 +20,14 @@ namespace CachingPrj
             Context.Items.Add("Email", txtemail.Text);
 
             //1.
-           // Response.Redirect("OtherPage.aspx");
+            // Response.Redirect("OtherPage.aspx");  // other page in the same webserver
+            //1.1 redirecting to other web server
+            //  Response.Redirect("https://www.google.com"); //other page in another server
+
 
             //2.
-            Server.Transfer("OtherPage.aspx");
+            //  Server.Transfer("OtherPage.aspx"); // other page in the same webserver
+            Server.MapPath("http://www.google.com");   //other page in another server
         }
     }
 }

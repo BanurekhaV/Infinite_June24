@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OurLayout.master.cs" Inherits="MasterpagePrj.OurLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            background-color: silver;
+            text-align: center;
+            font-size: 40px;
+            padding: 30px;
+        }
+
+        nav li {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden
+        }
+
+            nav li a {
+                float: left;
+                color: aqua;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+        a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to the Wonders of the World
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Taj_Mahal">TajMahal</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Statue_of_Liberty">Statue of Liberty</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Eiffel_Tower">Eiffel Tower</a></li>
+            <li><a href="#" style="float: right">Sign In</a></li>
+            <li><a href="#" style="float: right">Sign Out</a></li>
+        </ul>
+    </nav>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+    <footer>
+        &copy; Team Infinite
+    </footer>
+</body>
+</html>

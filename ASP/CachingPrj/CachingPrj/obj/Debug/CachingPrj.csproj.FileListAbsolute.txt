@@ -56,3 +56,4 @@ C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.csp
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.csproj.CopyComplete
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.dll
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.pdb
+C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.csproj.AssemblyReference.cache

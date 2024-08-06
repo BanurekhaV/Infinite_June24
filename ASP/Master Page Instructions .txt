@@ -1,0 +1,14 @@
+Master Page Instructions :
+
+-Create a web application for .net framework
+- right click on the project->add new Item
+- search for master page and choose the second option (master page for web application with a .master extension)
+- remove the tag contentplaceholder both in the head element as well as body element
+- then add a complete html with css inbuilt 
+- Next include the content place holder either by typing or by dragging and dropping from the tool box
+- change the id name of the contentplaceholder to any primary name viz (main, primary first etc..) 
+- then you may format the layout by selecting all and pressing ctrl k and d
+- then we can right click on the master in the solution explorer and keep adding content pages
+- you should place all the contents that you need only between the content control <asp:content >   </asp:content>
+
+Any changes to the layout cannot be made from the content pages, but only from the master page
