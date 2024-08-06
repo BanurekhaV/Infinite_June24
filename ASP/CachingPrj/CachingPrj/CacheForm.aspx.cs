@@ -17,6 +17,9 @@ namespace CachingPrj
             {
                 GetProductByName("All");
             }
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(30)); //duration
+            Response.Cache.VaryByParams["None"] = true; //cache options
+            Response.Cache.SetCacheability(HttpCacheability.ServerAndPrivate); //location
             lbldata.Text = "This Page is Cached @" + " " + DateTime.Now.ToString();
         }
 

@@ -67,10 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AutoGrid.aspx" />
     <Content Include="CacheForm.aspx" />
+    <Content Include="OtherPage.aspx" />
+    <Content Include="RedirectVsTransfer.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoGrid.aspx.cs">
+      <DependentUpon>AutoGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoGrid.aspx.designer.cs">
+      <DependentUpon>AutoGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CacheForm.aspx.cs">
       <DependentUpon>CacheForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -78,7 +88,21 @@
     <Compile Include="CacheForm.aspx.designer.cs">
       <DependentUpon>CacheForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OtherPage.aspx.cs">
+      <DependentUpon>OtherPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OtherPage.aspx.designer.cs">
+      <DependentUpon>OtherPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedirectVsTransfer.aspx.cs">
+      <DependentUpon>RedirectVsTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedirectVsTransfer.aspx.designer.cs">
+      <DependentUpon>RedirectVsTransfer.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

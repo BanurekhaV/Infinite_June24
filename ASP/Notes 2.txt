@@ -1,0 +1,26 @@
+Caching : is concept of storing the web page/s in the client machine in order to provide response quickly instead of fetching it from the server.
+
+
+Response.Redirect  vs Server.Transfer
+
+Both are meant for navigation from one page to another
+
+Response.Redirect : the object transfers the page permanently to the given page and ends the processing of the first page, and the new page processing continues. 
+It also sends a command back to the browser (that it has stopped the processing of the current page and started processing the new page
+leading to an extra unnecessary round trip)
+
+  Usage of response.redirect :
+    1. Want our users to be able to see the newly redirected url.
+    2. We want to redirect to a new page as well as a new webserver
+    3. We do not want to preserve(state) of the form variables of the original request
+    4. we don't mind extra roundtrip
+
+Server.Transfer : this helps in navigating between pages of the same application or within the same web server
+The original page is still in the memory that can read the values directly from the new page
+The page is not redirected permanently unlike the response. redirect.
+
+ Usage of server.transfer :
+   1. to transfer the current page to another page of the same server
+   2. To preserve server resources and avoid unnecessary roundtrips to the server
+   3. to preserve the form variables
+   4. need not disclose the url address of all the navigating pages

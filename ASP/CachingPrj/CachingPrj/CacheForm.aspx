@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CacheForm.aspx.cs" Inherits="CachingPrj.CacheForm" %>
-<%@ OutputCache Duration="30" VaryByParam="None" Location="ServerAndClient" %>
+<!--<%@ OutputCache Duration="30" VaryByParam="None" Location="ServerAndClient" %>-->
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">

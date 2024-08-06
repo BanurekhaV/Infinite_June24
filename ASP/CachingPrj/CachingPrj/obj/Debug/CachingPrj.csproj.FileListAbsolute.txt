@@ -52,7 +52,6 @@ C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\bin\roslyn\VBCSCompiler.
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\bin\roslyn\VBCSCompiler.exe.config
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.csproj.AssemblyReference.cache
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.csproj.CopyComplete
 C:\Banu\Infinite\Batch_June24\ASP\CachingPrj\CachingPrj\obj\Debug\CachingPrj.dll

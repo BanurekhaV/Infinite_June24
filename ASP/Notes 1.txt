@@ -46,7 +46,9 @@ All web forms are instances of ASP.Net web Page class. The page class has the fo
  5. Response
  6. Server
  7. User
- 8. TraceValidatio Controls :
+ 8. Trace
+ 9. Context
+
 
 Page Life Cycle:
 
