@@ -11,7 +11,17 @@ namespace Securityprj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write("Application code is executed here...   ");
+            Response.Write(System.Security.Principal.WindowsIdentity.GetCurrent().Name + "<br/>");
 
+            Response.Write("Is the user Authenticated ?  ");
+            Response.Write(User.Identity.IsAuthenticated.ToString() + "<br/>");
+
+            Response.Write("Authentication Type , if authenticated   ");
+            Response.Write(User.Identity.AuthenticationType + "<br/>");
+
+            Response.Write("User Name, if authenticated ..  ");
+            Response.Write(User.Identity.Name + "<br/>");
         }
     }
 }
