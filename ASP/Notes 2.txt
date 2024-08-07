@@ -24,3 +24,51 @@ The page is not redirected permanently unlike the response. redirect.
    2. To preserve server resources and avoid unnecessary roundtrips to the server
    3. to preserve the form variables
    4. need not disclose the url address of all the navigating pages
+
+
+Events of a Page /Application  (www.bookmyshow.com/login , www.amazon.in
+
+protected void Application_Start(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Session_Start(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void Session_End(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_End(object sender, EventArgs e)
+        {
+
+        }
+
+error Handlers preferences
+  1. try catch block at code level
+  2. Page_Error() handler at the code behind file 
+             or at the @Page directive with an attribute ErrorPage="~/<name of the error page> (.html/.htm/.aspx)
+  3. Application_Error() handler at the global.asax file
+  4. Custom errors mode=On in the web.config file along with a defaultredirect property
+
+Logging of errors : Always a standard practice to log the errors to enable the developers to correct the same later
+

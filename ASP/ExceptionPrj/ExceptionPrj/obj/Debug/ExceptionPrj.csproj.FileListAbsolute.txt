@@ -52,8 +52,8 @@ C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\bin\roslyn\VBCSCompi
 C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\bin\roslyn\VBCSCompiler.exe.config
 C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\obj\Debug\ExceptionPrj.csproj.AssemblyReference.cache
 C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\obj\Debug\ExceptionPrj.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\obj\Debug\ExceptionPrj.csproj.CopyComplete
 C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\obj\Debug\ExceptionPrj.dll
 C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\obj\Debug\ExceptionPrj.pdb
+C:\Banu\Infinite\Batch_June24\ASP\ExceptionPrj\ExceptionPrj\obj\Debug\ExceptionPrj.csproj.AssemblyReference.cache

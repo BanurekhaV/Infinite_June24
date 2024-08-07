@@ -1,0 +1,22 @@
+use infinitedb
+
+create table ErrorLogger
+(Logid bigint identity not null,
+ExceptionMsg varchar(max),
+ExceptionType varchar(100),
+ExceptionSource varchar(max),
+ExceptionUrl varchar(100),
+LogDate datetime)
+
+--let us create a procedure to insert rows into the error table
+--as and when an error occurs in the application
+
+create or alter proc ExLogger
+(@exmsg varchar(max),@extype varchar(100),@exsrc varchar(max),@exurl varchar(100))
+as
+ begin
+  insert into ErrorLogger(ExceptionMsg,ExceptionType,ExceptionSource,ExceptionUrl,LogDate)
+  select @exmsg,@extype,@exsrc,@exurl,getdate()
+ end
+
+ select * from ErrorLogger

@@ -12,17 +12,18 @@ namespace ExceptionPrj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 DataSet ds = new DataSet();
                 ds.ReadXml(Server.MapPath("~/Employees.xml"));
                 Grid1.DataSource = ds;
                 Grid1.DataBind();
-           // }
-            //catch (Exception ex)
-            //{
-            //    lblmsg1.Text = "Some Technical error occured.. try after sometime";
-            //}
+            }
+            catch (Exception ex)
+            {
+                ExceptionLogging.LogExceptionDB(ex);
+                lblmsg1.Text = "Some Technical error occured.. try after sometime";
+            }
         }
 
         //protected void Page_Error(object sender, EventArgs e)

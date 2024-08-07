@@ -32,9 +32,13 @@ namespace ExceptionPrj
 
         protected void Application_Error(object sender, EventArgs e)
         {
-            //Exception ex = Server.GetLastError();
-            //Server.ClearError();
-            //Server.Transfer("~/DefaultErrors.aspx");
+            Exception ex = Server.GetLastError();
+            Server.ClearError();
+            string str = "";
+            str = ex.Message + ex.Source+ex.Data;
+            string path = @"C:\Banu\Infinite\Batch_June24\Allerrors.txt";
+            System.IO.File.WriteAllText(path, str);
+            Server.Transfer("~/DefaultErrors.aspx");
         }
 
         protected void Session_End(object sender, EventArgs e)

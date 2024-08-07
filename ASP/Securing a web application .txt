@@ -1,0 +1,24 @@
+Securing a web application :
+
+Authenticate : Who the user is ? The process of identifying the users
+
+Authorization : What rights the user has ? What resources the user can access. The process of granting access to the user on a resource based on the identity
+
+Types of Authentications :
+
+1. Anonymous Authentication : allows users to access public areas of the website without any credentials
+
+2. Windows Authentication : Identifies and authorizes users, based on the server's user list. Access to resources on the server are granted/denied accordingly (privileges of the user account)
+-it is best suited for intranet applications
+
+3. Form Based authentication : is used for internet applications, where the users need not be the members of their domain based network
+    Eg : gmail, facebook,irctc, amazon etc..
+
+4. Role Based Authentication : User roles are mapped to forms/windows in order to gain access to resources
+
+5. Passport Authentication : Paid Service that uses 'claims' authentication method, generated from other applications to authenticate self
+  flow of events in passport authentication :
+   - User Log in, then passport.authenticate() is called which implements some strategy/logic to verify
+   - If success, then it serializes the User details as an object and creates a unique identifier for the user
+   - the unique user details are stored in the session of that user, which is used for all further transactions (request/response)
+ 

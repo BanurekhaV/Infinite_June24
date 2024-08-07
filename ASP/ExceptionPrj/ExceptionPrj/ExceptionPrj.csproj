@@ -71,7 +71,9 @@
     <Content Include="DefaultErrors.aspx" />
     <Content Include="Employee.xml" />
     <Content Include="Errors.aspx" />
+    <Content Include="GeneralErrors.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="PageNotFound.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +97,14 @@
     </Compile>
     <Compile Include="Errors.aspx.designer.cs">
       <DependentUpon>Errors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionLogging.cs" />
+    <Compile Include="GeneralErrors.aspx.cs">
+      <DependentUpon>GeneralErrors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralErrors.aspx.designer.cs">
+      <DependentUpon>GeneralErrors.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
