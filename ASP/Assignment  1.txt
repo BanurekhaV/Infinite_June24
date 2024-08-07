@@ -1,7 +1,0 @@
-Assignment :
-
-Create a web application that hosts a series of products (any) as a dropdown list.
-Have a image control that can display the selected item in the dropdown
-have a button control that gets the price of the selected product and displays it in a Label control
-
-
