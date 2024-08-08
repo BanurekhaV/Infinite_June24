@@ -71,4 +71,4 @@ Views :(.cshtml) allows writing eazor synatx, a powerful and easier way of writi
 To access the model data in the view we use @model
 
 @model binds a model object to the view
-@Model 
+@Model can access the properties of the bound model object 
