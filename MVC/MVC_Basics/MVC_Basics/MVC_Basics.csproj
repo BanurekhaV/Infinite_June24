@@ -177,6 +177,7 @@
     <Content Include="Views\Data\FirstTempRequest.cshtml" />
     <Content Include="Views\Data\SecondTempRequest.cshtml" />
     <Content Include="Views\Data\TestTempData.cshtml" />
+    <Content Include="Views\Data\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

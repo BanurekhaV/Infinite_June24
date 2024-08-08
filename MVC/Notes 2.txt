@@ -33,3 +33,6 @@ TempData : Is used to transfer data from controller to the view
 -It internally uses session to store values
 -It is a dictionary Object deriving from TempDataDictionary
 -It allows data transfers in subsequent request, using TempData.Keep() method.
+-Needs Typecasting
+-Has a bigger Life than ViewBag and ViewData
+-Mostly used to transfer data from one controller to another.

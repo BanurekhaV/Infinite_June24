@@ -17,8 +17,8 @@ namespace MVC_Basics.Controllers
             //    "Roses","Lillies","Jasmine","Marigold"
             //};
             //return View(flowers);
-            List<string> st;
-            st = TempData["stores"] as List<string>;
+            //List<string> st;
+            //st = TempData["stores"] as List<string>;
             // return View(st); //working
 
             return RedirectToAction("TestTempData");
@@ -81,11 +81,23 @@ namespace MVC_Basics.Controllers
 
         public ActionResult SecondTempRequest()
         {
-            List<string> stnlist;
-            stnlist = TempData["stores"] as List<string>;
+            //List<string> stnlist;
+            //stnlist = TempData["stores"] as List<string>;
             //return View(stnlist); // working
 
             return RedirectToAction("index");  //working
+        }
+
+        //5. If we want to have action method name and the view name to be different,
+        //then we can give the ActionName selector and map it to a view with different name
+        //otr change the view name to match the action name
+
+        [ActionName("Test")]
+        public ActionResult DifferentName()
+        {
+            ViewBag.mydata = "Testing with different names";
+            return View("DifferentName");
+           // return View();
         }
     }
 }
