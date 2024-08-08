@@ -12,11 +12,28 @@ namespace MVC_Basics.Controllers
         //1. Passing an object to the view that will be used as a model
         public ActionResult Index()
         {
-            List<string> flowers = new List<string>()
-            {
-                "Roses","Lillies","Jasmine","Marigold"
-            };
-            return View(flowers);
+            //List<string> flowers = new List<string>()
+            //{
+            //    "Roses","Lillies","Jasmine","Marigold"
+            //};
+            //return View(flowers);
+            List<string> st;
+            st = TempData["stores"] as List<string>;
+            // return View(st); //working
+
+            return RedirectToAction("TestTempData");
+        }
+
+        public ActionResult TestTempData()
+        {
+            //List<string> st2;
+            //st2 = TempData["stores"] as List<string>;
+            //inorder to retain the Tempdata values for further request,
+            //we should retain the data as below
+            // TempData.Keep();
+            // return View(st2);
+
+            return RedirectToAction("About", "Home");
         }
 
         //2. Passing data thru Viewbag and ViewData
@@ -47,6 +64,28 @@ namespace MVC_Basics.Controllers
             // return Redirect("Index"); //2. redirecting to another action method within the same controller
 
             //return RedirectToAction("Contact", "Home"); //3. redirecting to action method of other controller
+        }
+
+        //4. using TempData to transfer values across requests
+        public ActionResult FirstTempRequest()
+        {
+            List<string> stationeries = new List<string>()
+            {
+                "pens", "pencils","erasers","markers","notebooks"
+            };
+            TempData["stores"] = stationeries;
+            // return View(); //1. This is the usual transfer and it works
+
+            return RedirectToAction("SecondTempRequest");
+        }
+
+        public ActionResult SecondTempRequest()
+        {
+            List<string> stnlist;
+            stnlist = TempData["stores"] as List<string>;
+            //return View(stnlist); // working
+
+            return RedirectToAction("index");  //working
         }
     }
 }

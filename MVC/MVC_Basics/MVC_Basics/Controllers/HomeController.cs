@@ -17,7 +17,9 @@ namespace MVC_Basics.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            List<string> st2;
+            st2 = TempData["stores"] as List<string>;
+            return View(st2);
         }
 
         public ActionResult Contact()
