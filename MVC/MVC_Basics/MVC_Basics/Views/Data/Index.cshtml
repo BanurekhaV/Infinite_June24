@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>@ViewBag.data1</h3>
+<h3>@ViewData["data2"]</h3>
+<h2>List of Flowers</h2>
+@foreach(var item in Model)
+            {
+                <p>@item</p>
+            }
+
