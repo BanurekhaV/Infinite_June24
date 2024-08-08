@@ -1,0 +1,74 @@
+ASP.Net MVC : is a very popular framework for developing web based applications
+-Asp.net MVC is based on the Model View Controller pattern, making the development robust,fast and secure applications
+-It is the next generation technology succeeding Asp.net Web forms
+
+Features:
+- Separation of concerns
+- Light weight
+- Designs and codes are neatly separated
+- Uses pure HTML controls(Html Helpers), and no server controls
+- Uses controller based routing
+- Implements no view state
+- Uses Razor Syntax for customization
+- Uses Layouts instead of Master pages
+- It is an Open Source Technology
+
+Models : Is responsible for keeping data based operations and logics like connecting to the data source, retrieving data, storing.
+
+Views : Is responsible for serving the web page or user interface to the client
+
+Controllers : Are responsible for business/programming logics and anchors both the Models and the Views
+
+
+App_Data : this folder contains data files like local db,.xml,.mdf etc.
+
+App_Start : Contains classes with static methods that are called during Application start
+
+Controllers : Contains classes that handles the request and response. All controllers names have to be suffixed with 'controller' keyword
+
+Views : Contains Html with the Razor syntax and is always referred with .cshtml (in case of C#). This folder will have separate folders for each controller with the same name. Inside these folders we can have the corresponding views for the action method
+
+ - it also contains a folder called Shared , which has the Layout and error files to give the master layout for the application, and to handle application errors
+
+ -_ViewStart.cshtml : is used to place all common UI Logics across all the views
+
+
+
+Controllers : Main part of MVC
+- Mediators between client and the server 
+- Bridge between Models and Views
+- The url is always mapped with a controller
+
+Action methods : are methods inside controllers
+- They are always public
+- They cannot be overloaded
+- They cannot be static 
+- Every controller has atleast one default action method called Index()
+- Every action method returns a type of ActionResult (base class for all types of return)
+
+Return types of action methods : all the below types are inherited from ActionResult class directly or transitively
+ - ViewResult :
+ - EmptyResult :
+ - RedirectResult :
+ - JsonResult :
+ - JavascriptResult :
+ - ContentResult :
+ - FileContentResult :
+ - FilePathResult :
+ - FileStreamResult : 
+
+Views :(.cshtml) allows writing eazor synatx, a powerful and easier way of writing program code directly on the html based view page 
+- Razor syntax is like a markup that allows embedding program code with html
+- Uses '@{}' block to write program code
+- All the inline expressions like variables and functions starts with @
+- variables are declared using var keyword, and all the code statements end with a ';'
+- string values are give within " "
+- Comments in razor is as
+ @*  ...    *@ --- multiple lines
+ /* ... */
+ //  single line comments
+
+To access the model data in the view we use @model
+
+@model binds a model object to the view
+@Model 
