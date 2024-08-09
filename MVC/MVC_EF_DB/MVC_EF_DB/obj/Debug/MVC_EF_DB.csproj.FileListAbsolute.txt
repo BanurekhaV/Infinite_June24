@@ -1,3 +1,4 @@
+C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\obj\Debug\MVC_EF_DB.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\bin\MVC_EF_DB.dll.config
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\bin\MVC_EF_DB.dll
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\bin\MVC_EF_DB.pdb
@@ -76,8 +77,7 @@ C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\bin\System.Web.WebPages.Ra
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\bin\Newtonsoft.Json.xml
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\bin\Antlr3.Runtime.pdb
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\obj\Debug\MVC_EF_DB.csproj.AssemblyReference.cache
-C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\obj\Debug\MVC_EF_DB.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\obj\Debug\MVC_EF_DB.csproj.CopyComplete
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\obj\Debug\MVC_EF_DB.dll
 C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\obj\Debug\MVC_EF_DB.pdb
+C:\Banu\Infinite\Batch_June24\MVC\MVC_EF_DB\MVC_EF_DB\obj\Debug\MVC_EF_DB.csproj.AssemblyReference.cache
