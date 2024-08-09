@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MVC_EF_DB.Models.Order>
+@{
+    ViewBag.Title = "MultipleData";
+}
+
+<h2>MultipleData</h2>
+
+@foreach(var item in Model)
+            {
+                <ul>
+                    <li> Order ID : @item.OrderID</li>
+                    <li> CustomerName : @item.Customer.ContactName</li>
+                    <li> Employee Last Name : @item.Employee.LastName</li>
+                    <li> Shipper Name : @item.Shipper.CompanyName</li>            
+                  
+                </ul>
+            }
