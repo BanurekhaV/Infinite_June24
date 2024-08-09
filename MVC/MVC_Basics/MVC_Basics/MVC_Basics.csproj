@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HRController.cs" />
@@ -177,10 +178,11 @@
     <Content Include="Views\Data\FirstTempRequest.cshtml" />
     <Content Include="Views\Data\SecondTempRequest.cshtml" />
     <Content Include="Views\Data\TestTempData.cshtml" />
-    <Content Include="Views\Data\Test.cshtml" />
+    <Content Include="Views\Data\DifferentName.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
