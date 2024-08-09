@@ -75,5 +75,22 @@ namespace MVC_EF_DB.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //6. getting the deatils of a given category Id
+        public ActionResult Details(int Id)
+        {
+            Category c = db.Categories.Find(Id);
+            return View(c);
+        }
+
+        //7. get category by name in a sorted 
+        public ActionResult GetCategoryByName()
+        {
+            List<string> sortedcat = (from c in db.Categories
+                                      orderby c.CategoryName
+                                      select c.CategoryName).ToList();
+
+            return View(sortedcat);
+        }
     }
 }
