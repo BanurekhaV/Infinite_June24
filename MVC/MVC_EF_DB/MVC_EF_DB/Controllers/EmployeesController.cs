@@ -86,7 +86,7 @@ namespace MVC_EF_DB.Controllers
         {
             if (ModelState.IsValid)
             {
-               // db.Entry(employee).State = EntityState.Modified;
+                db.Entry(employee).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

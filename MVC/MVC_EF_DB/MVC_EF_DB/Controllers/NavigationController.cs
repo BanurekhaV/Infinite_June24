@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVC_EF_DB.Models;
+using System.Data.Entity;
 
 namespace MVC_EF_DB.Controllers
 {
@@ -20,8 +21,10 @@ namespace MVC_EF_DB.Controllers
         //1. Fetching Data from Multiple tables using navigation property
         public ActionResult MultipleData()
         {
+           
              return View(db.Orders.ToList());            
         }
+               
 
         public ActionResult MoreData()
         {
