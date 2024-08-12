@@ -1,0 +1,20 @@
+Model Binding :
+
+Binding a model or any object to the view
+
+Http verbs :
+HttpGet : is to indicate that it is a get request from the server
+HttpPost : data being sent from the view to the server via the controller
+HttpDelete : is a request for change in data (deletion)
+HttpPut : is edit/update of the view and then the data 
+HttpPatch : (selective updation od data)
+
+Passing data from view to the controller :
+
+1. Object
+2. Forms Collection
+3. Parameter Collection (parameter name to match the Model/schema name)
+4. Request Object
+
+
+Code First MVC with a Repository Pattern:
