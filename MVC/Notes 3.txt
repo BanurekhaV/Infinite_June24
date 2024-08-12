@@ -20,4 +20,7 @@ Passing data from view to the controller :
 Code First MVC with a Repository Pattern:
 
 
-ViewModel : 
+ViewModel : Is a model where we can include properties from different Models into one for Diplay purpose
+
+ModelValidations:
+Custome Model Validation

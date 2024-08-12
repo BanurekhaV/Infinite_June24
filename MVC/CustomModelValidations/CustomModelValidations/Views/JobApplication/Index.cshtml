@@ -1,0 +1,87 @@
+﻿@model CustomModelValidations.Models.JobApplication
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h2> Job Application Form</h2><br/>
+<h3>@ViewBag.Result</h3>
+<div>
+    @using(Html.BeginForm())
+            {
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.name)
+                @Html.EditorFor(model => model.name)
+                @Html.ValidationMessageFor(model => model.name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.experience)
+                @Html.EditorFor(model => model.experience)
+                @Html.ValidationMessageFor(model => model.experience)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.birthdate)
+                @Html.EditorFor(model => model.birthdate)
+                @Html.ValidationMessageFor(model => model.birthdate)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.email)
+                @Html.EditorFor(model => model.email)
+                @Html.ValidationMessageFor(model => model.email)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Gender)
+                @Html.DropDownListFor(model => model.Gender, new List<SelectListItem>{
+                new SelectListItem{Text="Select Gender",Value="select" },
+                 new SelectListItem{Text="Male",Value="M" },
+                 new SelectListItem{Text="Female",Value="F" }})
+                @Html.ValidationMessageFor(model => model.Gender)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.expsal)
+                @Html.EditorFor(model => model.expsal)
+                @Html.ValidationMessageFor(model => model.expsal)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Skills)
+                @Html.CheckBoxFor(m => m.Skills[0].IsChecked, new { id = "csharp" }) C#
+                @Html.CheckBoxFor(m => m.Skills[1].IsChecked, new { id = "asp" }) ASPNet
+                @Html.CheckBoxFor(m => m.Skills[2].IsChecked, new { id = "mvc" }) MVC
+                @Html.CheckBoxFor(m => m.Skills[3].IsChecked, new { id = "sql" }) MSSQL
+                @Html.CheckBoxFor(m => m.Skills[4].IsChecked, new { id = "jq" }) JQuery
+
+                @Html.ValidationMessageFor(model => model.Skills)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.HavePassport)
+                @Html.RadioButtonFor(model => model.HavePassport, "True") Yes I have
+                @Html.RadioButtonFor(model => model.HavePassport, "False") No, I Dont
+                @Html.ValidationMessageFor(model => model.HavePassport)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+            }
+</div>
+
