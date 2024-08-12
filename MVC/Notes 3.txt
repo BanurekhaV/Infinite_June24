@@ -18,3 +18,6 @@ Passing data from view to the controller :
 
 
 Code First MVC with a Repository Pattern:
+
+
+ViewModel : 

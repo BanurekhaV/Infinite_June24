@@ -81,3 +81,7 @@ C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_Code
 C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_CodeFirst.csproj.CopyComplete
 C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_CodeFirst.dll
 C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_CodeFirst.pdb
+C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_CodeFirst.Migrations.InitialCreate.resources
+C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_CodeFirst.csproj.GenerateResource.cache
+C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_CodeFirst.Migrations.procedureremoved.resources
+C:\Banu\Infinite\Batch_June24\MVC\MVC_CodeFirst\MVC_CodeFirst\obj\Debug\MVC_CodeFirst.Migrations.columnsaddedinSalesModel.resources

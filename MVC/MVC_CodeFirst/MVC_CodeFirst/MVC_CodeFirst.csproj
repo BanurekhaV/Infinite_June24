@@ -128,11 +128,26 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408120545400_InitialCreate.cs" />
+    <Compile Include="Migrations\202408120545400_InitialCreate.Designer.cs">
+      <DependentUpon>202408120545400_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408120743003_procedure removed.cs" />
+    <Compile Include="Migrations\202408120743003_procedure removed.Designer.cs">
+      <DependentUpon>202408120743003_procedure removed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408121024546_columns added in Sales Model.cs" />
+    <Compile Include="Migrations\202408121024546_columns added in Sales Model.Designer.cs">
+      <DependentUpon>202408121024546_columns added in Sales Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\ProductsContext.cs" />
+    <Compile Include="Models\Sales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
@@ -178,6 +193,8 @@
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Sales\Index.cshtml" />
+    <Content Include="Views\Sales\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -194,6 +211,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202408120545400_InitialCreate.resx">
+      <DependentUpon>202408120545400_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408120743003_procedure removed.resx">
+      <DependentUpon>202408120743003_procedure removed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408121024546_columns added in Sales Model.resx">
+      <DependentUpon>202408121024546_columns added in Sales Model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

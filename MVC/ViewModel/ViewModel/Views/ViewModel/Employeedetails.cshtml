@@ -1,0 +1,26 @@
+﻿@model ViewModel.Models.EmployeeAddress
+@{
+    ViewBag.Title = @Model.PageTitle;
+}
+
+<html>
+<head>
+    <title>@Model.PageTitle</title>
+</head>
+<body>
+    <h1>@Model.PageTitle</h1>
+    <div>
+        Employee Number : @Model.employee.Eid
+        Employee Name : @Model.employee.Ename
+        Employee Salary : @Model.employee.Salary
+    </div>
+    <br/>
+    <div>
+        <h2>Employee Address Details</h2>
+        Door No : @Model.address.DoorNo
+        Street : @Model.address.Street
+        City  : @Model.address.City
+    </div>
+</body>
+</html>
+

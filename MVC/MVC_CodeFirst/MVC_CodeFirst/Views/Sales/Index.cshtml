@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVC_CodeFirst.Models.Sales>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dtofSale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtySold)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToTalampunt)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dtofSale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtySold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToTalampunt)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SaleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SaleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SaleId })
+        </td>
+    </tr>
+}
+
+</table>
