@@ -28,7 +28,7 @@ namespace CustomModelBinding.Controllers
         //for scripts bundle
         public ActionResult BundleMethod()
         {
-            return View();
+           return View();
         }
     }
 }
