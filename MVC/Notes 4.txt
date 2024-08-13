@@ -1,0 +1,48 @@
+Custom Model Validations : are classes that inherit from ValidationAttribute class and can perform validations needed as per the business logic
+
+
+
+
+Html Helpers : are C# methods that return HTML strings, which are used in the Views for generating the html content
+-We can have custom helpers
+
+Types of HTML Helpers :
+
+1. Inline Html helper : are used on a single view of the same page. They area created using @helper tag
+
+Eg : @helper MyInlinehelper(string[] words)
+{
+<ol>
+ @foreach(string w in words)
+{
+  <li>@w</li>
+}
+}
+
+2. Built in Html Helper :
+
+ 1. Standard Html Helper : are mainly used for rendering typical html elements
+Eg : @Html.Action()  - to create links on the html page
+     @Html.TextBox()  - to create a textbox
+     @Html.BeginForm()  - to start form action
+
+ 2. Strongly typed Html Helper : These take lambda expressions with parameters and tells the helper which element of the model to be used in the view
+
+Eg : @html.LabelFor()
+     @html.TextBoxFor()
+
+ 3. Templated Html Helper : is used for data display and input. It generates html automatically as the per the model property and for the complete model with just a single tag. It is divided into 2 categories
+   a) Display Template
+  
+ eg : @html.Display(), @html.DisplayFor(), @html.DisplayForModel()  // single tag for the entire model
+
+     b) Editor Template
+ eg : @html.Editor(), @html.EditorFor()
+      @html.EditorForModel() ; //single tag for the entire model
+
+
+Custom Helpers : How users would prefer the view. Are of 2 types
+ 1. Static helpers
+ 2. extension helpers
+
+    
