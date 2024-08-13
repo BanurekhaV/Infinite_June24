@@ -1,0 +1,11 @@
+Custom Model Binding :
+
+Model Binding : is a mechanism which converts the URL segment into method parameters
+-Acts like a bridge between http request and the action method
+
+Model Binder uses a default modelbinder for mapping, and it follows the below rules for mapping
+ 1. Request Form[] - if the request is post request
+ 2. RouteData.Values[] - if the values is in the route
+ 3. Request.QueryString[] - if the values are concatenated in the url (uname=?&pass=)
+ 4. Request.Files[] - if a file is being uploaded
+

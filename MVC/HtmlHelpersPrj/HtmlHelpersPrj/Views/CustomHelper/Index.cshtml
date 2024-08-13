@@ -1,0 +1,28 @@
+﻿@using HtmlHelpersPrj.CustomHelpers
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Static Custom Helpers</h2>
+<p>
+    @CustomHelper.LabelWithmark("This is an Example for static Custom Helpers")
+</p>
+<br/>
+<hr/>
+<h2>Extension Helpers</h2>
+<p>
+    @Html.RedLabel("This is RedLabel Extension  Custom Helper Example")
+    @Html.GreenLabel("This is Greenlable Extension Custom Helper Example")
+</p>
+<br/>
+<h2>Inline HTML Helpers</h2>
+<!--Decalaration of Inline Html Helper-->
+@helper LabelWithrazor(string Content)
+    {
+    <label><strong><sub>@Content</sub></strong></label>
+    }
+
+<!--calling the inline helper-->
+<p>
+    @LabelWithrazor("This is an Example for Inline Html Helper using Razor Syntax")
+</p>

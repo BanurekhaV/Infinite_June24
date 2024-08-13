@@ -120,8 +120,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomHelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="CustomHelpers\CustomHelper.cs" />
+    <Compile Include="CustomHelpers\ExtensionHelpers.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -169,6 +172,7 @@
     <Content Include="Views\Student\TemplatedHelper.cshtml" />
     <Content Include="Views\Student\StronglyTypedHelper.cshtml" />
     <Content Include="Views\Student\StandardHelper.cshtml" />
+    <Content Include="Views\CustomHelper\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
