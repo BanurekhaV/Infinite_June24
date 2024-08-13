@@ -12,7 +12,7 @@ namespace FiltersPrj.Controllers
   // [HandleError(ExceptionType = typeof(NullReferenceException), View ="NullReference")]
   // [HandleError(ExceptionType = typeof(DivideByZeroException), View = "DivideByZero")]
    //[HandleError]
-   [LogCustomExceptionFilter]
+  // [LogCustomExceptionFilter]
     public class HomeController : Controller
     {
         //  [Authorize]

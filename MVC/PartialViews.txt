@@ -1,0 +1,55 @@
+Layouts : We can have custom layouts, whcih can be applied to different views
+We can skip layouts also for some views by setting the layout to null.
+These layouts should be placed inside the shared folder
+
+
+
+Partial Views : are also like regular views, which can be reused multiple times in  other views, rather than creating that many times
+
+Eg : Comments on Blogging Sites, Shipping & Billing address in a ecommerce site
+
+Calling partial Views :
+  1. Html.RenderPartial
+------------------------
+              - It is a void method that writes the output to the response stream as a part of the same Http response 
+   - It is faster way to render partial views
+   -Since it is a void method, we should be enclosing the call within {} and terminating the call with a ';'
+
+  2. Html.Partial :is a method that returns a MVC IHtmlstring.
+      - simple to use
+
+  3. Html.RenderAction : is the best choice when we need to cach the partial view
+
+  4. Html.Action
+     -----------
+   can return a partialviewresult, as an IHtmlstring. Works like the renderpartial
+
+  5. JQuery Load function : 
+
+Layouts : We can have custom layouts, which can be applied to different views
+We can skip layouts also for some views by setting the layout to null.
+These layouts should be placed inside the shared folder
+
+
+
+Partial Views : are also like regular views, which can be reused multiple times in  other views, rather than creating that many times
+
+Eg : Comments on Blogging Sites, Shipping & Billing address in a ecommerce site
+
+Calling partial Views :
+  1. Html.RenderPartial
+------------------------
+              - It is a void method that writes the output to the response stream as a part of the same Http response 
+   - It is faster way to render partial views
+   -Since it is a void method, we should be enclosing the call within {} and terminating the call with a ';'
+
+  2. Html.Partial :is a method that returns a MVC IHtmlstring.
+      - simple to use
+
+  3. Html.RenderAction : is the best choice when we need to cach the partial view
+
+  4. Html.Action
+     -----------
+   can return a partialviewresult, as an IHtmlstring. Works like the renderpartial
+
+  5. JQuery Load function : 
