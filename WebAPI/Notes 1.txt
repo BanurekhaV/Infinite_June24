@@ -1,0 +1,25 @@
+Web API : Application Programming Interface, Is a Framework by microsoft, to build services based on Http. 
+- Helps in creating RESTFul services to be consumed by a variety of clients such 
+1. Browsers
+2. Desktops/Laptops
+3. Mobiles
+4. Iot's
+
+REST stands for Representational State Transfer, a architectural pattern for exchange of data over distributed environment. Works on client server arch. where client and server can be from different platforms
+- Works with the help of Http verbs
+
+1. HttpGet: Request for Data 
+2. HttpPost : Adding a new Resource
+3. HttpPut : Updating all properties/data of the current resource
+4. HttpPatch : Updating few properties/data of the current resource
+5. HttpDelete : Either a soft delete that involves a patch verb where only a column is updated
+                Hard delete will remove the current resource permanently
+
+
+REST have constraints as follows :
+1. Client Server : Separation of concern. Client interacts with the server using URI
+2. Stateless constraint : Communication between client and server is stateless, meaning the server never stores any data about the client on the server. Client would pass on few identity information to the server to get the response. Every request is treated independently by the server.
+3. Cachable Constraint: Less frequently changed resources of the server can be cached so that the rendering of the request of the cached resource can be made easily
+4. Uniform Interface Constraint : specifies that there be an uniform interface between client and server (Http verbs, that tells the server what to do with the resource)
+5. Content Negotiation : States that the client should have the ability to decide in which format they want the response (xml/json)
+6. Layered System : With REST we can use a layered system, where we can deploy the API in one server, have the data in another, have other services like Authentication, Payment etc on another server. 
