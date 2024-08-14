@@ -1,0 +1,38 @@
+create database MVCSecurityDB
+use MVCSecurityDb
+create table Employee
+(ID int primary key identity,
+Name varchar(40),
+Designation varchar(50),
+Salary int)
+
+create table Users
+(ID int primary key identity,
+UserName varchar(50),
+UserPassword varchar(50))
+
+create table RoleMaster
+(ID int primary key identity,
+RoleName varchar(40))
+
+create table UserRoleMapping(
+ID int primary key,
+UserId int not null references Users(ID),
+RoleId int not null references RoleMaster(ID))
+
+select * from users
+select * from employee
+
+insert into employee values('Shashank','Programmer',46000),
+('Saajana', 'Tester', 45000),('Naman','Software Engg',47000)
+
+insert into users values('Admin','admin'),('User','user'),('Customer','customer'),
+('Guest','guest')
+
+insert into rolemaster values('Admin'),('User'),('Guest')
+
+select * from rolemaster
+select * from users
+select * from userrolemapping
+insert into userrolemapping values(1,2,1),(2,2,2),(3,2,3)
+insert into userrolemapping values(4,3,2),(5,3,3),(6,5,3)

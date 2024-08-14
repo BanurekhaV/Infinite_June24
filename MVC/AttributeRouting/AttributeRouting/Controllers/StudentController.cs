@@ -31,7 +31,8 @@ namespace AttributeRouting.Controllers
           [Route("{sid}")]
         public ActionResult GetStudentById(int sid)
         {
-            Student std = students.Find(s => s.Id == sid);
+            Student std = students.FirstOrDefault(s => s.Id == sid);
+           // Student std = students.Find(s => s.Id == sid);
 
             return View(std);
         }

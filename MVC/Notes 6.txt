@@ -13,8 +13,37 @@ Select the check box 'Use async controller actions' in the controller creation a
 Routing :
  1. Conventional routing
 
- 2. Attribute Routing : for this, go to routeconfig.cs file and enable the attribute routing by including
-  routes.MapMvcAtributeRoutes() after ignore route
+ 2. Attribute Routing : for this, go to Routeconfig.cs file and enable the attribute routing by including
+
+  routes.MapMvcAttributeRoutes() after ignore route
+
+
+Forms  Authentication
+
+
+0) include System.Web.Security namespace
+1) set authentication mode as forms in the web.config file
+2) Use the FormsAuthentication.SetAuthCookie for login
+3) Use FormAuthentication.SignOut for logout
+
+
+after forms authentication along with role based authentication the web.config file looks as below: 
+-------------------------------------------------------
+
+
+<system.web>
+    <authentication mode="Forms">
+      <forms loginUrl="Accounts/Login"></forms>
+    </authentication>
+    <roleManager defaultProvider="UserRoleProvider" enabled="true">
+      <providers>
+        <clear/>
+        <add name="UserRoleProvider" type ="SecurityPrj.Models.UserRoleProvider"/>
+      </providers>
+    </roleManager>
+    <compilation debug="true" targetFramework="4.7.2" />
+    <httpRuntime targetFramework="4.7.2" />
+  </system.web>
 
 
 
