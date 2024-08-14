@@ -1,0 +1,21 @@
+Asynchronous Controllers : 
+Select the check box 'Use async controller actions' in the controller creation along with EF support
+
+1. Return type is prefixed with async notifying that the action method returns data asynchronously
+
+2. the return type is a Task<ActionResult>, represents asynchronous operations
+
+3. Any database related operations/read and write is prefixed with await keyword
+
+4. ToListAsync(), instead of ToList(), that returns data asynchronously
+
+
+Routing :
+ 1. Conventional routing
+
+ 2. Attribute Routing : for this, go to routeconfig.cs file and enable the attribute routing by including
+  routes.MapMvcAtributeRoutes() after ignore route
+
+
+
+ 
