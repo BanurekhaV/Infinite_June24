@@ -62,14 +62,30 @@ namespace WebApI_1.Controllers
         //Post 2
         [HttpPost]
         [Route("personpost")]
-        public void PersonPost([FromBody]int Id, string name, string desig)
+        public IEnumerable<Person> PersonPost([FromUri]int Id, string name, string desig)
         {
             Person person = new Person();
             person.Id = Id;
             person.Personname = name;
             person.Designation = desig;
             personlist.Add(person);
+            return personlist;
         }
 
+        [HttpPut]
+        [Route("updperson")]
+        public IEnumerable<Person>Put(int pid,[FromUri] Person p)
+        {
+            personlist[pid - 1] = p;
+            return personlist;
+        }
+
+        [HttpDelete]
+        [Route("delperson")]
+        public IEnumerable<Person>Delete(int pid)
+        {
+            personlist.RemoveAt(pid - 1);
+            return personlist;
+        }
     }
 }
