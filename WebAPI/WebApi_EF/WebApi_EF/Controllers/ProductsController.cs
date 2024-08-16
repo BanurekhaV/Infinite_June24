@@ -37,17 +37,17 @@ namespace WebApi_EF.Controllers
 
         // PUT: api/Products/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutProduct(int id, Product product)
+        public IHttpActionResult PutProduct(Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != product.productId)
-            {
-                return BadRequest();
-            }
+            //if (id != product.productId)
+            //{
+            //    return BadRequest();
+            //}
 
             db.Entry(product).State = EntityState.Modified;
 
@@ -57,14 +57,14 @@ namespace WebApi_EF.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(id))
-                {
+                //if (!ProductExists(id))
+                //{
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                //}
+                //else
+                //{
+                //    throw;
+                //}
             }
 
             return StatusCode(HttpStatusCode.NoContent);

@@ -14,7 +14,7 @@ namespace WebApi_EF.Models
     
     public partial class tblemployee
     {
-        public int Empid { get; set; }
+        public int Empid { get; set; }        
         public string Empname { get; set; }
         public string Gender { get; set; }
         public Nullable<double> Salary { get; set; }

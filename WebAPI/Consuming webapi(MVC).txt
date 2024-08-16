@@ -12,8 +12,8 @@ Consuming WebAPI from a client application(MVC)
 2. Add required Models that represent the Actual Web API model
 3. Add an empty MVC controller
 4. Add required action methods
-5. Include Newtonsoft.json package thru nuget, and also use the reference assembly
-6. Include System.Net.Http namespace
+5. Include Newtonsoft.json package thru nuget, and also use the reference assembly, and System.net.http namespace
+6. Include System.Net.Http namespace 
 7. Add Microsoft.Aspnet.WebApi.Client package thru nuget
 8. Write the logic to consume data in the action methods
 9. Create corresponding views
