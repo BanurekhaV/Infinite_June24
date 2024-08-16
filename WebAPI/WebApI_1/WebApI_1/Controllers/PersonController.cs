@@ -73,7 +73,7 @@ namespace WebApI_1.Controllers
         }
 
         [HttpPut]
-        [Route("updperson")]
+       // [Route("updperson")]
         public IEnumerable<Person>Put(int pid,[FromUri] Person p)
         {
             personlist[pid - 1] = p;

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InfiniteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="fn_GetEmployeesbyGender_Result">
+    <Property Name="Empid" Type="Int32" />
+    <Property Name="EmployeeName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="fn_tablevalued_Result">
+    <Property Name="empid" Type="Int32" Nullable="false" />
+    <Property Name="empname" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salary" Type="Double" />
+    <Property Name="deptno" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="productId" />
+    </Key>
+    <Property Name="productId" Type="Int32" Nullable="false" />
+    <Property Name="Productname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="QuantityAvailable" Type="Int32" />
+    <NavigationProperty Name="ProductSales" Relationship="Self.FK__ProductSa__Produ__6383C8BA" FromRole="Products" ToRole="ProductSales" />
+  </EntityType>
+  <EntityType Name="ProductSale">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="QuantitySold" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__ProductSa__Produ__6383C8BA" FromRole="ProductSales" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DeptNo" />
+    </Key>
+    <Property Name="DeptNo" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Budget" Type="Double" />
+    <Property Name="Loc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblemployees" Relationship="Self.FK__tblemploy__DeptN__267ABA7A" FromRole="tblDepartment" ToRole="tblemployees" />
+  </EntityType>
+  <EntityType Name="tblemployee">
+    <Key>
+      <PropertyRef Name="Empid" />
+    </Key>
+    <Property Name="Empid" Type="Int32" Nullable="false" />
+    <Property Name="Empname" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="Salary" Type="Double" />
+    <Property Name="DeptNo" Type="Int32" />
+    <Property Name="Phoneno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblDepartment" Relationship="Self.FK__tblemploy__DeptN__267ABA7A" FromRole="tblemployees" ToRole="tblDepartment" />
+  </EntityType>
+  <EntityType Name="empdetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ErrorLogger">
+    <Key>
+      <PropertyRef Name="Logid" />
+    </Key>
+    <Property Name="Logid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExceptionMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ExceptionType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ExceptionSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ExceptionUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LogDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sample1">
+    <Key>
+      <PropertyRef Name="S_id" />
+    </Key>
+    <Property Name="S_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sname" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="utable1">
+    <Key>
+      <PropertyRef Name="tid" />
+    </Key>
+    <Property Name="tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="tgrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tpercentage" Type="Int32" />
+  </EntityType>
+  <EntityType Name="utable2">
+    <Key>
+      <PropertyRef Name="tid" />
+    </Key>
+    <Property Name="tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="tgrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tpercentage" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__ProductSa__Produ__6383C8BA">
+    <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="ProductSales" Type="Self.ProductSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="productId" />
+      </Principal>
+      <Dependent Role="ProductSales">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblemploy__DeptN__267ABA7A">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblemployees" Type="Self.tblemployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DeptNo" />
+      </Principal>
+      <Dependent Role="tblemployees">
+        <PropertyRef Name="DeptNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InfiniteDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductSales" EntityType="Self.ProductSale" />
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <EntitySet Name="tblemployees" EntityType="Self.tblemployee" />
+    <EntitySet Name="empdetails" EntityType="Self.empdetail" />
+    <EntitySet Name="ErrorLoggers" EntityType="Self.ErrorLogger" />
+    <EntitySet Name="Sample1" EntityType="Self.Sample1" />
+    <EntitySet Name="utable1" EntityType="Self.utable1" />
+    <EntitySet Name="utable2" EntityType="Self.utable2" />
+    <AssociationSet Name="FK__ProductSa__Produ__6383C8BA" Association="Self.FK__ProductSa__Produ__6383C8BA">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductSales" EntitySet="ProductSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblemploy__DeptN__267ABA7A" Association="Self.FK__tblemploy__DeptN__267ABA7A">
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+      <End Role="tblemployees" EntitySet="tblemployees" />
+    </AssociationSet>
+    <FunctionImport Name="fn_GetEmployeesbyGender" IsComposable="true" ReturnType="Collection(InfiniteDBModel.fn_GetEmployeesbyGender_Result)">
+      <Parameter Name="gender" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="fn_tablevalued" IsComposable="true" ReturnType="Collection(InfiniteDBModel.fn_tablevalued_Result)">
+      <Parameter Name="deptid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Errorproc" ReturnType="Collection(Double)" />
+    <FunctionImport Name="ExLogger">
+      <Parameter Name="exmsg" Mode="In" Type="String" />
+      <Parameter Name="extype" Mode="In" Type="String" />
+      <Parameter Name="exsrc" Mode="In" Type="String" />
+      <Parameter Name="exurl" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetDeptName" ReturnType="Collection(InfiniteDBModel.GetDeptName_Result)">
+      <Parameter Name="eid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getsalary">
+      <Parameter Name="ename" Mode="In" Type="String" />
+      <Parameter Name="esal" Mode="InOut" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="Sales">
+      <Parameter Name="pid" Mode="In" Type="Int32" />
+      <Parameter Name="qty_to_sell" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_deleteemp" ReturnType="Collection(InfiniteDBModel.sp_deleteemp_Result)" />
+    <FunctionImport Name="sp_deptdetails" ReturnType="Collection(InfiniteDBModel.sp_deptdetails_Result)" />
+    <FunctionImport Name="sp_Deptno">
+      <Parameter Name="loc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getLocation" />
+    <FunctionImport Name="sp_Getproducts" ReturnType="Collection(InfiniteDBModel.sp_Getproducts_Result)" />
+    <FunctionImport Name="sp_parameter1" ReturnType="Collection(String)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Taxcalculator">
+      <Parameter Name="eid" Mode="In" Type="Int32" />
+      <Parameter Name="annualsal" Mode="InOut" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_totalDept" />
+    <FunctionImport Name="sp_updatesalary">
+      <Parameter Name="eid" Mode="In" Type="Int32" />
+      <Parameter Name="sal" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_welcome" ReturnType="Collection(String)" />
+    <FunctionImport Name="spGetProductsByName" ReturnType="Collection(InfiniteDBModel.spGetProductsByName_Result)">
+      <Parameter Name="prdname" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetDeptName_Result">
+    <Property Type="String" Name="empname" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="deptname" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="sp_deleteemp_Result">
+    <Property Type="Int32" Name="Empid" Nullable="false" />
+    <Property Type="String" Name="Empname" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="7" />
+    <Property Type="Double" Name="Salary" Nullable="true" />
+    <Property Type="Int32" Name="DeptNo" Nullable="true" />
+    <Property Type="String" Name="Phoneno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_deptdetails_Result">
+    <Property Type="Int32" Name="deptno" Nullable="true" />
+    <Property Type="String" Name="dname" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="loc" Nullable="true" MaxLength="16" />
+  </ComplexType>
+  <ComplexType Name="sp_Getproducts_Result">
+    <Property Type="Int32" Name="productid" Nullable="false" />
+    <Property Type="String" Name="productname" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="price" Nullable="true" />
+    <Property Type="Int32" Name="quantityavailable" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetProductsByName_Result">
+    <Property Type="Int32" Name="productid" Nullable="false" />
+    <Property Type="String" Name="productname" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="price" Nullable="true" />
+    <Property Type="Int32" Name="quantityavailable" Nullable="true" />
+  </ComplexType>
+</Schema>

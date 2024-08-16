@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InfiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Bonusdata' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Bonusdata">
+          <Property Name="BonusId" Type="int" />
+          <Property Name="Eid" Type="int" />
+          <Property Name="bonusAmt" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.casetable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="casetable">
+          <Property Name="cid" Type="int" />
+          <Property Name="cname" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.dept' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="dept">
+          <Property Name="deptno" Type="int" />
+          <Property Name="dname" Type="varchar" MaxLength="15" />
+          <Property Name="loc" Type="varchar" MaxLength="16" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.dummy1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="dummy1">
+          <Property Name="dummyid" Type="int" />
+          <Property Name="dummyname" Type="varchar" MaxLength="20" />
+          <Property Name="dummycity" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.emp' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="emp">
+          <Property Name="empno" Type="int" />
+          <Property Name="ename" Type="varchar" MaxLength="15" />
+          <Property Name="job" Type="varchar" MaxLength="20" />
+          <Property Name="mgrid" Type="int" />
+          <Property Name="hiredate" Type="date" />
+          <Property Name="sal" Type="float" />
+          <Property Name="comm" Type="int" />
+          <Property Name="deptno" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.empdetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="empdetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EName" Type="varchar" MaxLength="30" />
+    <Property Name="Age" Type="int" />
+    <Property Name="City" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Employee_Audit' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Employee_Audit">
+          <Property Name="Msg" Type="varchar(max)" />
+          <Property Name="AuditDate" Type="date" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.ErrorLogger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ErrorLogger">
+    <Key>
+      <PropertyRef Name="Logid" />
+    </Key>
+    <Property Name="Logid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExceptionMsg" Type="varchar(max)" />
+    <Property Name="ExceptionType" Type="varchar" MaxLength="100" />
+    <Property Name="ExceptionSource" Type="varchar(max)" />
+    <Property Name="ExceptionUrl" Type="varchar" MaxLength="100" />
+    <Property Name="LogDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Marks' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Marks">
+          <Property Name="stdname" Type="varchar" MaxLength="25" />
+          <Property Name="cls_subject" Type="varchar" MaxLength="12" />
+          <Property Name="marks_secured" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="productId" />
+    </Key>
+    <Property Name="productId" Type="int" Nullable="false" />
+    <Property Name="Productname" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Price" Type="int" />
+    <Property Name="QuantityAvailable" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductSales">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="QuantitySold" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.Sample1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Sample1">
+    <Key>
+      <PropertyRef Name="S_id" />
+    </Key>
+    <Property Name="S_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sname" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DeptNo" />
+    </Key>
+    <Property Name="DeptNo" Type="int" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Budget" Type="float" />
+    <Property Name="Loc" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblemployees">
+    <Key>
+      <PropertyRef Name="Empid" />
+    </Key>
+    <Property Name="Empid" Type="int" Nullable="false" />
+    <Property Name="Empname" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Gender" Type="char" MaxLength="7" />
+    <Property Name="Salary" Type="float" />
+    <Property Name="DeptNo" Type="int" />
+    <Property Name="Phoneno" Type="varchar" MaxLength="10" />
+    <Property Name="remarks" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test">
+          <Property Name="tid" Type="int" />
+          <Property Name="tname" Type="char" MaxLength="5" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.utable1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="utable1">
+    <Key>
+      <PropertyRef Name="tid" />
+    </Key>
+    <Property Name="tid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tname" Type="varchar" MaxLength="30" />
+    <Property Name="tgrade" Type="char" MaxLength="1" />
+    <Property Name="tpercentage" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.utable2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="utable2">
+    <Key>
+      <PropertyRef Name="tid" />
+    </Key>
+    <Property Name="tid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tname" Type="varchar" MaxLength="30" />
+    <Property Name="tgrade" Type="char" MaxLength="1" />
+    <Property Name="tpercentage" Type="int" />
+  </EntityType>
+  <Association Name="FK__ProductSa__Produ__6383C8BA">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="ProductSales" Type="Self.ProductSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="productId" />
+      </Principal>
+      <Dependent Role="ProductSales">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblemploy__DeptN__267ABA7A">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblemployees" Type="Self.tblemployees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DeptNo" />
+      </Principal>
+      <Dependent Role="tblemployees">
+        <PropertyRef Name="DeptNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Errorproc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ExLogger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="exmsg" Type="varchar(max)" Mode="In" />
+    <Parameter Name="extype" Type="varchar" Mode="In" />
+    <Parameter Name="exsrc" Type="varchar(max)" Mode="In" />
+    <Parameter Name="exurl" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_calculateArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="length" Type="int" Mode="In" />
+    <Parameter Name="breadth" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_GetEmployeesbyGender" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="gender" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Empid" Type="int" />
+          <Property Name="EmployeeName" Type="varchar" MaxLength="40" />
+          <Property Name="Gender" Type="varchar" MaxLength="7" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="fn_tablevalued" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="deptid" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="empid" Type="int" Nullable="false" />
+          <Property Name="empname" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="salary" Type="float" />
+          <Property Name="deptno" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="fngetSalary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fnJoinData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="empname" Type="varchar" Mode="In" />
+    <Parameter Name="gen" Type="varchar" Mode="In" />
+    <Parameter Name="phone" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetDeptName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getsalary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ename" Type="varchar" Mode="In" />
+    <Parameter Name="esal" Type="float" Mode="InOut" />
+  </Function>
+  <Function Name="Sales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pid" Type="int" Mode="In" />
+    <Parameter Name="qty_to_sell" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_deleteemp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_deptdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Deptno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="loc" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Getproducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_parameter1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Taxcalculator" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eid" Type="int" Mode="In" />
+    <Parameter Name="annualsal" Type="float" Mode="InOut" />
+  </Function>
+  <Function Name="sp_totalDept" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_updatesalary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eid" Type="int" Mode="In" />
+    <Parameter Name="sal" Type="float" Mode="In" />
+  </Function>
+  <Function Name="sp_welcome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spGetProductsByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prdname" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="InfiniteDBModelStoreContainer">
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductSales" EntityType="Self.ProductSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblemployees" EntityType="Self.tblemployees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="empdetails" EntityType="Self.empdetails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [empdetails].[Id] AS [Id], 
+    [empdetails].[EName] AS [EName], 
+    [empdetails].[Age] AS [Age], 
+    [empdetails].[City] AS [City]
+    FROM [dbo].[empdetails] AS [empdetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ErrorLogger" EntityType="Self.ErrorLogger" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ErrorLogger].[Logid] AS [Logid], 
+    [ErrorLogger].[ExceptionMsg] AS [ExceptionMsg], 
+    [ErrorLogger].[ExceptionType] AS [ExceptionType], 
+    [ErrorLogger].[ExceptionSource] AS [ExceptionSource], 
+    [ErrorLogger].[ExceptionUrl] AS [ExceptionUrl], 
+    [ErrorLogger].[LogDate] AS [LogDate]
+    FROM [dbo].[ErrorLogger] AS [ErrorLogger]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sample1" EntityType="Self.Sample1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Sample1].[S_id] AS [S_id], 
+    [Sample1].[sname] AS [sname]
+    FROM [dbo].[Sample1] AS [Sample1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="utable1" EntityType="Self.utable1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [utable1].[tid] AS [tid], 
+    [utable1].[tname] AS [tname], 
+    [utable1].[tgrade] AS [tgrade], 
+    [utable1].[tpercentage] AS [tpercentage]
+    FROM [dbo].[utable1] AS [utable1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="utable2" EntityType="Self.utable2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [utable2].[tid] AS [tid], 
+    [utable2].[tname] AS [tname], 
+    [utable2].[tgrade] AS [tgrade], 
+    [utable2].[tpercentage] AS [tpercentage]
+    FROM [dbo].[utable2] AS [utable2]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__ProductSa__Produ__6383C8BA" Association="Self.FK__ProductSa__Produ__6383C8BA">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductSales" EntitySet="ProductSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblemploy__DeptN__267ABA7A" Association="Self.FK__tblemploy__DeptN__267ABA7A">
+      <End Role="tblDepartment" EntitySet="tblDepartment" />
+      <End Role="tblemployees" EntitySet="tblemployees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

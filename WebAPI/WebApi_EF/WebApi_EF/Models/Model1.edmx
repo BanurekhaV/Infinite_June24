@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="InfiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Bonusdata' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Bonusdata">
+          <Property Name="BonusId" Type="int" />
+          <Property Name="Eid" Type="int" />
+          <Property Name="bonusAmt" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.casetable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="casetable">
+          <Property Name="cid" Type="int" />
+          <Property Name="cname" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.dept' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="dept">
+          <Property Name="deptno" Type="int" />
+          <Property Name="dname" Type="varchar" MaxLength="15" />
+          <Property Name="loc" Type="varchar" MaxLength="16" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.dummy1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="dummy1">
+          <Property Name="dummyid" Type="int" />
+          <Property Name="dummyname" Type="varchar" MaxLength="20" />
+          <Property Name="dummycity" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.emp' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="emp">
+          <Property Name="empno" Type="int" />
+          <Property Name="ename" Type="varchar" MaxLength="15" />
+          <Property Name="job" Type="varchar" MaxLength="20" />
+          <Property Name="mgrid" Type="int" />
+          <Property Name="hiredate" Type="date" />
+          <Property Name="sal" Type="float" />
+          <Property Name="comm" Type="int" />
+          <Property Name="deptno" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.empdetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="empdetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EName" Type="varchar" MaxLength="30" />
+          <Property Name="Age" Type="int" />
+          <Property Name="City" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Employee_Audit' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Employee_Audit">
+          <Property Name="Msg" Type="varchar(max)" />
+          <Property Name="AuditDate" Type="date" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.ErrorLogger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ErrorLogger">
+          <Key>
+            <PropertyRef Name="Logid" />
+          </Key>
+          <Property Name="Logid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExceptionMsg" Type="varchar(max)" />
+          <Property Name="ExceptionType" Type="varchar" MaxLength="100" />
+          <Property Name="ExceptionSource" Type="varchar(max)" />
+          <Property Name="ExceptionUrl" Type="varchar" MaxLength="100" />
+          <Property Name="LogDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Marks' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Marks">
+          <Property Name="stdname" Type="varchar" MaxLength="25" />
+          <Property Name="cls_subject" Type="varchar" MaxLength="12" />
+          <Property Name="marks_secured" Type="int" />
+        </EntityType>-->
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="productId" Type="int" Nullable="false" />
+          <Property Name="Productname" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Price" Type="int" />
+          <Property Name="QuantityAvailable" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductSales">
+          <Key>
+            <PropertyRef Name="SaleId" />
+          </Key>
+          <Property Name="SaleId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="QuantitySold" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.Sample1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Sample1">
+          <Key>
+            <PropertyRef Name="S_id" />
+          </Key>
+          <Property Name="S_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sname" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="tblDepartment">
+          <Key>
+            <PropertyRef Name="DeptNo" />
+          </Key>
+          <Property Name="DeptNo" Type="int" Nullable="false" />
+          <Property Name="DeptName" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Budget" Type="float" />
+          <Property Name="Loc" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tblemployees">
+          <Key>
+            <PropertyRef Name="Empid" />
+          </Key>
+          <Property Name="Empid" Type="int" Nullable="false" />
+          <Property Name="Empname" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Gender" Type="char" MaxLength="7" />
+          <Property Name="Salary" Type="float" />
+          <Property Name="DeptNo" Type="int" />
+          <Property Name="Phoneno" Type="varchar" MaxLength="10" />
+          <Property Name="remarks" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test">
+          <Property Name="tid" Type="int" />
+          <Property Name="tname" Type="char" MaxLength="5" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.utable1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="utable1">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tname" Type="varchar" MaxLength="30" />
+          <Property Name="tgrade" Type="char" MaxLength="1" />
+          <Property Name="tpercentage" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.utable2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="utable2">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tname" Type="varchar" MaxLength="30" />
+          <Property Name="tgrade" Type="char" MaxLength="1" />
+          <Property Name="tpercentage" Type="int" />
+        </EntityType>
+        <Association Name="FK__ProductSa__Produ__6383C8BA">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="ProductSales" Type="Self.ProductSales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="productId" />
+            </Principal>
+            <Dependent Role="ProductSales">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblemploy__DeptN__267ABA7A">
+          <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+          <End Role="tblemployees" Type="Self.tblemployees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDepartment">
+              <PropertyRef Name="DeptNo" />
+            </Principal>
+            <Dependent Role="tblemployees">
+              <PropertyRef Name="DeptNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="Errorproc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ExLogger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="exmsg" Type="varchar(max)" Mode="In" />
+          <Parameter Name="extype" Type="varchar" Mode="In" />
+          <Parameter Name="exsrc" Type="varchar(max)" Mode="In" />
+          <Parameter Name="exurl" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="fn_calculateArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="length" Type="int" Mode="In" />
+          <Parameter Name="breadth" Type="int" Mode="In" />
+        </Function>
+        <Function Name="fn_GetEmployeesbyGender" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="gender" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Empid" Type="int" />
+                <Property Name="EmployeeName" Type="varchar" MaxLength="40" />
+                <Property Name="Gender" Type="varchar" MaxLength="7" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="fn_tablevalued" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="deptid" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="empid" Type="int" Nullable="false" />
+                <Property Name="empname" Type="varchar" MaxLength="40" Nullable="false" />
+                <Property Name="salary" Type="float" />
+                <Property Name="deptno" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="fngetSalary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+          <Parameter Name="empid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="fnJoinData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="empname" Type="varchar" Mode="In" />
+          <Parameter Name="gen" Type="varchar" Mode="In" />
+          <Parameter Name="phone" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetDeptName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="eid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="getsalary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ename" Type="varchar" Mode="In" />
+          <Parameter Name="esal" Type="float" Mode="InOut" />
+        </Function>
+        <Function Name="Sales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pid" Type="int" Mode="In" />
+          <Parameter Name="qty_to_sell" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_deleteemp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_deptdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_Deptno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="loc" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_getLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_Getproducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_parameter1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Taxcalculator" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="eid" Type="int" Mode="In" />
+          <Parameter Name="annualsal" Type="float" Mode="InOut" />
+        </Function>
+        <Function Name="sp_totalDept" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_updatesalary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="eid" Type="int" Mode="In" />
+          <Parameter Name="sal" Type="float" Mode="In" />
+        </Function>
+        <Function Name="sp_welcome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spGetProductsByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="prdname" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="InfiniteDBModelStoreContainer">
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductSales" EntityType="Self.ProductSales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblemployees" EntityType="Self.tblemployees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="empdetails" EntityType="Self.empdetails" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [empdetails].[Id] AS [Id], 
+    [empdetails].[EName] AS [EName], 
+    [empdetails].[Age] AS [Age], 
+    [empdetails].[City] AS [City]
+    FROM [dbo].[empdetails] AS [empdetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ErrorLogger" EntityType="Self.ErrorLogger" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ErrorLogger].[Logid] AS [Logid], 
+    [ErrorLogger].[ExceptionMsg] AS [ExceptionMsg], 
+    [ErrorLogger].[ExceptionType] AS [ExceptionType], 
+    [ErrorLogger].[ExceptionSource] AS [ExceptionSource], 
+    [ErrorLogger].[ExceptionUrl] AS [ExceptionUrl], 
+    [ErrorLogger].[LogDate] AS [LogDate]
+    FROM [dbo].[ErrorLogger] AS [ErrorLogger]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Sample1" EntityType="Self.Sample1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Sample1].[S_id] AS [S_id], 
+    [Sample1].[sname] AS [sname]
+    FROM [dbo].[Sample1] AS [Sample1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="utable1" EntityType="Self.utable1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [utable1].[tid] AS [tid], 
+    [utable1].[tname] AS [tname], 
+    [utable1].[tgrade] AS [tgrade], 
+    [utable1].[tpercentage] AS [tpercentage]
+    FROM [dbo].[utable1] AS [utable1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="utable2" EntityType="Self.utable2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [utable2].[tid] AS [tid], 
+    [utable2].[tname] AS [tname], 
+    [utable2].[tgrade] AS [tgrade], 
+    [utable2].[tpercentage] AS [tpercentage]
+    FROM [dbo].[utable2] AS [utable2]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__ProductSa__Produ__6383C8BA" Association="Self.FK__ProductSa__Produ__6383C8BA">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductSales" EntitySet="ProductSales" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblemploy__DeptN__267ABA7A" Association="Self.FK__tblemploy__DeptN__267ABA7A">
+            <End Role="tblDepartment" EntitySet="tblDepartment" />
+            <End Role="tblemployees" EntitySet="tblemployees" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InfiniteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="fn_GetEmployeesbyGender_Result">
+          <Property Name="Empid" Type="Int32" />
+          <Property Name="EmployeeName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+        </ComplexType>
+        <ComplexType Name="fn_tablevalued_Result">
+          <Property Name="empid" Type="Int32" Nullable="false" />
+          <Property Name="empname" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="salary" Type="Double" />
+          <Property Name="deptno" Type="Int32" />
+        </ComplexType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="productId" Type="Int32" Nullable="false" />
+          <Property Name="Productname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="QuantityAvailable" Type="Int32" />
+          <NavigationProperty Name="ProductSales" Relationship="Self.FK__ProductSa__Produ__6383C8BA" FromRole="Products" ToRole="ProductSales" />
+        </EntityType>
+        <EntityType Name="ProductSale">
+          <Key>
+            <PropertyRef Name="SaleId" />
+          </Key>
+          <Property Name="SaleId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="QuantitySold" Type="Int32" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__ProductSa__Produ__6383C8BA" FromRole="ProductSales" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="tblDepartment">
+          <Key>
+            <PropertyRef Name="DeptNo" />
+          </Key>
+          <Property Name="DeptNo" Type="Int32" Nullable="false" />
+          <Property Name="DeptName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Budget" Type="Double" />
+          <Property Name="Loc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblemployees" Relationship="Self.FK__tblemploy__DeptN__267ABA7A" FromRole="tblDepartment" ToRole="tblemployees" />
+        </EntityType>
+        <EntityType Name="tblemployee">
+          <Key>
+            <PropertyRef Name="Empid" />
+          </Key>
+          <Property Name="Empid" Type="Int32" Nullable="false" />
+          <Property Name="Empname" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="Salary" Type="Double" />
+          <Property Name="DeptNo" Type="Int32" />
+          <Property Name="Phoneno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblDepartment" Relationship="Self.FK__tblemploy__DeptN__267ABA7A" FromRole="tblemployees" ToRole="tblDepartment" />
+        </EntityType>
+        <EntityType Name="empdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ErrorLogger">
+          <Key>
+            <PropertyRef Name="Logid" />
+          </Key>
+          <Property Name="Logid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExceptionMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExceptionType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ExceptionSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExceptionUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LogDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Sample1">
+          <Key>
+            <PropertyRef Name="S_id" />
+          </Key>
+          <Property Name="S_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sname" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="utable1">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="tgrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="tpercentage" Type="Int32" />
+        </EntityType>
+        <EntityType Name="utable2">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="tgrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="tpercentage" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__ProductSa__Produ__6383C8BA">
+          <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="ProductSales" Type="Self.ProductSale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="productId" />
+            </Principal>
+            <Dependent Role="ProductSales">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblemploy__DeptN__267ABA7A">
+          <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+          <End Role="tblemployees" Type="Self.tblemployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDepartment">
+              <PropertyRef Name="DeptNo" />
+            </Principal>
+            <Dependent Role="tblemployees">
+              <PropertyRef Name="DeptNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InfiniteDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="ProductSales" EntityType="Self.ProductSale" />
+          <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+          <EntitySet Name="tblemployees" EntityType="Self.tblemployee" />
+          <EntitySet Name="empdetails" EntityType="Self.empdetail" />
+          <EntitySet Name="ErrorLoggers" EntityType="Self.ErrorLogger" />
+          <EntitySet Name="Sample1" EntityType="Self.Sample1" />
+          <EntitySet Name="utable1" EntityType="Self.utable1" />
+          <EntitySet Name="utable2" EntityType="Self.utable2" />
+          <AssociationSet Name="FK__ProductSa__Produ__6383C8BA" Association="Self.FK__ProductSa__Produ__6383C8BA">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductSales" EntitySet="ProductSales" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblemploy__DeptN__267ABA7A" Association="Self.FK__tblemploy__DeptN__267ABA7A">
+            <End Role="tblDepartment" EntitySet="tblDepartments" />
+            <End Role="tblemployees" EntitySet="tblemployees" />
+          </AssociationSet>
+          <FunctionImport Name="fn_GetEmployeesbyGender" IsComposable="true" ReturnType="Collection(InfiniteDBModel.fn_GetEmployeesbyGender_Result)">
+            <Parameter Name="gender" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="fn_tablevalued" IsComposable="true" ReturnType="Collection(InfiniteDBModel.fn_tablevalued_Result)">
+            <Parameter Name="deptid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Errorproc" ReturnType="Collection(Double)" />
+          <FunctionImport Name="ExLogger">
+            <Parameter Name="exmsg" Mode="In" Type="String" />
+            <Parameter Name="extype" Mode="In" Type="String" />
+            <Parameter Name="exsrc" Mode="In" Type="String" />
+            <Parameter Name="exurl" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetDeptName" ReturnType="Collection(InfiniteDBModel.GetDeptName_Result)">
+            <Parameter Name="eid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="getsalary">
+            <Parameter Name="ename" Mode="In" Type="String" />
+            <Parameter Name="esal" Mode="InOut" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="Sales">
+            <Parameter Name="pid" Mode="In" Type="Int32" />
+            <Parameter Name="qty_to_sell" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_deleteemp" ReturnType="Collection(InfiniteDBModel.sp_deleteemp_Result)" />
+          <FunctionImport Name="sp_deptdetails" ReturnType="Collection(InfiniteDBModel.sp_deptdetails_Result)" />
+          <FunctionImport Name="sp_Deptno">
+            <Parameter Name="loc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_getLocation" />
+          <FunctionImport Name="sp_Getproducts" ReturnType="Collection(InfiniteDBModel.sp_Getproducts_Result)" />
+          <FunctionImport Name="sp_parameter1" ReturnType="Collection(String)">
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Taxcalculator">
+            <Parameter Name="eid" Mode="In" Type="Int32" />
+            <Parameter Name="annualsal" Mode="InOut" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="sp_totalDept" />
+          <FunctionImport Name="sp_updatesalary">
+            <Parameter Name="eid" Mode="In" Type="Int32" />
+            <Parameter Name="sal" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="sp_welcome" ReturnType="Collection(String)" />
+          <FunctionImport Name="spGetProductsByName" ReturnType="Collection(InfiniteDBModel.spGetProductsByName_Result)">
+            <Parameter Name="prdname" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetDeptName_Result">
+          <Property Type="String" Name="empname" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="deptname" Nullable="false" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="sp_deleteemp_Result">
+          <Property Type="Int32" Name="Empid" Nullable="false" />
+          <Property Type="String" Name="Empname" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="7" />
+          <Property Type="Double" Name="Salary" Nullable="true" />
+          <Property Type="Int32" Name="DeptNo" Nullable="true" />
+          <Property Type="String" Name="Phoneno" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="remarks" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_deptdetails_Result">
+          <Property Type="Int32" Name="deptno" Nullable="true" />
+          <Property Type="String" Name="dname" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="loc" Nullable="true" MaxLength="16" />
+        </ComplexType>
+        <ComplexType Name="sp_Getproducts_Result">
+          <Property Type="Int32" Name="productid" Nullable="false" />
+          <Property Type="String" Name="productname" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="price" Nullable="true" />
+          <Property Type="Int32" Name="quantityavailable" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spGetProductsByName_Result">
+          <Property Type="Int32" Name="productid" Nullable="false" />
+          <Property Type="String" Name="productname" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="price" Nullable="true" />
+          <Property Type="Int32" Name="quantityavailable" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InfiniteDBModelStoreContainer" CdmEntityContainer="InfiniteDBEntities">
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="InfiniteDBModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="productId" ColumnName="productId" />
+                <ScalarProperty Name="Productname" ColumnName="Productname" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSales">
+            <EntityTypeMapping TypeName="InfiniteDBModel.ProductSale">
+              <MappingFragment StoreEntitySet="ProductSales">
+                <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="QuantitySold" ColumnName="QuantitySold" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDepartments">
+            <EntityTypeMapping TypeName="InfiniteDBModel.tblDepartment">
+              <MappingFragment StoreEntitySet="tblDepartment">
+                <ScalarProperty Name="DeptNo" ColumnName="DeptNo" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="Loc" ColumnName="Loc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblemployees">
+            <EntityTypeMapping TypeName="InfiniteDBModel.tblemployee">
+              <MappingFragment StoreEntitySet="tblemployees">
+                <ScalarProperty Name="Empid" ColumnName="Empid" />
+                <ScalarProperty Name="Empname" ColumnName="Empname" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DeptNo" ColumnName="DeptNo" />
+                <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empdetails">
+            <EntityTypeMapping TypeName="InfiniteDBModel.empdetail">
+              <MappingFragment StoreEntitySet="empdetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EName" ColumnName="EName" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="City" ColumnName="City" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ErrorLoggers">
+            <EntityTypeMapping TypeName="InfiniteDBModel.ErrorLogger">
+              <MappingFragment StoreEntitySet="ErrorLogger">
+                <ScalarProperty Name="Logid" ColumnName="Logid" />
+                <ScalarProperty Name="ExceptionMsg" ColumnName="ExceptionMsg" />
+                <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+                <ScalarProperty Name="ExceptionSource" ColumnName="ExceptionSource" />
+                <ScalarProperty Name="ExceptionUrl" ColumnName="ExceptionUrl" />
+                <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sample1">
+            <EntityTypeMapping TypeName="InfiniteDBModel.Sample1">
+              <MappingFragment StoreEntitySet="Sample1">
+                <ScalarProperty Name="S_id" ColumnName="S_id" />
+                <ScalarProperty Name="sname" ColumnName="sname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utable1">
+            <EntityTypeMapping TypeName="InfiniteDBModel.utable1">
+              <MappingFragment StoreEntitySet="utable1">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="tname" ColumnName="tname" />
+                <ScalarProperty Name="tgrade" ColumnName="tgrade" />
+                <ScalarProperty Name="tpercentage" ColumnName="tpercentage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utable2">
+            <EntityTypeMapping TypeName="InfiniteDBModel.utable2">
+              <MappingFragment StoreEntitySet="utable2">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="tname" ColumnName="tname" />
+                <ScalarProperty Name="tgrade" ColumnName="tgrade" />
+                <ScalarProperty Name="tpercentage" ColumnName="tpercentage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="InfiniteDBModel.Store.fn_GetEmployeesbyGender" FunctionImportName="fn_GetEmployeesbyGender">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.fn_GetEmployeesbyGender_Result">
+                <ScalarProperty Name="Empid" ColumnName="Empid" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="InfiniteDBModel.Store.fn_tablevalued" FunctionImportName="fn_tablevalued">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.fn_tablevalued_Result">
+                <ScalarProperty Name="empid" ColumnName="empid" />
+                <ScalarProperty Name="empname" ColumnName="empname" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="deptno" ColumnName="deptno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Errorproc" FunctionName="InfiniteDBModel.Store.Errorproc" />
+          <FunctionImportMapping FunctionImportName="ExLogger" FunctionName="InfiniteDBModel.Store.ExLogger" />
+          <FunctionImportMapping FunctionImportName="GetDeptName" FunctionName="InfiniteDBModel.Store.GetDeptName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.GetDeptName_Result">
+                <ScalarProperty Name="empname" ColumnName="empname" />
+                <ScalarProperty Name="deptname" ColumnName="deptname" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getsalary" FunctionName="InfiniteDBModel.Store.getsalary" />
+          <FunctionImportMapping FunctionImportName="Sales" FunctionName="InfiniteDBModel.Store.Sales" />
+          <FunctionImportMapping FunctionImportName="sp_deleteemp" FunctionName="InfiniteDBModel.Store.sp_deleteemp">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.sp_deleteemp_Result">
+                <ScalarProperty Name="Empid" ColumnName="Empid" />
+                <ScalarProperty Name="Empname" ColumnName="Empname" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DeptNo" ColumnName="DeptNo" />
+                <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_deptdetails" FunctionName="InfiniteDBModel.Store.sp_deptdetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.sp_deptdetails_Result">
+                <ScalarProperty Name="deptno" ColumnName="deptno" />
+                <ScalarProperty Name="dname" ColumnName="dname" />
+                <ScalarProperty Name="loc" ColumnName="loc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Deptno" FunctionName="InfiniteDBModel.Store.sp_Deptno" />
+          <FunctionImportMapping FunctionImportName="sp_getLocation" FunctionName="InfiniteDBModel.Store.sp_getLocation" />
+          <FunctionImportMapping FunctionImportName="sp_Getproducts" FunctionName="InfiniteDBModel.Store.sp_Getproducts">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.sp_Getproducts_Result">
+                <ScalarProperty Name="productid" ColumnName="productid" />
+                <ScalarProperty Name="productname" ColumnName="productname" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantityavailable" ColumnName="quantityavailable" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_parameter1" FunctionName="InfiniteDBModel.Store.sp_parameter1" />
+          <FunctionImportMapping FunctionImportName="sp_Taxcalculator" FunctionName="InfiniteDBModel.Store.sp_Taxcalculator" />
+          <FunctionImportMapping FunctionImportName="sp_totalDept" FunctionName="InfiniteDBModel.Store.sp_totalDept" />
+          <FunctionImportMapping FunctionImportName="sp_updatesalary" FunctionName="InfiniteDBModel.Store.sp_updatesalary" />
+          <FunctionImportMapping FunctionImportName="sp_welcome" FunctionName="InfiniteDBModel.Store.sp_welcome" />
+          <FunctionImportMapping FunctionImportName="spGetProductsByName" FunctionName="InfiniteDBModel.Store.spGetProductsByName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.spGetProductsByName_Result">
+                <ScalarProperty Name="productid" ColumnName="productid" />
+                <ScalarProperty Name="productname" ColumnName="productname" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantityavailable" ColumnName="quantityavailable" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

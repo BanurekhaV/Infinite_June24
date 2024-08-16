@@ -1,0 +1,20 @@
+put: 
+
+https://localhost:44362/api/user/updperson/?pid=2&id=2&personname=Draupadi&designation=Vicepresident&gender=Female
+
+delete:
+
+https://localhost:44362/api/user/delperson?pid=4
+
+Consuming WebAPI from a client application(MVC)
+
+1. Create a MVC Templated WebApplication
+2. Add required Models that represent the Actual Web API model
+3. Add an empty MVC controller
+4. Add required action methods
+5. Include Newtonsoft.json package thru nuget, and also use the reference assembly
+6. Include System.Net.Http namespace
+7. Add Microsoft.Aspnet.WebApi.Client package thru nuget
+8. Write the logic to consume data in the action methods
+9. Create corresponding views
+10. Test the client (ensure server is up and running)
