@@ -1,0 +1,42 @@
+ASP.Net Core
+- a complete rewrite of the dotnet framework 
+- modular
+- open source
+- cross platform 
+
+Netcore 8.0 LTS available till Nov 2026
+
+STS (short/standard term support) - 18 months
+LTS (Long term support) -3 years
+
+Core applications can be built using either
+ 1. Visual Studio 2022
+ 2. Visual studio code
+ 3. CLI (command line interface)
+
+Nuget 
+npm 
+Program.cs:
+
+Main Method: The first statement initializes a builder for the web application with pre configured defaults viz.
+
+ Set Up Web Server (IIS, Kestrel)
+ Host the Application (In process or out-of process)
+ Logging (Built in ==> debug/console)
+ Configuration (to include all config files)
+ Dependency injections(Iservice collection, where all dependencies get registered)
+ Adds the Framework services
+
+Hosting Model : 1. In process, where the web application runs along with the IIS process space
+
+Kestrel Web Server : is a cross platform web server. It is included as an internal webserver
+2. Out-of process : is when our application code runs in a Kestrel based server, and has IIS to send response to the client
+
+MiddleWare : are components that form the building blocks of the request processing pipeline
+
+UseAuthentication
+UsehttpRedirection
+UseStaticFiles
+UseRouting
+UseAuthorization
+

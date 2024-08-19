@@ -18,3 +18,4 @@ Consuming WebAPI from a client application(MVC)
 8. Write the logic to consume data in the action methods
 9. Create corresponding views
 10. Test the client (ensure server is up and running)
+
