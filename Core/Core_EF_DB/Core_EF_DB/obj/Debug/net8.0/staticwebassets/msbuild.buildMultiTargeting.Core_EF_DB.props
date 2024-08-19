@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Core_EF_DB.props" />
+</Project>

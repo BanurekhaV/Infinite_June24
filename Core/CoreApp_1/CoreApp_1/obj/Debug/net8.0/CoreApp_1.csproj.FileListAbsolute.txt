@@ -27,3 +27,4 @@ C:\Banu\Infinite\Batch_June24\Core\CoreApp_1\CoreApp_1\obj\Debug\net8.0\refint\C
 C:\Banu\Infinite\Batch_June24\Core\CoreApp_1\CoreApp_1\obj\Debug\net8.0\CoreApp_1.pdb
 C:\Banu\Infinite\Batch_June24\Core\CoreApp_1\CoreApp_1\obj\Debug\net8.0\CoreApp_1.genruntimeconfig.cache
 C:\Banu\Infinite\Batch_June24\Core\CoreApp_1\CoreApp_1\obj\Debug\net8.0\ref\CoreApp_1.dll
+C:\Banu\Infinite\Batch_June24\Core\CoreApp_1\CoreApp_1\bin\Debug\net8.0\CoreApp_1.staticwebassets.runtime.json

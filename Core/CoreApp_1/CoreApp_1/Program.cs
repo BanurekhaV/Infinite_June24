@@ -4,7 +4,13 @@ namespace CoreApp_1
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationOptions webApplicationOptions = new WebApplicationOptions
+            {
+                WebRootPath = "Mywebroot1",
+                Args = args,
+                EnvironmentName = "Staging",
+            };
+            var builder = WebApplication.CreateBuilder(webApplicationOptions);
             var app = builder.Build();
             //app.MapGet("/", () => "Worker Process name :" +
             //System.Diagnostics.Process.GetCurrentProcess().ProcessName);
@@ -32,22 +38,30 @@ namespace CoreApp_1
             //app.Run(FirstMiddleware
 
             // 3. chain of async middlewares
-            app.Use(async (context, next)=>
-            {
-                await context.Response.WriteAsync("This is Response from First Middleware  " );
-                await next();
-            });
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("This is Response from Second Middleware   ");
-                await next();
-            });
+            //app.Use(async (context, next)=>
+            //{
+            //    await context.Response.WriteAsync("This is Response from First Middleware  " );
+            //    await next();
+            //});
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("This is Response from Second Middleware   ");
+            //    await next();
+            //});
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("This is Response from last Middleware");
-               
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("This is Response from last Middleware");
+
+            //});
+
+            //5. middleware for rendering static files
+            app.UseStaticFiles();
+
+            //4. WebapplicationOptions properties
+            app.MapGet("/", () => $"enVironmentName : {app.Environment.EnvironmentName}\n" +
+            $"Application name : {app.Environment.ApplicationName}\n " +
+            $"ContentRootpath :{app.Environment.ContentRootPath}");
             app.Run();
         }
 

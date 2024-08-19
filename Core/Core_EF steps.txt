@@ -1,0 +1,32 @@
+packages to be included 
+
+1. Microsoft.EntityFrameworkCore.SqlServer : on installing this package
+  Microsoft.EntityFrameworkCore as well as Microsoft.EntityFrameworkCore.Relational gets added
+
+2. Microsoft.EntityFrameworkCore.Tools (design)
+
+
+in the PM console type the below to get the models mapped
+
+Scaffold-DbContext "Server=LAPTOP-TJJ7D977;Database=Northwind;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Also make an entry in appsettings.json as below
+
+ },
+ "AllowedHosts": "*",
+ "ConnectionStrings": {
+   "Northwinddbconn": "Server=Laptop-tjj7d977;Database=Northwind;Integrated Security=True;TrustServerCertificate=True"
+
+ }
+ }
+
+
+ASP.net core dependency injection system has 3 options for registering the services
+
+AddTransient : A new instance of the services is created every time a request is received, and post the request the instance is disposed. 
+
+AddScopped : An instance of the service is created and is reused throughout the scope of the session, and then gets disposed
+
+In the Program.cs file register all the dependencies and also use the UseSqlServer middleware 
+
+AddSingleton : A single instance serves for the entire application and is shared among all requests and clients
