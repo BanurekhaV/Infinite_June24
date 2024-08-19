@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Core_EF_DB.ViewModel.ProductSupplier>
+@{
+    ViewData["Title"] = "GetProductSupplierDetails";
+}
+
+<h1>GetProductSupplierDetails</h1>
+
+@foreach(var item in Model)
+{
+   <li>Company Name : @item.CompanyName</li>
+   <li>Product Name : @item.ProductName</li>
+   <li>Unit Price : @item.UnitPrice</li>
+}

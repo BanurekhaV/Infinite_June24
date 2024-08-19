@@ -5,6 +5,9 @@ namespace Core_EF_DB.Repository
     public interface IProductRepository
     {
         Task<List<Product>> GetProducts();
-       // dynamic GetProductSupplier();
+
+        //to get the viewmodel object bound to a view 
+
+        dynamic GetProductSupplier();
     }
 }

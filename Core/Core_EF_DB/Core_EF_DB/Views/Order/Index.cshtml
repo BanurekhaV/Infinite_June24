@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Core_EF_DB.Models.CustOrdersOrders>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@foreach(var item in Model)
+{
+    <li>@item.OrderId</li>
+    <li>@item.OrderDate</li>
+    <li>@item.RequiredDate</li>
+    <li>@item.ShippedDate</li>
+}

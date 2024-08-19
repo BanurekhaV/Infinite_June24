@@ -20,6 +20,7 @@ namespace Core_EF_DB
             //DI Service Lifetime
             builder.Services.AddScoped<ICategoryRepository, CategoryService>();
             builder.Services.AddScoped<IProductRepository, ProductService>();
+            builder.Services.AddScoped<IOrdersRepository, OrderService>();
 
             var app = builder.Build();
 

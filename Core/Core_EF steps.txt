@@ -10,6 +10,10 @@ in the PM console type the below to get the models mapped
 
 Scaffold-DbContext "Server=LAPTOP-TJJ7D977;Database=Northwind;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
+Note : Whenever there is any change made to the tables, we can retype the above command with -F option in the end
+
+Scaffold-DbContext "Server=LAPTOP-TJJ7D977;Database=Northwind;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -F
+
 Also make an entry in appsettings.json as below
 
  },
@@ -30,3 +34,7 @@ AddScopped : An instance of the service is created and is reused throughout the 
 In the Program.cs file register all the dependencies and also use the UseSqlServer middleware 
 
 AddSingleton : A single instance serves for the entire application and is shared among all requests and clients
+
+
+Check program.cs File for service registration
+

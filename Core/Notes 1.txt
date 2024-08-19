@@ -35,7 +35,7 @@ Kestrel Web Server : is a cross platform web server. It is included as an intern
 MiddleWare : are components that form the building blocks of the request processing pipeline
 
 UseAuthentication
-UsehttpRedirection
+UseHttpRedirection
 UseStaticFiles
 UseRouting
 UseAuthorization

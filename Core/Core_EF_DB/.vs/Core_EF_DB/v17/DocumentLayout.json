@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\views\\product\\getproductsupplierdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\views\\product\\getproductsupplierdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\viewmodel\\productsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\viewmodel\\productsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -27,28 +51,12 @@
       "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\views\\category\\getallcategories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\viewmodel\\productsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\viewmodel\\productsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\core_ef_db.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\core_ef_db.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\repository\\iordersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|solutionrelative:core_ef_db\\repository\\iordersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E981D2CC-3918-4E74-A227-D251E94EC12D}|Core_EF_DB\\Core_EF_DB.csproj|c:\\banu\\infinite\\batch_june24\\core\\core_ef_db\\core_ef_db\\models\\alphabeticallistofproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,63 +74,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Core_EF_DB\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Core_EF_DB\\Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T10:36:18.68Z",
+              "DocumentIndex": 0,
+              "Title": "GetProductSupplierDetails.cshtml",
+              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Views\\Product\\GetProductSupplierDetails.cshtml",
+              "RelativeDocumentMoniker": "Core_EF_DB\\Views\\Product\\GetProductSupplierDetails.cshtml",
+              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Views\\Product\\GetProductSupplierDetails.cshtml",
+              "RelativeToolTip": "Core_EF_DB\\Views\\Product\\GetProductSupplierDetails.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T13:00:07.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Core_EF_DB\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Core_EF_DB\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAABwAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T12:52:49.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "Core_EF_DB\\Models\\Supplier.cs",
+              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Models\\Supplier.cs",
+              "RelativeToolTip": "Core_EF_DB\\Models\\Supplier.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T12:10:12.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProductSupplier.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\ViewModel\\ProductSupplier.cs",
               "RelativeDocumentMoniker": "Core_EF_DB\\ViewModel\\ProductSupplier.cs",
               "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\ViewModel\\ProductSupplier.cs",
               "RelativeToolTip": "Core_EF_DB\\ViewModel\\ProductSupplier.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-19T10:26:06.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Core_EF_DB\\Repository\\IProductRepository.cs",
+              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\IProductRepository.cs",
+              "RelativeToolTip": "Core_EF_DB\\Repository\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:11:35.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\ProductService.cs",
               "RelativeDocumentMoniker": "Core_EF_DB\\Repository\\ProductService.cs",
               "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\ProductService.cs",
               "RelativeToolTip": "Core_EF_DB\\Repository\\ProductService.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABEAAAAcAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAAAUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-19T10:24:48.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "Core_EF_DB\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "Core_EF_DB\\Views\\Order\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T12:38:38.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Program.cs",
               "RelativeDocumentMoniker": "Core_EF_DB\\Program.cs",
               "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Program.cs",
               "RelativeToolTip": "Core_EF_DB\\Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAA6AAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-19T08:19:13.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\appsettings.json",
               "RelativeDocumentMoniker": "Core_EF_DB\\appsettings.json",
@@ -130,12 +190,11 @@
               "RelativeToolTip": "Core_EF_DB\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-19T07:49:53.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T07:49:53.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\CategoryService.cs",
               "RelativeDocumentMoniker": "Core_EF_DB\\Repository\\CategoryService.cs",
@@ -148,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "GetAllCategories.cshtml",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Views\\Category\\GetAllCategories.cshtml",
               "RelativeDocumentMoniker": "Core_EF_DB\\Views\\Category\\GetAllCategories.cshtml",
@@ -156,12 +215,11 @@
               "RelativeToolTip": "Core_EF_DB\\Views\\Category\\GetAllCategories.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T10:44:44.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T10:44:44.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "GetCategoryByID.cshtml",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Views\\Category\\GetCategoryByID.cshtml",
               "RelativeDocumentMoniker": "Core_EF_DB\\Views\\Category\\GetCategoryByID.cshtml",
@@ -169,25 +227,11 @@
               "RelativeToolTip": "Core_EF_DB\\Views\\Category\\GetCategoryByID.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T10:48:30.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T10:48:30.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "Core_EF_DB\\Repository\\IProductRepository.cs",
-              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\IProductRepository.cs",
-              "RelativeToolTip": "Core_EF_DB\\Repository\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T10:11:35.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "Core_EF_DB\\Repository\\ICategoryRepository.cs",
@@ -195,38 +239,23 @@
               "RelativeToolTip": "Core_EF_DB\\Repository\\ICategoryRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T10:05:05.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T10:05:05.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IOrdersRepository.cs",
-              "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\IOrdersRepository.cs",
-              "RelativeDocumentMoniker": "Core_EF_DB\\Repository\\IOrdersRepository.cs",
-              "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Repository\\IOrdersRepository.cs",
-              "RelativeToolTip": "Core_EF_DB\\Repository\\IOrdersRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T10:06:52.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Core_EF_DB",
+              "DocumentIndex": 12,
+              "Title": "Core_EF_DB.csproj",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Core_EF_DB.csproj",
               "RelativeDocumentMoniker": "Core_EF_DB\\Core_EF_DB.csproj",
               "ToolTip": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Core_EF_DB.csproj",
               "RelativeToolTip": "Core_EF_DB\\Core_EF_DB.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-19T10:04:14.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T10:04:14.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "AlphabeticalListOfProduct.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Models\\AlphabeticalListOfProduct.cs",
               "RelativeDocumentMoniker": "Core_EF_DB\\Models\\AlphabeticalListOfProduct.cs",
@@ -234,12 +263,11 @@
               "RelativeToolTip": "Core_EF_DB\\Models\\AlphabeticalListOfProduct.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T09:45:21.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T09:45:21.033Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite\\Batch_June24\\Core\\Core_EF_DB\\Core_EF_DB\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Core_EF_DB\\Controllers\\HomeController.cs",
@@ -247,8 +275,7 @@
               "RelativeToolTip": "Core_EF_DB\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T07:18:11.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T07:18:11.7Z"
             }
           ]
         }
