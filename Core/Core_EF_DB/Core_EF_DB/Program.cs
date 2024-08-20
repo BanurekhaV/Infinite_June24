@@ -36,6 +36,7 @@ namespace Core_EF_DB
             app.UseStaticFiles();
 
             app.UseRouting();
+           
 
             app.UseAuthorization();
 

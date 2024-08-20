@@ -38,3 +38,17 @@ AddSingleton : A single instance serves for the entire application and is shared
 
 Check program.cs File for service registration
 
+
+
+Code First Approach :
+
+-Create an MVC application
+-Add Model class/es to the models folder
+-Add a Connection string in appsettings.json file
+-Create a Context Class and make an entry of the model classes
+-Register the DbContext class along with Sqlservices in the program.cs file
+-Build once
+-in the PM Console, migrate using
+   Add-Migration "<name>"
+   Update-database
+Then you can create respective controllers and perform actions

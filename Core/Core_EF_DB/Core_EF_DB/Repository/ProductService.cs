@@ -11,6 +11,11 @@ namespace Core_EF_DB.Repository
             _context = context;
         }
 
+        public async Task<Product> GetProductById(int id)
+        {
+            return  _context.Products.FirstOrDefault(x => x.ProductId == id);
+        }
+
         //get all products
         public async Task<List<Product>>GetProducts()
         {
