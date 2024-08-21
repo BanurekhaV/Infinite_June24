@@ -1,10 +1,9 @@
-﻿
+﻿﻿
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
-
 <div class="col-md-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -22,23 +21,23 @@
                        placeholder="Enter Student Address" required="" />
             </div>
             <div class="form-group col-md-1">
-                <div style="float:right;display:inline-block">
+                <div style="float:right; display:inline-block">
                     <input class="btn btn-primary" type="button" name="submitButton" id="btnSave" value="Save" />
                 </div>
             </div>
         </div>
     </div>
-    <hr/>
-    <table id="tblStudent" class="table table-bordered table-striped table-responsive table-hover">
+    <hr />
+    <table id="tblStudent" class="table table-bordered table-striped table-responsive
+           table-hover">
         <thead>
             <tr>
                 <th align="left" class="productth">ID</th>
-                <th align="left" class="productth">Student Name</th>
+                <th align="left" class="productth">Studnet Name</th>
                 <th align="left" class="productth">Student Address</th>
             </tr>
         </thead>
         <tbody>
-
         </tbody>
     </table>
 </div>
@@ -46,9 +45,9 @@
 @section Scripts
 {
     <script type="text/javascript">
-        $(function () {
+        $(function(){
             LoadData();
-            $('#btnSave').click(function () {
+            $("#btnSave").click(function () {
                 var std = {};
                 std.StudentName = $('#StudentName').val();
                 std.StudentAddress = $('#StudentAddress').val();
@@ -62,7 +61,7 @@
                         LoadData();
                     },
                     error: function () {
-                        alert("Error while Inserting Data");
+                        alert("Error While Inserting Data");
                     }
                 });
                 return false;
@@ -76,24 +75,25 @@
                 url: '@Url.Action("GetStudent")',
                 dataType: 'json',
                 data: { id: '' },
-                sucess: function (data) {
+                success: function (data) {
                     var items = '';
                     $.each(data, function (i, item) {
-                        var rows = "<tr" > + "<td class='producttd'>" + item.StudentID + "</td>"
+                        var rows = "<tr>" + "<td class='producttd'>" + item.StudentID + "</td>"
                             + "<td class='producttd'>" + item.StudentName + "</td>"
                             + "<td class='producttd'>" + item.StudentAddress + "</td>"
-                            + "</tr>";
+                            + "<tr/>";
                         $('#tblStudent tbody').append(rows);
                     });
                 },
                 error: function (e) {
                     var r = jQuery.parseJSON(response.responseText);
-                    alert("Message : " + r.Message);
-                    alert("StackTrace : " + r.StackTrace);
-                    alert("ExceptionType : " + r.ExceptionType);
+                    alert("Message: " + r.Message);
+                    alert("StackTrace :" + r.StackTrace);
+                    alert("ExceptionType :" + r.ExceptionType);
                 }
             });
             return false;
         }
     </script>
-    }
+
+}
