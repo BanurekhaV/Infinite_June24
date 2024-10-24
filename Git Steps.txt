@@ -36,4 +36,38 @@ Move to the newly created directory
 12. For any changes made to the remote repo, that must be included in the local repo type
      git pull <alias name> <branch name>
 
+
+
+Step 5: Create a new branch
+
+
+Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in. 
+
+Branches allow you to move back and forth between 'states' of a project. Official git docs describe branches this way: ‘A branch in Git is simply a lightweight movable pointer to one of these commits.’ For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project. Once you're done with the page, you can merge your changes from your branch into the primary branch. When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files. 
+
+Let's say you are on the primary branch and want to create a new branch to develop your web page. 
+
+Here's what you'll do: Run git checkout -b <my branch name>. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the primary branch.
+
+After running the above command, you can use the git branch command to confirm that your branch was created:
+
+
+mnelson:myproject mnelson$ git branch
+  master
+* my-new-branch
+view rawgitbranch.md hosted with ❤ by GitHub
+The branch name with the asterisk next to it indicates which branch you're on at that given time. 
+
+
+- git branch <branchname> to create a new branch
+- git branch ot git branch --list ( to show all branches)
+- git branch -d <branchname> ( to delete a branch)
+- git checkout <branchname> ( to switch between branches)
+- git branch -m master ( to go to the master branch)
+
+- git merge <branchname> (to merge changes)
+
+
+A note on branch names
+By default, every git repository’s first branch is named `master` (and is typically used as the primary branch in the project). As part of the tech industry’s general anti-racism work, some groups have begun to use alternate names for the default branch (we are using “primary” in this tutorial, for example). In other documentation and discussions, you may see “master”, or other terms, used to refer to the primary branch. Regardless of the name, just keep in mind that nearly every repository has a primary branch that can be thought of as the official version of the repository. If it’s a website, then the primary branch is the version that users see. If it’s an application, then the primary branch is the version that users download. This isn’t technically necessary (git doesn’t treat any branches differently from other branches), but it’s how git is traditionally used in a project.
   
